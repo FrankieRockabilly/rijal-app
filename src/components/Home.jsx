@@ -24,6 +24,7 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/src/ScrollTrigger";
 import Testimonial from "./Testimonial";
 import { CiTimer } from "react-icons/ci";
+import Booking from "./Booking";
 
 const Home = () => {
    const [size, setSize] = useState(0);
@@ -184,6 +185,10 @@ const Home = () => {
                   </div>
                   {/* 1 */}
                   <div className=" max-w-[75%] h-full px-5 lg:px-28 flex flex-col justify-center items-start lg:gap-3">
+                     <div className="flex justify-start items-center gap-2 homecare">
+                        <Line />
+                        <p>M Rijal</p>
+                     </div>
                      <h1 className="font-bold text-4xl lg:text-8xl xl:text-[11rem] text-white homecare">
                         HomeCare
                      </h1>
@@ -266,7 +271,9 @@ const Home = () => {
                   <p className="font-semibold text-sm lg:text-2xl">
                      Tanpa Suntik
                   </p>
-                  <p className="text-[12px] lg:text-xl">All card Accepted</p>
+                  <p className="text-[12px] lg:text-lg text-gray-500">
+                     All card Accepted
+                  </p>
                </div>
             </div>
 
@@ -277,7 +284,9 @@ const Home = () => {
                   <p className="font-semibold text-sm lg:text-2xl">
                      Online Support
                   </p>
-                  <p className="text-[12px] lg:text-xl">Melayani 24 jam</p>
+                  <p className="text-[12px] lg:text-lg text-gray-500">
+                     Melayani 24 jam
+                  </p>
                </div>
             </div>
 
@@ -290,7 +299,9 @@ const Home = () => {
                />
                <div>
                   <p className="font-semibold text-sm lg:text-2xl">Maksimal</p>
-                  <p className="text-[12px] lg:text-xl">Melayani dengan Hati</p>
+                  <p className="text-[12px] lg:text-lg text-gray-500">
+                     Melayani dengan Hati
+                  </p>
                </div>
             </div>
 
@@ -299,7 +310,9 @@ const Home = () => {
                <CiTimer size={size} color="#2abbdf" weight="duotone" />
                <div>
                   <p className="font-semibold text-sm lg:text-2xl">Responsif</p>
-                  <p className="text-[12px] lg:text-xl">Penanganan Cepat</p>
+                  <p className="text-[12px] lg:text-lg text-gray-500">
+                     Penanganan Cepat
+                  </p>
                </div>
             </div>
          </div>
@@ -307,7 +320,7 @@ const Home = () => {
          {/* why choose us */}
          <div className="flex flex-col lg:flex-row justify-center items-center gap-5 lg:gap-10  px-5  py-10 lg:pb-32 text-black">
             {/* 1 */}
-            <div className="flex flex-col justify-start items-start gap-5 lg:gap-10 lg:max-w-[40%] py-10 kiri text-sm lg:text-base">
+            <div className="flex flex-col justify-start items-start gap-5 lg:gap-10 lg:max-w-[40%] py-10 kiri text-sm lg:text-base pilihKiri">
                <h1 className="text-xl lg:text-3xl font-bold">
                   Mengapa Pilih Kami ?
                </h1>
@@ -337,7 +350,7 @@ const Home = () => {
             </div>
 
             {/* 2 */}
-            <div className="w-full lg:w-[35rem] h-full flex justify-end items-end relative flex-col-reverse gap-10 kanan">
+            <div className="w-full lg:w-[35rem] h-full flex justify-end items-end relative flex-col-reverse gap-10 pilihKanan">
                <img
                   src="https://demo.phlox.pro/medical/wp-content/uploads/sites/166/2020/05/Mask_Group_54-1.jpg"
                   alt=""
@@ -373,8 +386,15 @@ const Home = () => {
          </div>
 
          {/* banner */}
-         <div className="w-full px-5  py-10 lg:px-[10%] text-black">
-            <div className=" bg-gray-100 rounded-xl px-5 lg:px-28 py-5 lg:py-28 flex flex-col justify-start items-start gap-3 relative overflow-hidden shadow-lg">
+         <div className="w-full px-5  py-10 lg:px-[10%] text-white">
+            <div
+               className="bg-biru rounded-xl px-5 lg:px-28 py-5 lg:py-28 flex flex-col justify-start items-start gap-3 overflow-hidden shadow-lg bg-opacity-80 relative"
+               // style={{
+               //    backgroundImage: `url(https://img.freepik.com/free-photo/view-medicine-blue-background_23-2149341571.jpg?t=st=1739951318~exp=1739954918~hmac=74472508729df09e0fdb0309dee3f2a2f9efdf5c658abd90c1e1856d3084734c&w=1380)`,
+               //    backgroundSize: "cover",
+               //    backgroundPosition: "center",
+               // }}
+            >
                <h2>Tahukah Kamu ?</h2>
                <h1 className="text-lg lg:text-6xl font-semibold max-w-[60%]">
                   SOLUSI TEPAT UNTUK{" "}
@@ -384,7 +404,7 @@ const Home = () => {
                   Luka yang tidak di tangani dengan baik bisa beresiko infeksi
                   dan memperlambat proses penyembuhan
                </p>
-               <button className="bg-biru px-5 py-3 text-white rounded-lg mt-3">
+               <button className="bg-orange-500 px-5 py-3 text-white rounded-lg mt-3">
                   Read More
                </button>
                {/* gambar */}
@@ -395,6 +415,11 @@ const Home = () => {
                   />
                </div>
             </div>
+         </div>
+
+         {/* booking */}
+         <div>
+            <Booking />
          </div>
 
          <div>

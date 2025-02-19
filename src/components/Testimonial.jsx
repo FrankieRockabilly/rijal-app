@@ -28,7 +28,7 @@ const Testimonial = () => {
         </div>
 
         {/* Bagian kanan - Slider */}
-        <div className="w-full lg:w-3/5 py-12">
+        <div className="w-full lg:w-3/5 py-12 ">
            <Swiper
               loop={true} // Infinite scroll
               autoplay={{
@@ -47,9 +47,9 @@ const Testimonial = () => {
               {reviews.map((review, index) => (
                  <SwiperSlide
                     key={index}
-                    className="flex justify-center items-center border bg-white shadow-lg"
+                    className="flex justify-center items-center"
                  >
-                    <div className="w-80 lg:w-full h-60 lg:h-[15rem]  flex flex-col justify-around items-start p-5">
+                    <div className="w-80 lg:w-full h-60 lg:h-[15rem]  flex flex-col justify-around items-start p-5 border rounded-2xl bg-white">
                        <div className="h-24 flex flex-col justify-start w-full items-start overflow-hidden ">
                           <div className="h-9 opacity-20">
                              <Quotes size={76} color="#34bf8c" weight="fill" />
