@@ -1,12 +1,15 @@
-import React from 'react'
-import Home from '../components/Home'
+import React, { useEffect } from "react";
+import Home from "../components/Home";
 
 const HomePage = () => {
-  return (
-    <>
-      <Home />
-    </>
-  )
-}
+   useEffect(() => {
+      window.scrollTo(0, 0);
+   }, []);
+   return (
+      <>
+         <Home />
+      </>
+   );
+};
 
-export default HomePage
+export default HomePage;
