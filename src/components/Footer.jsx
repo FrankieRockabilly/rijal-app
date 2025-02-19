@@ -44,9 +44,9 @@ const Footer = () => {
                    Layanan
                 </p>
                 <div className="text-sm lg:text-lg flex flex-col justify-start items-start gap-5">
-                   <p>layanan 1</p>
-                   <p>layanan 2</p>
-                   <p>layanan 3</p>
+                   <p>Perawatan Luka</p>
+                   <p>Layanan Khitan Super Ring</p>
+                   <p>Konsultasi</p>
                 </div>
              </div>
 

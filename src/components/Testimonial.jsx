@@ -40,7 +40,7 @@ const Testimonial = () => {
               className="w-full"
               breakpoints={{
                  320: { slidesPerView: 1, spaceBetween: 5 }, // Mobile
-                 640: { slidesPerView: 1, spaceBetween: 5 }, // Tablet
+                 640: { slidesPerView: 2, spaceBetween: 5 }, // Tablet
                  1024: { slidesPerView: 3, spaceBetween: 10 }, // Laptop
               }}
            >

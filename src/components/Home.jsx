@@ -18,7 +18,8 @@ import {
    FaWhatsapp,
    FaLinkedin,
 } from "react-icons/fa";
-import rijal from "../assets/Image/rjl.png";
+import rijal from "../assets/Image/rijall.png";
+import excitedPerson from "../assets/Image/omg2.png";
 import Footer from "./Footer";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/src/ScrollTrigger";
@@ -177,7 +178,7 @@ const Home = () => {
          <div className="  bg-warm overflow-hidden h-full relative">
             <div className="relative pt-14 lg:pt-20">
                {/* hero section */}
-               <div className=" h-[20rem] lg:h-[55rem] w-full bg-gradient-to-r from-[#007c9d] to-white text-black flex justify-start items-center overflow-hidden relative">
+               <div className="border py-52 h-[20rem] lg:h-[55rem] w-full bg-gradient-to-r from-[#007c9d] to-white text-black flex justify-start items-center overflow-hidden relative">
                   <div className="absolute top-[3%] lg:top-[10%] translate-y-1/2 right-14 lg:right-[35%] z-10 ">
                      <h1 className="font-extrabold text-5xl lg:text-[10rem]  opacity-10">
                         HOME CARE
@@ -227,7 +228,7 @@ const Home = () => {
                      <img
                         src={rijal}
                         alt=""
-                        className="w-52 lg:w-[35rem] object-cover opacity-60"
+                        className="w-80 lg:w-[60rem] object-cover opacity-60"
                      />
                   </div>
                </div>
@@ -388,7 +389,7 @@ const Home = () => {
          {/* banner */}
          <div className="w-full px-5  py-10 lg:px-[10%] text-white">
             <div
-               className="bg-biru rounded-xl px-5 lg:px-28 py-5 lg:py-28 flex flex-col justify-start items-start gap-3 overflow-hidden shadow-lg bg-opacity-80 relative"
+               className="bg-biru rounded-xl px-5 lg:px-28 py-5 lg:py-28 flex flex-col justify-start items-start gap-3 shadow-lg bg-opacity-80 relative"
                // style={{
                //    backgroundImage: `url(https://img.freepik.com/free-photo/view-medicine-blue-background_23-2149341571.jpg?t=st=1739951318~exp=1739954918~hmac=74472508729df09e0fdb0309dee3f2a2f9efdf5c658abd90c1e1856d3084734c&w=1380)`,
                //    backgroundSize: "cover",
@@ -397,10 +398,10 @@ const Home = () => {
             >
                <h2>Tahukah Kamu ?</h2>
                <h1 className="text-lg lg:text-6xl font-semibold max-w-[60%]">
-                  SOLUSI TEPAT UNTUK{" "}
+                  SOLUSI TEPAT UNTUK
                   <span className="text-orange-500">PENYEMBUHAN LUKA</span>
                </h1>
-               <p className="text-sm lg:text-xl max-w-[70%]">
+               <p className="text-[12px] lg:text-xl max-w-[70%] z-10">
                   Luka yang tidak di tangani dengan baik bisa beresiko infeksi
                   dan memperlambat proses penyembuhan
                </p>
@@ -408,12 +409,43 @@ const Home = () => {
                   Read More
                </button>
                {/* gambar */}
-               <div className="absolute right-0 lg:-top-14 bottom-0 w-[42%] ">
+               <div className="absolute right-0 lg:-top-28 bottom-0 w-[42%] ">
                   <img
                      src="https://res.cloudinary.com/dplikeeby/image/upload/v1739855466/obat_ixcp8q.png"
                      alt=""
                   />
                </div>
+            </div>
+         </div>
+
+         {/* second banner */}
+         <div className="w-full px-5  lg:px-[10%] text-white">
+            <div
+               className="bg-orange-500 rounded-xl px-5 lg:px-28 py-5 lg:py-28 flex flex-col justify-end items-end gap-3 shadow-lg bg-opacity-80 relative overflow-hidden bg-cover bg-no-repeat"
+               style={{ backgroundImage: `url(${excitedPerson})` }}
+            >
+               <div className=" flex flex-col justify-start items-start gap-3 w-full text-left max-w-[60%] z-10 ">
+                  <h1 className="text-lg lg:text-6xl font-semibold ">
+                     METODE KHITAN TANPA SUNTIK
+                     <span className="text-biru">SUPER RING</span>
+                  </h1>
+                  <p className="text-[12px] lg:text-xl">
+                     Takut jarum? Sekarang nggak perlu lagi! Dengan Metode Super
+                     Ring, sunat jadi lebih nyaman tanpa suntikan, tanpa
+                     jahitan, dan minim rasa sakit.
+                  </p>
+                  <button className="bg-biru px-5 py-3 text-white rounded-lg mt-3">
+                     Read More
+                  </button>
+               </div>
+               {/* gambar */}
+               {/* <div className="absolute left-0 lg:-top-28 bottom-0 inset-0 ">
+                  <img
+                     src={excitedPerson}
+                     alt=""
+                     className="w-[70%] lg:w-[30%]"
+                  />
+               </div> */}
             </div>
          </div>
 
