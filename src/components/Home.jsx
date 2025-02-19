@@ -21,11 +21,10 @@ import {
    Hospital,
 } from "@phosphor-icons/react";
 import rijal from "../assets/Image/rjl.png";
-import Footer from "./footer";
+import Footer from "./Footer";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/src/ScrollTrigger";
 import Testimonial from "./Testimonial";
-import Count from "./Count";
 
 const Home = () => {
    const [size, setSize] = useState(0);
