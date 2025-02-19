@@ -37,7 +37,7 @@ const Home = () => {
          } else if (width >= 768 && width < 1024) {
             setSize(35); // Untuk tampilan tablet
          } else {
-            setSize(50); // Untuk tampilan desktop
+            setSize(40); // Untuk tampilan desktop
          }
       };
 
@@ -173,7 +173,7 @@ const Home = () => {
 
    return (
       <>
-         <div className="  bg-white overflow-hidden h-full relative">
+         <div className="  bg-warm overflow-hidden h-full relative">
             <div className="relative pt-14 lg:pt-20">
                {/* hero section */}
                <div className=" h-[20rem] lg:h-[55rem] w-full bg-gradient-to-r from-[#007c9d] to-white text-black flex justify-start items-center overflow-hidden relative">
@@ -257,8 +257,55 @@ const Home = () => {
             </div>
          </div>
 
+         {/* free shipping */}
+         <div className="flex flex-wrap justify-center items-center gap-2 lg:gap-5 py-10 lg:py-24 text-black ">
+            {/* 1 */}
+            <div className="flex justify-start items-center gap-2 lg:gap-8 w-[170px] lg:w-[20rem] speciality">
+               <PiSyringe size={size} color="#2abbdf" weight="duotone" />
+               <div>
+                  <p className="font-semibold text-sm lg:text-2xl">
+                     Tanpa Suntik
+                  </p>
+                  <p className="text-[12px] lg:text-xl">All card Accepted</p>
+               </div>
+            </div>
+
+            {/* 2 */}
+            <div className="flex justify-start items-center gap-2 lg:gap-8 w-[170px] lg:w-[20rem] speciality">
+               <PiHeadsetThin size={size} color="#2abbdf" weight="duotone" />
+               <div>
+                  <p className="font-semibold text-sm lg:text-2xl">
+                     Online Support
+                  </p>
+                  <p className="text-[12px] lg:text-xl">Melayani 24 jam</p>
+               </div>
+            </div>
+
+            {/* 3 */}
+            <div className="flex justify-start items-center gap-2 lg:gap-8 w-[170px] lg:w-[20rem] speciality">
+               <PiStethoscopeThin
+                  size={size}
+                  color="#2abbdf"
+                  weight="duotone"
+               />
+               <div>
+                  <p className="font-semibold text-sm lg:text-2xl">Maksimal</p>
+                  <p className="text-[12px] lg:text-xl">Melayani dengan Hati</p>
+               </div>
+            </div>
+
+            {/* 3 */}
+            <div className="flex justify-start items-center gap-2 lg:gap-8 w-[170px] lg:w-[20rem] speciality">
+               <CiTimer size={size} color="#2abbdf" weight="duotone" />
+               <div>
+                  <p className="font-semibold text-sm lg:text-2xl">Responsif</p>
+                  <p className="text-[12px] lg:text-xl">Penanganan Cepat</p>
+               </div>
+            </div>
+         </div>
+
          {/* why choose us */}
-         <div className="flex flex-col lg:flex-row justify-center items-center gap-5 lg:gap-10  bg-white px-5  py-10 lg:pb-32 text-black">
+         <div className="flex flex-col lg:flex-row justify-center items-center gap-5 lg:gap-10  px-5  py-10 lg:pb-32 text-black">
             {/* 1 */}
             <div className="flex flex-col justify-start items-start gap-5 lg:gap-10 lg:max-w-[40%] py-10 kiri text-sm lg:text-base">
                <h1 className="text-xl lg:text-3xl font-bold">
@@ -320,56 +367,34 @@ const Home = () => {
             </div>
          </div>
 
-         {/* free shipping */}
-         <div className="flex flex-wrap justify-center items-center gap-2 lg:gap-5 py-10 lg:py-24 text-black">
-            {/* 1 */}
-            <div className="flex justify-start items-center gap-2 lg:gap-8 w-[170px] lg:w-[20rem] speciality">
-               <PiSyringe size={size} color="#2abbdf" weight="duotone" />
-               <div>
-                  <p className="font-semibold text-sm lg:text-2xl">
-                     Tanpa Suntik
-                  </p>
-                  <p className="text-[12px] lg:text-xl">All card Accepted</p>
-               </div>
-            </div>
-
-            {/* 2 */}
-            <div className="flex justify-start items-center gap-2 lg:gap-8 w-[170px] lg:w-[20rem] speciality">
-               <PiHeadsetThin size={size} color="#2abbdf" weight="duotone" />
-               <div>
-                  <p className="font-semibold text-sm lg:text-2xl">
-                     Online Support
-                  </p>
-                  <p className="text-[12px] lg:text-xl">Melayani 24 jam</p>
-               </div>
-            </div>
-
-            {/* 3 */}
-            <div className="flex justify-start items-center gap-2 lg:gap-8 w-[170px] lg:w-[20rem] speciality">
-               <PiStethoscopeThin
-                  size={size}
-                  color="#2abbdf"
-                  weight="duotone"
-               />
-               <div>
-                  <p className="font-semibold text-sm lg:text-2xl">Maksimal</p>
-                  <p className="text-[12px] lg:text-xl">Melayani dengan Hati</p>
-               </div>
-            </div>
-
-            {/* 3 */}
-            <div className="flex justify-start items-center gap-2 lg:gap-8 w-[170px] lg:w-[20rem] speciality">
-               <CiTimer size={size} color="#2abbdf" weight="duotone" />
-               <div>
-                  <p className="font-semibold text-sm lg:text-2xl">Responsif</p>
-                  <p className="text-[12px] lg:text-xl">Penanganan Cepat</p>
-               </div>
-            </div>
-         </div>
-
          {/* testimonial */}
          <div>
             <Testimonial />
+         </div>
+
+         {/* banner */}
+         <div className="w-full px-5  py-10 lg:px-[10%] text-black">
+            <div className=" bg-gray-100 rounded-xl px-5 lg:px-28 py-5 lg:py-28 flex flex-col justify-start items-start gap-3 relative overflow-hidden shadow-lg">
+               <h2>Tahukah Kamu ?</h2>
+               <h1 className="text-lg lg:text-6xl font-semibold max-w-[60%]">
+                  SOLUSI TEPAT UNTUK{" "}
+                  <span className="text-orange-500">PENYEMBUHAN LUKA</span>
+               </h1>
+               <p className="text-sm lg:text-xl max-w-[70%]">
+                  Luka yang tidak di tangani dengan baik bisa beresiko infeksi
+                  dan memperlambat proses penyembuhan
+               </p>
+               <button className="bg-biru px-5 py-3 text-white rounded-lg mt-3">
+                  Read More
+               </button>
+               {/* gambar */}
+               <div className="absolute right-0 lg:-top-14 bottom-0 w-[42%] ">
+                  <img
+                     src="https://res.cloudinary.com/dplikeeby/image/upload/v1739855466/obat_ixcp8q.png"
+                     alt=""
+                  />
+               </div>
+            </div>
          </div>
 
          <div>

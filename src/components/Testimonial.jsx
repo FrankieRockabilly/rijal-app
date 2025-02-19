@@ -10,7 +10,7 @@ import Line from "./Line";
 
 const Testimonial = () => {
   return (
-     <div className="px-5 lg:px-40 py-10 lg:py-32 text-black flex flex-col lg:flex-row justify-between items-center  bg-slate-100 ">
+     <div className="px-5 lg:px-40 py-10 lg:py-20 text-black flex flex-col lg:flex-row justify-between items-center ">
         {/* Bagian kiri */}
         <div className="flex flex-col justify-start items-start gap-2 lg:gap-5 w-auto text-[12px] lg:text-xl">
            <h1>Testimonial</h1>
@@ -35,13 +35,13 @@ const Testimonial = () => {
                  delay: 0, // Tanpa jeda
                  disableOnInteraction: false, // Tetap berjalan meski ada interaksi
               }}
-              speed={5000} // Kecepatan scroll (ms)
+              speed={3000} // Kecepatan scroll (ms)
               modules={[Autoplay]} // Gunakan modul Autoplay
               className="w-full"
               breakpoints={{
                  320: { slidesPerView: 1, spaceBetween: 5 }, // Mobile
                  640: { slidesPerView: 1, spaceBetween: 5 }, // Tablet
-                 1024: { slidesPerView: 2, spaceBetween: 10 }, // Laptop
+                 1024: { slidesPerView: 3, spaceBetween: 10 }, // Laptop
               }}
            >
               {reviews.map((review, index) => (
@@ -49,7 +49,7 @@ const Testimonial = () => {
                     key={index}
                     className="flex justify-center items-center border bg-white shadow-lg"
                  >
-                    <div className="w-80 lg:w-full h-60 lg:h-[18rem]  flex flex-col justify-around items-start p-5">
+                    <div className="w-80 lg:w-full h-60 lg:h-[15rem]  flex flex-col justify-around items-start p-5">
                        <div className="h-24 flex flex-col justify-start w-full items-start overflow-hidden ">
                           <div className="h-9 opacity-20">
                              <Quotes size={76} color="#34bf8c" weight="fill" />
@@ -58,7 +58,7 @@ const Testimonial = () => {
                        </div>
                        <hr className="w-full border border-gray-300 " />
                        <div className="flex justify-start items-center gap-5">
-                          <div className="w-20 h-20 rounded-full overflow-hidden">
+                          <div className="w-14 h-14 rounded-full overflow-hidden">
                              <img
                                 src={review.image}
                                 alt=""

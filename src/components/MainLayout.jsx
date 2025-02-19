@@ -38,7 +38,7 @@ const MainLayout = () => {
 
   return (
      <>
-        <div className="w-full bg-slate-300 font-poppins relativv h-full overflow-hidden">
+        <div className="w-full bg-warm font-poppins relativv h-full overflow-hidden">
            <div>
               <Header />
            </div>
