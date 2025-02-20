@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
-import gsap from "gsap";
 
 const MainLayout = () => {
    const [name, setName] = useState("");
@@ -26,6 +25,18 @@ const MainLayout = () => {
       alert(`telah dikirim : ${pelayanan}`);
    };
 
+   useEffect(() => {
+      if (bookingAppointment) {
+         document.body.classList.add("overflow-hidden");
+      } else {
+         document.body.classList.remove("overflow-hidden");
+      }
+
+      return () => {
+         document.body.classList.remove("overflow-hidden");
+      };
+   }, [bookingAppointment]);
+
    return (
       <>
          <div className="w-full bg-warm font-poppins relative h-full overflow-hidden">
@@ -40,14 +51,14 @@ const MainLayout = () => {
 
             {/* whatsapp */}
             <div className="flex lg:flex-col justify-center items-center gap-0 w-full lg:w-auto lg:gap-5 fixed bottom-0 lg:bottom-5 right-0 lg:right-5 z-20 ">
-               <p className="w-full lg:w-52 text-center text-sm lg:text-base bg-biru text-white px-3 py-4 lg:rounded-md shadow-lg cursor-pointer hover:text-black transition-all">
-                  Book Health Check-up
+               <p className="w-full lg:w-64 text-center text-sm lg:text-base bg-biru text-white px-3 py-4 lg:rounded-md shadow-lg cursor-pointer hover:text-black transition-all">
+                  Booking Jadwal Perawatan
                </p>
                <p
-                  className="w-full lg:w-52 text-center text-sm lg:text-base bg-orange-500 text-white px-3 py-4 lg:rounded-md shadow-lg cursor-pointer hover:text-black transition-all"
+                  className="w-full lg:w-64 text-center text-sm lg:text-base bg-orange-500 text-white px-3 py-4 lg:rounded-md shadow-lg cursor-pointer hover:text-black transition-all"
                   onClick={clickBookingAppointment}
                >
-                  Book Appointment
+                  Booking Jadwal Khitan
                </p>
                {/* klik menu booking */}
                {bookingAppointment && (
@@ -62,12 +73,12 @@ const MainLayout = () => {
                               className="flex flex-col justify-start items-start gap-5 w-full"
                               onSubmit={submitBookingAppointment}
                            >
-                              <div>
-                                 <label htmlFor="">Masukkan Nama</label>
+                              <div className="w-full">
+                                 <label htmlFor="">Masukkan Nama Lengkap</label>
                                  <input
                                     type="text"
                                     className="outline-none px-3 py-3 rounded-lg w-full border focus:border-orange-500 bg-white"
-                                    placeholder="Nama"
+                                    placeholder="Nama Lengkap"
                                     value={name}
                                     onChange={(e) => setName(e.target.value)}
                                     required
@@ -84,7 +95,7 @@ const MainLayout = () => {
                                     required
                                  />
                               </div>
-                              <div>
+                              <div className="w-full">
                                  <label htmlFor="">Masukkan Alamat</label>
                                  <input
                                     type="text"
@@ -95,7 +106,7 @@ const MainLayout = () => {
                                     required
                                  />
                               </div>
-                              <div>
+                              <div className="w-full">
                                  <label htmlFor="">Masukkan No Hp AKtif</label>
                                  <input
                                     type="text"

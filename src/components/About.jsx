@@ -18,6 +18,7 @@ const About = () => {
                   <img
                      src="https://demo.phlox.pro/shop-drugstore/wp-content/uploads/sites/256/2020/12/Lekaren_049-73642-2-protected-1.jpg"
                      alt=""
+                     className="w-full"
                   />
                </div>
 
@@ -35,7 +36,7 @@ const About = () => {
                         deliver unconventional solutions
                      </p>
                   </div>
-                  <div className="flex flex-col lg:flex-row justify-center items-center w-full">
+                  <div className="flex flex-col lg:flex-row justify-start items-start gap-5 w-full mt-5">
                      <div className="">
                         <h2 className="text-base lg:text-2xl font-bold">
                            Penanganan Cepat
@@ -52,7 +53,7 @@ const About = () => {
                            Meaningful adventre in which we become
                         </p>
                      </div>
-                     <div className="p-5">
+                     <div>
                         <h2 className="text-base lg:text-2xl font-bold">
                            Penanganan Cepat
                         </h2>

@@ -65,13 +65,13 @@ export const Header = () => {
             <div className="hidden xl:flex justify-end items-center gap-8">
                <ul className="flex justify-start items-center gap-10 cursor-pointer text-gray-700">
                   <Link to={"/"}>
-                     <li>Home</li>
+                     <li className="hover:text-biru">Home</li>
                   </Link>
                   <Link to={"/about"}>
-                     <li>Tentang</li>
+                     <li className="hover:text-biru">Tentang</li>
                   </Link>
                   <Link to={"/contact"}>
-                     <li>Kontak</li>
+                     <li className="hover:text-biru">Kontak</li>
                   </Link>
                   <li className="px-3 py-2 bg-biru rounded-md text-white">
                      Buat Janji / Booking
@@ -91,11 +91,15 @@ export const Header = () => {
 
                <div className="px-3 py-2 border border-biru rounded-md text-[#007c9d] hover:text-white flex justify-center items-center gap-2 hover:bg-gradient-to-r from-green-700 to-blue-900 cursor-pointer">
                   <FaPhoneAlt />
-                  <p>+628123456</p>
+                  <a href="http://wa.me/+6282273212907" target="blank">
+                     <p>+6282-7321-2907</p>
+                  </a>
                </div>
                <div className="px-3 py-2 border border-biru rounded-md text-[#007c9d] hover:text-white flex justify-center items-center gap-2 hover:bg-gradient-to-r from-green-700 to-blue-900 cursor-pointer">
                   <IoMdMail />
-                  <p>rizalaraffa14@gmail.com</p>
+                  <a href="mailto:rizalaraffa14@gmail.com" target="_blank">
+                     <p>rizalaraffa14@gmail.com</p>
+                  </a>
                </div>
             </div>
 
