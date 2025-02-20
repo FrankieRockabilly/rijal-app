@@ -25,17 +25,17 @@ const MainLayout = () => {
       alert(`telah dikirim : ${pelayanan}`);
    };
 
-   useEffect(() => {
-      if (bookingAppointment) {
-         document.body.classList.add("overflow-hidden");
-      } else {
-         document.body.classList.remove("overflow-hidden");
-      }
+   // useEffect(() => {
+   //    if (bookingAppointment) {
+   //       document.body.classList.add("overflow-hidden");
+   //    } else {
+   //       document.body.classList.remove("overflow-hidden");
+   //    }
 
-      return () => {
-         document.body.classList.remove("overflow-hidden");
-      };
-   }, [bookingAppointment]);
+   //    return () => {
+   //       document.body.classList.remove("overflow-hidden");
+   //    };
+   // }, [bookingAppointment]);
 
    return (
       <>
@@ -51,11 +51,11 @@ const MainLayout = () => {
 
             {/* whatsapp */}
             <div className="flex lg:flex-col justify-center items-center gap-0 w-full lg:w-auto lg:gap-5 fixed bottom-0 lg:bottom-5 right-0 lg:right-5 z-20 ">
-               <p className="w-full lg:w-64 text-center text-sm lg:text-base bg-biru text-white px-3 py-4 lg:rounded-md shadow-lg cursor-pointer hover:text-black transition-all">
+               <p className="w-full lg:w-64 text-center text-[12px] lg:text-base bg-biru text-white px-3 py-4 lg:rounded-md shadow-lg cursor-pointer hover:text-black transition-all">
                   Booking Jadwal Perawatan
                </p>
                <p
-                  className="w-full lg:w-64 text-center text-sm lg:text-base bg-orange-500 text-white px-3 py-4 lg:rounded-md shadow-lg cursor-pointer hover:text-black transition-all"
+                  className="w-full lg:w-64 text-center text-[12px] lg:text-base bg-orange-500 text-white px-3 py-4 lg:rounded-md shadow-lg cursor-pointer hover:text-black transition-all"
                   onClick={clickBookingAppointment}
                >
                   Booking Jadwal Khitan
@@ -68,9 +68,9 @@ const MainLayout = () => {
                            Booking Pelayanan
                         </p>
                         <div className="px-3 py-3 text-gray-600 flex flex-col justify-start items-start gap-5">
-                           <p className="py-3">Please Input this field below</p>
+                           <p>Please Input this field below</p>
                            <form
-                              className="flex flex-col justify-start items-start gap-5 w-full"
+                              className="flex flex-col justify-start items-start gap-3 w-full"
                               onSubmit={submitBookingAppointment}
                            >
                               <div className="w-full">
