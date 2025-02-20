@@ -17,6 +17,17 @@ export const Header = () => {
    // Animasi GSAP
    useEffect(() => {
       gsap.fromTo(
+         ".navmenu",
+         { opacity: 0, height: -20 },
+         {
+            opacity: 1,
+            height: 1,
+            duration: 0.5,
+            stagger: 0.1,
+            ease: "power1.out",
+         }
+      );
+      gsap.fromTo(
          ".menu-item",
          { opacity: 0, y: -20 },
          {
@@ -56,7 +67,7 @@ export const Header = () => {
                   <Link to={"/"}>
                      <li>Home</li>
                   </Link>
-                  <Link to={"/"}>
+                  <Link to={"/about"}>
                      <li>Tentang</li>
                   </Link>
                   <Link to={"/contact"}>
@@ -67,7 +78,7 @@ export const Header = () => {
                   </li>
                </ul>
 
-               <div className="relative">
+               {/* <div className="relative">
                   <input
                      type="text"
                      className="border bg-zinc-50 w-96 rounded-md px-3 py-2 outline-none text-gray-600"
@@ -76,7 +87,7 @@ export const Header = () => {
                   <div className="w-10 h-10 bg-biru absolute top-1/2 right-0 -translate-y-1/2 flex justify-center items-center rounded-md">
                      <IoIosSearch size={25} color="#f0f0f0" />
                   </div>
-               </div>
+               </div> */}
 
                <div className="px-3 py-2 border border-biru rounded-md text-[#007c9d] hover:text-white flex justify-center items-center gap-2 hover:bg-gradient-to-r from-green-700 to-blue-900 cursor-pointer">
                   <FaPhoneAlt />
@@ -98,12 +109,22 @@ export const Header = () => {
          {isMenuClicked && (
             <div
                ref={menuRef}
-               className="fixed min-h-screen w-full bg-white flex flex-col justify-center items-center gap-14 z-30 text-xl shadow-lg"
+               className="fixed min-h-screen w-full bg-white flex flex-col justify-center items-center gap-14 z-30 text-xl shadow-lg navmenu"
+               onClick={() => setIsMenuClicked(false)}
             >
-               <p className="menu-item">Home</p>
-               <p className="menu-item">Tentang</p>
-               <p className="menu-item">Kontak</p>
-               <p className="menu-item">Booking Online</p>
+               <Link to={"/"}>
+                  <p className="menu-item">Home</p>
+               </Link>
+               <Link to={"/about"}>
+                  <p className="menu-item">Tentang</p>
+               </Link>
+               <Link to={"/contact"}>
+                  <p className="menu-item">Kontak</p>
+               </Link>
+               <Link to={"/about"}>
+                  <p className="menu-item">Booking Online</p>
+               </Link>
+
                <button
                   onClick={() => setIsMenuClicked(false)}
                   className="bg-red-700 px-5 py-1 rounded-md text-white"

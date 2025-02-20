@@ -126,7 +126,7 @@ const Home = () => {
 
       gsap.fromTo(
          ".speciality",
-         { x: 50, opacity: 0 },
+         { x: -50, opacity: 0 },
          {
             x: 0,
             opacity: 1,
@@ -254,10 +254,6 @@ const Home = () => {
                   <div className="w-[10rem] lg:w-[12rem] h-44 lg:h-48 text-center rounded-lg flex flex-col justify-center items-center gap-2 shadow-md border p-3 hover:bg-gradient-to-r from-[#007c9d] to-green-300 cursor-pointer layanan">
                      <GiMedicines size={50} />
                      <p>Rawat Luka</p>
-                  </div>
-                  <div className="w-[10rem] lg:w-[12rem] h-44 lg:h-48 text-center rounded-lg flex flex-col justify-center items-center gap-2 shadow-md border p-3 hover:bg-gradient-to-r from-[#007c9d] to-green-300 cursor-pointer layanan">
-                     <GiMedicines size={50} />
-                     <p>Lainnya</p>
                   </div>
                </div>
             </div>
@@ -452,10 +448,6 @@ const Home = () => {
          {/* booking */}
          <div>
             <Booking />
-         </div>
-
-         <div>
-            <Footer />
          </div>
       </>
    );
