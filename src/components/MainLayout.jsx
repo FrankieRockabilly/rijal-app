@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Outlet } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
@@ -21,6 +21,8 @@ const MainLayout = () => {
    const [bookingPerawatan, setIsBookingPerawatan] = useState(false);
    const [bookingKhitan, setIsBookingKhitan] = useState(false);
 
+   const bookingPerawatanRef = useRef(null);
+   const bookingKhitanRef = useRef(null);
    // booking perawatan
    const clickBookingPerawatan = () => {
       setIsBookingPerawatan((state) => !state);
@@ -41,6 +43,30 @@ const MainLayout = () => {
       e.preventDefault();
       alert(`telah dikirim : ${pelayanan}`);
    };
+
+   // klik di luar area form
+   useEffect(() => {
+      const handleClickOutside = (event) => {
+         if (
+            bookingPerawatanRef.current &&
+            !bookingPerawatanRef.current.contains(event.target)
+         ) {
+            setIsBookingPerawatan(false);
+         }
+         if (
+            bookingKhitanRef.current &&
+            !bookingKhitanRef.current.contains(event.target)
+         ) {
+            setIsBookingKhitan(false);
+         }
+      };
+
+      document.addEventListener("mousedown", handleClickOutside);
+
+      return () => {
+         document.removeEventListener("mousedown", handleClickOutside);
+      };
+   }, []);
 
    // useEffect(() => {
    //    if (bookingAppointment) {
@@ -83,11 +109,20 @@ const MainLayout = () => {
 
                {/* booking perawatan */}
                {bookingPerawatan && (
-                  <div className=" border border-green-700 ">
-                     <div className="fixed bottom-0 lg:bottom-3 right-0 lg:right-3 w-full lg:w-96  bg-white  lg:rounded-lg shadow-xl text-[12px] lg:text-base overflow-y-auto max-h-[80vh]">
-                        <p className="text-white bg-biru w-full px-3 py-3 lg:rounded-t-lg">
-                           Booking Perawatan
-                        </p>
+                  <div className=" shadow-xl">
+                     <div
+                        ref={bookingPerawatanRef}
+                        className="fixed bottom-0 lg:bottom-3 right-0 lg:right-3 w-full lg:w-96  bg-white  lg:rounded-lg shadow-xl text-[12px] lg:text-base overflow-y-auto max-h-[80vh] border"
+                     >
+                        <div className="text-white bg-biru w-full px-3 py-3 lg:rounded-t-lg flex justify-between items-center">
+                           <p>Booking Perawatan Luka</p>
+                           <button
+                              className="px-5"
+                              onClick={() => setIsBookingPerawatan(false)}
+                           >
+                              x
+                           </button>
+                        </div>
                         <div className="px-3 py-3 text-gray-600 flex flex-col justify-start items-start gap-5">
                            <p>Please Input this field below</p>
                            <form
@@ -245,10 +280,19 @@ const MainLayout = () => {
                {/* klik menu booking */}
                {bookingKhitan && (
                   <div className=" border border-green-700 ">
-                     <div className="fixed bottom-0 lg:bottom-3 right-0 lg:right-3 w-full lg:w-96  bg-white  lg:rounded-lg shadow-xl text-[12px] lg:text-base overflow-y-auto max-h-[80vh]">
-                        <p className="text-white bg-orange-500 w-full px-3 py-3 lg:rounded-t-lg">
-                           Booking Layanan Khitan
-                        </p>
+                     <div
+                        ref={bookingKhitanRef}
+                        className="fixed bottom-0 lg:bottom-3 right-0 lg:right-3 w-full lg:w-96  bg-white  lg:rounded-lg shadow-xl text-[12px] lg:text-base overflow-y-auto max-h-[80vh]"
+                     >
+                        <div className="text-white bg-biru w-full px-3 py-3 lg:rounded-t-lg flex justify-between items-center">
+                           <p>Booking Perawatan Luka</p>
+                           <button
+                              className="px-5"
+                              onClick={() => setIsBookingKhitan(false)}
+                           >
+                              x
+                           </button>
+                        </div>
                         <div className="px-3 py-3 text-gray-600 flex flex-col justify-start items-start gap-5">
                            <p>Please Input this field below</p>
                            <form
