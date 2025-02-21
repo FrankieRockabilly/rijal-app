@@ -1,33 +1,59 @@
 [
    {
     "id" : 1,
-    "name" : "Frengki iskandar",
-    "review" :"pelayanan sangat bagus sekali sangat recommendedd",
-    "image" : "https://scontent.fbth8-1.fna.fbcdn.net/v/t39.30808-6/404024640_1814017575722149_840852257529890369_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=cc71e4&_nc_eui2=AeFSI4zAraHBz2UJoLlSHVru9GqYEd8M_pf0apgR3wz-l-JTwsKCapRt9JKnz0z1ZJfV6dbuP_UXoIT9ITSoUbv-&_nc_ohc=Ybqov3HMhFsQ7kNvgEouMV_&_nc_oc=Adhxz8U0vcnF4jj3H5tzKXtlzzASqRFUencZuUz0Q19JWLVmE9ir6W7e2-VU6ceM5Aw&_nc_zt=23&_nc_ht=scontent.fbth8-1.fna&_nc_gid=AHbtOzYhKFbgG2DonaLhsOK&oh=00_AYCbTnSAiE65D-NBGm7HSlwdCrRJVmoraPdSftM7Yq25TQ&oe=67B6890D"
+    "name" : "Pewdipie",
+    "status" :"Youtuber",
+    "review" :"Saya merasa sangat diperhatikan dengan layanan homecare ini. Semua kebutuhan saya ditangani dengan cermat dan penuh kasih. Sangat rekomended",
+    "image" : "https://i.guim.co.uk/img/media/9d9759a25269ff4dd7f4c41bde320c4928bdfb65/0_24_3000_1800/master/3000.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=e4916223d76a56180788e7bfc1d25b02"
    },
    {
     "id" : 2,
-    "name" : "Ceci Indriyani",
-    "review" :"pelayanan sangat bagus sekali",
-    "image" : "https://scontent.fbth8-1.fna.fbcdn.net/v/t39.30808-1/437713910_3713973362216795_3711921247078500866_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=109&ccb=1-7&_nc_sid=1d2534&_nc_eui2=AeHsZUztSoRXqL5HfgXmi8uCQpQCYuI1azJClAJi4jVrMhWWno7yKzSJmlgnluwifPyzQwQL4d2dM8qYJPxdHffN&_nc_ohc=HOcZj3W_5lQQ7kNvgGFDVQz&_nc_oc=Adjb4_L2qLAyAKF22iLnz-EXxXZe1Su4J6J9AbvbepGRZ3IoDyDx1OPkdkvqZ6JtgQg&_nc_zt=24&_nc_ht=scontent.fbth8-1.fna&_nc_gid=Ae-9C9_1iF00vxbDKfBK4r9&oh=00_AYCwmhmATX3nPvTQHZf553U7xJGNFWA8kGR7M7RooBUY7w&oe=67B6A85A"
+    "name" : "Justin Bieber",
+    "status" :"Penyanyi Dangdut",
+    "review" :"Layanan homecare yang sangat memudahkan, memadukan profesionalisme dan empati dalam setiap interaksi. Terima kasih telah membantu saya melewati masa pemulihan dengan tenang",
+    "image" : "https://static.promediateknologi.id/crop/0x0:0x0/0x0/webp/photo/p2/01/2025/01/13/IMG_6531-198265778.jpg"
    },
    {
     "id" : 3,
-    "name" : "Frengki iskandar",
-    "review" :"pelayanan sangat bagus sekali, pokokya sekali berobat pengen sakit lagi awowowkwk",
-    "image" : "https://scontent.fbth8-1.fna.fbcdn.net/v/t39.30808-6/404024640_1814017575722149_840852257529890369_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=cc71e4&_nc_eui2=AeFSI4zAraHBz2UJoLlSHVru9GqYEd8M_pf0apgR3wz-l-JTwsKCapRt9JKnz0z1ZJfV6dbuP_UXoIT9ITSoUbv-&_nc_ohc=Ybqov3HMhFsQ7kNvgEouMV_&_nc_oc=Adhxz8U0vcnF4jj3H5tzKXtlzzASqRFUencZuUz0Q19JWLVmE9ir6W7e2-VU6ceM5Aw&_nc_zt=23&_nc_ht=scontent.fbth8-1.fna&_nc_gid=AHbtOzYhKFbgG2DonaLhsOK&oh=00_AYCbTnSAiE65D-NBGm7HSlwdCrRJVmoraPdSftM7Yq25TQ&oe=67B6890D"
+    "name" : "Donald Trump",
+    "status" :"Presiden Amerika",
+    "review" :"Layanan homecare ini adalah keputusan terbaik. Perawatannya luar biasa, dan saya merasa sangat terbantu dengan layanan yang personal dan terpercaya",
+    "image" : "https://asset.kompas.com/crops/uwPl9i9j6X2K-dyW7_UjaiWPNxE=/1x0:2000x1333/1200x800/data/photo/2020/11/14/5fafeb7fc4832.jpg"
    },
    {
     "id" : 4,
     "name" : "Frengki iskandar",
-    "review" :"pelayanan sangat bagus sekali",
-    "image" : "https://scontent.fbth8-1.fna.fbcdn.net/v/t39.30808-6/404024640_1814017575722149_840852257529890369_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=cc71e4&_nc_eui2=AeFSI4zAraHBz2UJoLlSHVru9GqYEd8M_pf0apgR3wz-l-JTwsKCapRt9JKnz0z1ZJfV6dbuP_UXoIT9ITSoUbv-&_nc_ohc=Ybqov3HMhFsQ7kNvgEouMV_&_nc_oc=Adhxz8U0vcnF4jj3H5tzKXtlzzASqRFUencZuUz0Q19JWLVmE9ir6W7e2-VU6ceM5Aw&_nc_zt=23&_nc_ht=scontent.fbth8-1.fna&_nc_gid=AHbtOzYhKFbgG2DonaLhsOK&oh=00_AYCbTnSAiE65D-NBGm7HSlwdCrRJVmoraPdSftM7Yq25TQ&oe=67B6890D"
+    "status" :"Pasien",
+    "review" :"peayanan sangat bagus sekali",
+    "image" : "https://img.freepik.com/free-photo/man-dark-shirt-hand-sign-opened-both-sides_1150-27590.jpg?t=st=1740122443~exp=1740126043~hmac=8d1a17452110abc0825aa383bd07e0ac7accbe5c28b01ae4c50c20265b29bafa&w=740"
    },
    {
     "id" : 5,
-    "name" : "Frengki iskandar",
+    "name" : "Selena Gomez",
+    "status" :"Aktris",
     "review" :"pelayanan sangat bagus sekali",
-    "image" : "https://scontent.fbth8-1.fna.fbcdn.net/v/t39.30808-6/404024640_1814017575722149_840852257529890369_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=cc71e4&_nc_eui2=AeFSI4zAraHBz2UJoLlSHVru9GqYEd8M_pf0apgR3wz-l-JTwsKCapRt9JKnz0z1ZJfV6dbuP_UXoIT9ITSoUbv-&_nc_ohc=Ybqov3HMhFsQ7kNvgEouMV_&_nc_oc=Adhxz8U0vcnF4jj3H5tzKXtlzzASqRFUencZuUz0Q19JWLVmE9ir6W7e2-VU6ceM5Aw&_nc_zt=23&_nc_ht=scontent.fbth8-1.fna&_nc_gid=AHbtOzYhKFbgG2DonaLhsOK&oh=00_AYCbTnSAiE65D-NBGm7HSlwdCrRJVmoraPdSftM7Yq25TQ&oe=67B6890D"
+    "image" : "https://cdn.antaranews.com/cache/1200x800/2023/08/25/zyro-image.png.jpg"
+   },
+   {
+    "id" : 6,
+    "name" : "Elon Musk",
+    "status" :"Mas mas amrik",
+    "review" :"Layanan homecare ini adalah keputusan terbaik. Perawatannya luar biasa, dan saya merasa sangat terbantu dengan layanan yang personal dan terpercaya",
+    "image" : "https://d.newsweek.com/en/full/2590364/elon-musk.jpg?w=1200&f=9bd0f002656a3cd184485146ddc80adf"
+   },
+   {
+    "id" : 7,
+    "name" : "Jokowi",
+    "status" :"Presiden ke 7",
+    "review" :"pelayanan sangat bagus sekali",
+    "image" : "https://banggaikep.go.id/portal/wp-content/uploads/2024/03/jokowi-1.jpg"
+   },
+   {
+    "id" : 8,
+    "name" : "Prabowo Subianto",
+    "review" :"Gacor kangg",
+    "status" :"Presiden RI",
+    "image" : "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Prabowo_Subianto_2024_official_portrait.jpg/640px-Prabowo_Subianto_2024_official_portrait.jpg"
    }
       
 ]

@@ -279,13 +279,13 @@ const MainLayout = () => {
 
                {/* klik menu booking */}
                {bookingKhitan && (
-                  <div className=" border border-green-700 ">
+                  <div className=" border border-white shadow-xl ">
                      <div
                         ref={bookingKhitanRef}
                         className="fixed bottom-0 lg:bottom-3 right-0 lg:right-3 w-full lg:w-96  bg-white  lg:rounded-lg shadow-xl text-[12px] lg:text-base overflow-y-auto max-h-[80vh]"
                      >
-                        <div className="text-white bg-biru w-full px-3 py-3 lg:rounded-t-lg flex justify-between items-center">
-                           <p>Booking Perawatan Luka</p>
+                        <div className="text-white bg-orange-500 w-full px-3 py-3 lg:rounded-t-lg flex justify-between items-center">
+                           <p>Booking Layanan Khitan</p>
                            <button
                               className="px-5"
                               onClick={() => setIsBookingKhitan(false)}

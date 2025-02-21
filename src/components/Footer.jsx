@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { SoundcloudLogo } from '@phosphor-icons/react';
-import gsap from 'gsap';
+import { Link } from "react-router-dom";
+import gsap from "gsap";
 import ScrollTrigger from "gsap/all";
 import {
    FacebookLogo,
@@ -35,7 +36,7 @@ const Footer = () => {
    }, []);
 
    return (
-      <div className="w-full px-5 lg:px-36 py-20 lg:py-32 bg-zinc-900 text-gray-300  overflow-hidden  ">
+      <div className="w-full px-5 lg:px-36 py-20 lg:py-32 bg-zinc-900 text-gray-400  overflow-hidden  ">
          <div className=" flex flex-col lg:flex-row justify-between items-start gap-5 ">
             {/* 1 */}
             <div className=" lg:w-96 max-w-72">
@@ -71,9 +72,15 @@ const Footer = () => {
                   Useful Links
                </p>
                <div className="text-sm lg:text-lg flex flex-col justify-start items-start gap-5">
-                  <p>Home </p>
-                  <p>Tentang</p>
-                  <p>Kontak</p>
+                  <Link to={"/"}>
+                     <p>Home </p>
+                  </Link>
+                  <Link to={"/about"}>
+                     <p>Tentang </p>
+                  </Link>
+                  <Link to={"/contact"}>
+                     <p>Kontak </p>
+                  </Link>
                </div>
             </div>
 

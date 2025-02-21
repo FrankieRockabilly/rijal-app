@@ -35,7 +35,7 @@ const Home = () => {
          const width = window.innerWidth;
 
          if (width < 768) {
-            setSize(30); // Untuk tampilan mobile
+            setSize(20); // Untuk tampilan mobile
          } else if (width >= 768 && width < 1024) {
             setSize(35); // Untuk tampilan tablet
          } else {
@@ -235,32 +235,32 @@ const Home = () => {
 
                {/* layanan kami */}
                <div className="flex flex-wrap justify-center items-center gap-5 lg:gap-10 py-10 text-black">
-                  <div className="w-[10rem] lg:w-[12rem] h-44 lg:h-48 text-center rounded-lg flex flex-col justify-center items-center gap-2 shadow-md border p-3 hover:bg-gradient-to-r from-[#007c9d] to-green-300 cursor-pointer layanan">
-                     <LiaClipboardListSolid size={50} />
-                     <p>Booking Jadwal</p>
+                  <div className="w-[6rem] lg:w-[12rem] h-32 lg:h-48 text-center rounded-lg flex flex-col justify-center items-center gap-2 shadow-md border p-3 hover:bg-gradient-to-r from-[#007c9d] to-green-300 cursor-pointer layanan">
+                     <LiaClipboardListSolid size={size} />
+                     <p className="text-[12px] lg:text-base">Booking Jadwal</p>
                   </div>
-                  <div className="w-[10rem] lg:w-[12rem] h-44 lg:h-48 text-center rounded-lg flex flex-col justify-center items-center gap-2 shadow-md border p-3 hover:bg-gradient-to-r from-[#007c9d] to-green-300 cursor-pointer layanan">
-                     <MdMarkChatRead size={50} />
-                     <p>Konsultasi</p>
+                  <div className="w-[6rem] lg:w-[12rem] h-32 lg:h-48 text-center rounded-lg flex flex-col justify-center items-center gap-2 shadow-md border p-3 hover:bg-gradient-to-r from-[#007c9d] to-green-300 cursor-pointer layanan">
+                     <MdMarkChatRead size={size} />
+                     <p className="text-[12px] lg:text-base">Konsultasi</p>
                   </div>
-                  <div className="w-[10rem] lg:w-[12rem] h-44 lg:h-48 text-center rounded-lg flex flex-col justify-center items-center gap-2 shadow-md border p-3 hover:bg-gradient-to-r from-[#007c9d] to-green-300 cursor-pointer layanan">
-                     <RiHealthBookFill size={50} />
-                     <p>Check up</p>
+                  <div className="w-[6rem] lg:w-[12rem] h-32 lg:h-48 text-center rounded-lg flex flex-col justify-center items-center gap-2 shadow-md border p-3 hover:bg-gradient-to-r from-[#007c9d] to-green-300 cursor-pointer layanan">
+                     <RiHealthBookFill size={size} />
+                     <p className="text-[12px] lg:text-base">Check up</p>
                   </div>
-                  <div className="w-[10rem] lg:w-[12rem] h-44 lg:h-48 text-center rounded-lg flex flex-col justify-center items-center gap-2 shadow-md border p-3 hover:bg-gradient-to-r from-[#007c9d] to-green-300 cursor-pointer layanan">
-                     <RxScissors size={50} />
-                     <p>Layanan Khitan</p>
+                  <div className="w-[6rem] lg:w-[12rem] h-32 lg:h-48 text-center rounded-lg flex flex-col justify-center items-center gap-2 shadow-md border p-3 hover:bg-gradient-to-r from-[#007c9d] to-green-300 cursor-pointer layanan">
+                     <RxScissors size={size} />
+                     <p className="text-[12px] lg:text-base">Layanan Khitan</p>
                   </div>
-                  <div className="w-[10rem] lg:w-[12rem] h-44 lg:h-48 text-center rounded-lg flex flex-col justify-center items-center gap-2 shadow-md border p-3 hover:bg-gradient-to-r from-[#007c9d] to-green-300 cursor-pointer layanan">
-                     <GiMedicines size={50} />
-                     <p>Rawat Luka</p>
+                  <div className="w-[6rem] lg:w-[12rem] h-32 lg:h-48 text-center rounded-lg flex flex-col justify-center items-center gap-2 shadow-md border p-3 hover:bg-gradient-to-r from-[#007c9d] to-green-300 cursor-pointer layanan">
+                     <GiMedicines size={size} />
+                     <p className="text-[12px] lg:text-base">Rawat Luka</p>
                   </div>
                </div>
             </div>
          </div>
 
          {/* free shipping */}
-         <div className="flex flex-wrap justify-center items-center gap-2 lg:gap-5 py-10 lg:py-24 text-black ">
+         <div className="flex flex-wrap justify-center items-center gap-2 lg:gap-5 py-5 text-black ">
             {/* 1 */}
             <div className="flex justify-start items-center gap-2 lg:gap-8 w-[170px] lg:w-[20rem] speciality">
                <PiSyringe size={size} color="#2abbdf" weight="duotone" />

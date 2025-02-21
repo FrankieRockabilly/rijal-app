@@ -50,24 +50,24 @@ const Testimonial = () => {
                     className="flex justify-center items-center"
                  >
                     <div className="w-80 lg:w-full h-60 lg:h-[15rem]  flex flex-col justify-around items-start p-5 border rounded-2xl bg-white">
-                       <div className="h-24 flex flex-col justify-start w-full items-start overflow-hidden ">
-                          <div className="h-9 opacity-20">
+                       <div className="h-32 flex flex-col justify-start w-full items-start overflow-hidden relative">
+                          <div className="h-9 opacity-20 absolute top-0 left-0">
                              <Quotes size={76} color="#34bf8c" weight="fill" />
                           </div>
                           <p className="italic text-sm">"{review.review}"" </p>
                        </div>
                        <hr className="w-full border border-gray-300 " />
                        <div className="flex justify-start items-center gap-5">
-                          <div className="w-14 h-14 rounded-full overflow-hidden">
+                          <div className="w-10 h-10 rounded-full overflow-hidden bg-red-600">
                              <img
                                 src={review.image}
                                 alt=""
-                                className="object-cover"
+                                className="object-cover bg-center w-full h-full"
                              />
                           </div>
-                          <div>
-                             <h1 className="text-black">{review.name} </h1>
-                             <p>Pasien</p>
+                          <div className="text-black text-sm">
+                             <h1>{review.name} </h1>
+                             <p>{review.status} </p>
                           </div>
                        </div>
                     </div>

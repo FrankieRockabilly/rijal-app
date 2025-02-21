@@ -1,36 +1,40 @@
-import React from 'react'
+import React, { useEffect } from "react";
 import Line from "./Line";
 
 const About = () => {
+   useEffect(() => {
+      window.scrollTo(0, 0);
+   }, []);
+
    return (
       <>
          <div className="pb-10 pt-28 px-5 lg:px-40 text-black">
             <div className="flex flex-col justify-center items-center gap-6 py-10">
                <h1 className="text-center text-2xl lg:text-3xl font-bold ">
-                  Kontak Kami
+                  Tentang Saya
                </h1>
                <Line />
             </div>
             {/* min h screen */}
             <div className=" flex flex-col lg:flex-row justify-start items-start gap-10">
                {/* 1 */}
-               <div className="w-full lg:w-[40%] border border-red-500 rounded-lg">
+               <div className="w-full lg:w-[40%] h-[30rem] overflow-hidden rounded-lg">
                   <img
-                     src="https://demo.phlox.pro/shop-drugstore/wp-content/uploads/sites/256/2020/12/Lekaren_049-73642-2-protected-1.jpg"
+                     src="https://res.cloudinary.com/dplikeeby/image/upload/v1740124767/www_wgkiuq.jpg"
                      alt=""
-                     className="w-full h-auto"
+                     className="w-full h-auto object-cover"
                   />
                </div>
 
                {/* 2 */}
                <div className="w-full lg:w-[50%]">
-                  <div className="w-full lg:max-w-[60%] flex flex-col justify-start items-start gap-7">
+                  <div className="w-full flex flex-col justify-start items-start gap-7">
                      <p>Tentang Saya</p>
                      <h1 className="font-bold text-2xl xl:text-4xl">
                         We Are Providing Best Service Since 2001 to Pesent
                      </h1>
                      <hr className="border border-green-400 w-52" />
-                     <p className="text-sm lg:text-lg ">
+                     <p className="text-sm lg:text-base ">
                         Kami telah memberikan layanan perawatan kesehatan
                         terbaik sejak tahun 2001 hingga saat ini. Sebagai
                         penyedia layanan homecare profesional, kami fokus pada
@@ -152,4 +156,4 @@ const About = () => {
    );
 };
 
-export default About
+export default About;

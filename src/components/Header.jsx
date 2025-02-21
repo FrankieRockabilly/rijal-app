@@ -73,6 +73,9 @@ export const Header = () => {
                   <Link to={"/contact"}>
                      <li className="hover:text-biru">Kontak</li>
                   </Link>
+                  <Link to={"/gallery"}>
+                     <li className="hover:text-biru">Galeri</li>
+                  </Link>
                   <li className="px-3 py-2 bg-biru rounded-md text-white">
                      Buat Janji / Booking
                   </li>
@@ -124,6 +127,9 @@ export const Header = () => {
                </Link>
                <Link to={"/contact"}>
                   <p className="menu-item">Kontak</p>
+               </Link>
+               <Link to={"/gallery"}>
+                  <p className="menu-item">Galeri</p>
                </Link>
                <Link to={"/about"}>
                   <p className="menu-item">Booking Online</p>
