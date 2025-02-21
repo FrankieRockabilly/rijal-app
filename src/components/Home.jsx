@@ -54,6 +54,9 @@ const Home = () => {
          window.removeEventListener("resize", handleResize);
       };
    }, []);
+   useEffect(() => {
+      window.scrollTo(0, 0);
+   }, []);
 
    useEffect(() => {
       gsap.registerPlugin(ScrollTrigger);

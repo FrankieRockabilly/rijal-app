@@ -2,16 +2,25 @@ import React, { useState, useEffect, useRef } from "react";
 import { Outlet } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css"; // CSS untuk styling kalender
+import SuccessSubmitPerawatan from "../assets/modal/SuccessSubmitPerawatan";
 
 const MainLayout = () => {
    const [nameRawat, setNameRawat] = useState("");
    const [emailRawat, setEmailRawat] = useState("");
    const [alamatRawat, setAlamatRawat] = useState("");
    const [tanggalRawat, setTanggalRawat] = useState("");
+   const changeTanggalRawat = (date) => {
+      setTanggalRawat(date);
+   };
    const [hpRawat, setHpRawat] = useState("");
    const [pelayananRawat, setPelayananRawat] = useState("");
    const [gambarLuka, setGambarLuka] = useState("");
    const [deskripsi, setDeskripsi] = useState("");
+   const [successSubmitPerawatan, setSuccesSubmitPerawatan] = useState(false);
+
+   // booking kkhitan
    const [name, setName] = useState("");
    const [email, setEmail] = useState("");
    const [alamat, setAlamat] = useState("");
@@ -23,6 +32,8 @@ const MainLayout = () => {
 
    const bookingPerawatanRef = useRef(null);
    const bookingKhitanRef = useRef(null);
+
+   const [loading, setLoading] = useState(false);
    // booking perawatan
    const clickBookingPerawatan = () => {
       setIsBookingPerawatan((state) => !state);
@@ -36,7 +47,12 @@ const MainLayout = () => {
 
    const submitBookingPerawatan = (e) => {
       e.preventDefault();
-      alert("sukses dikirim");
+      setLoading(true);
+      setTimeout(() => {
+         setLoading(false);
+         setSuccesSubmitPerawatan(true);
+      }, 2000);
+      console.log("berhasil submit");
    };
 
    const submitBookingKhitan = (e) => {
@@ -68,21 +84,10 @@ const MainLayout = () => {
       };
    }, []);
 
-   // useEffect(() => {
-   //    if (bookingAppointment) {
-   //       document.body.classList.add("overflow-hidden");
-   //    } else {
-   //       document.body.classList.remove("overflow-hidden");
-   //    }
-
-   //    return () => {
-   //       document.body.classList.remove("overflow-hidden");
-   //    };
-   // }, [bookingAppointment]);
-
    return (
       <>
          <div className="w-full bg-warm font-poppins relative h-full overflow-hidden">
+            {successSubmitPerawatan && <SuccessSubmitPerawatan />}
             <div>
                <Header />
             </div>
@@ -222,7 +227,7 @@ const MainLayout = () => {
                                  <textarea
                                     type="text"
                                     className="outline-none px-3 py-3 rounded-lg w-full border focus:border-orange-500 bg-white"
-                                    placeholder="No Hp"
+                                    placeholder="Deskripsi Luka"
                                     value={deskripsi}
                                     onChange={(e) =>
                                        setDeskripsi(e.target.value)
@@ -232,15 +237,13 @@ const MainLayout = () => {
                               </div>
                               <div className="w-full">
                                  <label htmlFor="">Pilih Tanggal Layanan</label>
-                                 <input
-                                    type="date"
+                                 <DatePicker
+                                    id="tanggalLayanan"
+                                    selected={tanggalRawat} // Menampilkan tanggal yang dipilih
+                                    onChange={changeTanggalRawat} // Fungsi untuk menangani perubahan
+                                    dateFormat="yyyy-MM-dd" // Format tanggal yang ditampilkan
+                                    placeholderText="Pilih Tanggal Layanan"
                                     className="outline-none px-3 py-3 rounded-lg w-full border focus:border-orange-500 bg-white"
-                                    placeholder="Pilih Tanggal Layanan"
-                                    value={tanggal}
-                                    onChange={(e) =>
-                                       setTanggalRawat(e.target.value)
-                                    }
-                                    required
                                  />
                               </div>
                               <div className="flex justify-start items-center gap-2">
@@ -265,9 +268,15 @@ const MainLayout = () => {
                                  </button>
                                  <button
                                     type="submit"
-                                    className="px-5 py-3 rounded-md bg-biru text-white hover:bg-orange-700 "
+                                    className={`w-32 py-3 rounded-md bg-biru text-white hover:bg-orange-700 ${
+                                       loading ? "cursor-not-allowed" : ""
+                                    }`}
                                  >
-                                    Submit
+                                    {loading ? (
+                                       <span className="loading loading-spinner loading-xs"></span>
+                                    ) : (
+                                       "Submit"
+                                    )}
                                  </button>
                               </div>
                            </form>

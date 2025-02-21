@@ -1,37 +1,37 @@
 [
     {
         "id":1,
-        "gambar" : "https://cdn.britannica.com/78/43678-050-F4DC8D93/Starry-Night-canvas-Vincent-van-Gogh-New-1889.jpg?w=400&h=225&c=crop",
+        "gambar" : "https://res.cloudinary.com/dplikeeby/image/upload/v1740142759/luka1_lx59xo.jpg",
         "keterangan" : "sunat titid ges",
         "tanggal" :"12 november 2023"
     },
     {
         "id":2,
-        "gambar" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3_rGrUSCdhMUK0cCVeS0OQnmPUPVTzXOreQ&s",
+        "gambar" : "https://res.cloudinary.com/dplikeeby/image/upload/v1740142824/luka3_wrz3eb.jpg",
         "keterangan" : "sunat titid ges",
         "tanggal" :"12 november 2023"
     },
     {
         "id":3,
-        "gambar" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8rOpZ59A0gfIksDEmapzPedIttdVJ6dxzKg&s",
+        "gambar" : "https://res.cloudinary.com/dplikeeby/image/upload/v1740142824/luka2_qss3vi.jpg",
         "keterangan" : "sunat titid ges",
         "tanggal" :"12 november 2023"
     },
     {
         "id":4,
-        "gambar" : "https://cdn.britannica.com/78/43678-050-F4DC8D93/Starry-Night-canvas-Vincent-van-Gogh-New-1889.jpg?w=400&h=225&c=crop",
+        "gambar" : "https://res.cloudinary.com/dplikeeby/image/upload/v1740142827/luka4_ozvgzz.jpg",
         "keterangan" : "sunat titid ges",
         "tanggal" :"12 november 2023"
     },
     {
         "id":5,
-        "gambar" : "https://cdn.britannica.com/78/43678-050-F4DC8D93/Starry-Night-canvas-Vincent-van-Gogh-New-1889.jpg?w=400&h=225&c=crop",
+        "gambar" : "https://res.cloudinary.com/dplikeeby/image/upload/v1740142827/luka5_mnyfwd.jpg",
         "keterangan" : "sunat titid ges",
         "tanggal" :"12 november 2023"
     },
     {
         "id":6,
-        "gambar" : "https://cdn.britannica.com/78/43678-050-F4DC8D93/Starry-Night-canvas-Vincent-van-Gogh-New-1889.jpg?w=400&h=225&c=crop",
+        "gambar" : "https://res.cloudinary.com/dplikeeby/image/upload/v1739505009/rjl_dhznpo.png",
         "keterangan" : "sunat titid ges",
         "tanggal" :"12 november 2023"
     },

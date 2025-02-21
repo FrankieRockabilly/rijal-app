@@ -49,26 +49,32 @@ const About = () => {
                   <div className="flex flex-col lg:flex-row justify-start items-start gap-5 w-full mt-5">
                      <div className="">
                         <h2 className="text-base lg:text-2xl font-bold">
-                           Penanganan Cepat
+                           Layanan Responsif
                         </h2>
                         <p className="text-[12px] lg:text-base ">
-                           Meaningful adventre in which we become
+                           Kami memastikan setiap kebutuhan medis Anda ditangani
+                           dengan responsif, memberikan perhatian yang cepat dan
+                           tepat di kenyamanan rumah Anda
                         </p>
                      </div>
                      <div>
                         <h2 className="text-base lg:text-2xl font-bold">
-                           Penanganan Cepat
+                           Perawatan Tanngap
                         </h2>
                         <p className="text-[12px] lg:text-base ">
-                           Meaningful adventre in which we become
+                           Tim kami siap memberikan perawatan tanggap setiap
+                           saat, memberikan dukungan medis yang cepat dan
+                           terpercaya di rumah Anda
                         </p>
                      </div>
                      <div>
                         <h2 className="text-base lg:text-2xl font-bold">
-                           Penanganan Cepat
+                           Segera dan Profesional
                         </h2>
                         <p className="text-[12px] lg:text-base ">
-                           Meaningful adventre in which we become
+                           Kami selalu siap memberikan tindakan segera dengan
+                           pendekatan profesional untuk setiap kebutuhan medis
+                           di rumah Anda
                         </p>
                      </div>
                   </div>
