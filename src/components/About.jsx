@@ -14,16 +14,16 @@ const About = () => {
             {/* min h screen */}
             <div className=" flex flex-col lg:flex-row justify-start items-start gap-10">
                {/* 1 */}
-               <div className="w-full lg:w-[40%] border rounded-lg">
+               <div className="w-full lg:w-[40%] border border-red-500 rounded-lg">
                   <img
                      src="https://demo.phlox.pro/shop-drugstore/wp-content/uploads/sites/256/2020/12/Lekaren_049-73642-2-protected-1.jpg"
                      alt=""
-                     className="w-full"
+                     className="w-full h-auto"
                   />
                </div>
 
                {/* 2 */}
-               <div className=" grow">
+               <div className="w-full lg:w-[50%]">
                   <div className="w-full lg:max-w-[60%] flex flex-col justify-start items-start gap-7">
                      <p>Tentang Saya</p>
                      <h1 className="font-bold text-2xl xl:text-4xl">
@@ -31,9 +31,15 @@ const About = () => {
                      </h1>
                      <hr className="border border-green-400 w-52" />
                      <p className="text-sm lg:text-lg ">
-                        We are idea generators, goal seekers, challenge- thirsty
-                        proffesional, creators og uniquwInternet Projects,. We
-                        deliver unconventional solutions
+                        Kami telah memberikan layanan perawatan kesehatan
+                        terbaik sejak tahun 2001 hingga saat ini. Sebagai
+                        penyedia layanan homecare profesional, kami fokus pada
+                        perawatan medis di rumah yang aman dan nyaman. Dengan
+                        komitmen untuk memberikan layanan yang cepat, responsif,
+                        dan penuh perhatian, kami memastikan setiap pasien
+                        mendapatkan perhatian terbaik di rumah mereka. Kami
+                        hadir untuk membantu Anda dan keluarga dengan solusi
+                        perawatan kesehatan yang praktis dan efekti
                      </p>
                   </div>
                   <div className="flex flex-col lg:flex-row justify-start items-start gap-5 w-full mt-5">

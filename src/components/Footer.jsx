@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { SoundcloudLogo } from '@phosphor-icons/react';
 import gsap from 'gsap';
-import ScrollTrigger from 'gsap/src/ScrollTrigger';
+import ScrollTrigger from "gsap/all";
 import {
    FacebookLogo,
    WhatsappLogo,
@@ -35,14 +35,16 @@ const Footer = () => {
    }, []);
 
    return (
-      <div className="w-full px-5 lg:px-36 py-20 lg:py-32 bg-zinc-900 text-white  overflow-hidden  ">
-         <div className=" flex flex-col lg:flex-row justify-between items-start gap-5 footer">
+      <div className="w-full px-5 lg:px-36 py-20 lg:py-32 bg-zinc-900 text-gray-300  overflow-hidden  ">
+         <div className=" flex flex-col lg:flex-row justify-between items-start gap-5 ">
             {/* 1 */}
             <div className=" lg:w-96 max-w-72">
                <SoundcloudLogo size={80} color="#2abbdf" weight="duotone" />
-               <p>
-                  Rijal medic melayani perawatan orang orang gila, jadi kalo
-                  anda merasa gila silahkan berobat kesini{" "}
+               <p className="text-sm lg:text-base">
+                  <span className="font-semibold">Rijal Homecare </span>melayani
+                  kebutuhan perawatan kesehatan di rumah dengan layanan
+                  profesional dan terpercaya. Kami menyediakan layanan khitan
+                  dan pemeriksaan luka di rumah.
                </p>
 
                <div className="flex justify-end items-end gap-5 w-full py-5">
@@ -76,7 +78,7 @@ const Footer = () => {
             </div>
 
             <div className=" lg:w-96">
-               <p className="font-bold text-xl lg:text-2xl mb-2 lg:mb-5 text-biru">
+               <p className="font-bold text-xl lg:text-2xl mb-2 lg:mb-5 pb-5 border-b-2 border-white text-biru">
                   Kontak
                </p>
                <div className="text-sm lg:text-lg flex flex-col justify-start items-start gap-5">

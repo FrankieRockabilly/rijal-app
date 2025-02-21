@@ -1,26 +1,43 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Outlet } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
 
 const MainLayout = () => {
+   const [nameRawat, setNameRawat] = useState("");
+   const [emailRawat, setEmailRawat] = useState("");
+   const [alamatRawat, setAlamatRawat] = useState("");
+   const [tanggalRawat, setTanggalRawat] = useState("");
+   const [hpRawat, setHpRawat] = useState("");
+   const [pelayananRawat, setPelayananRawat] = useState("");
+   const [gambarLuka, setGambarLuka] = useState("");
+   const [deskripsi, setDeskripsi] = useState("");
    const [name, setName] = useState("");
    const [email, setEmail] = useState("");
    const [alamat, setAlamat] = useState("");
    const [tanggal, setTanggal] = useState("");
    const [hp, setHp] = useState("");
-   const [pelayanan, setPelayana] = useState("");
-   const [bookingAppointment, setIsBookingAppointment] = useState(false);
+   const [pelayanan, setPelayanan] = useState("");
+   const [bookingPerawatan, setIsBookingPerawatan] = useState(false);
+   const [bookingKhitan, setIsBookingKhitan] = useState(false);
 
-   const clickBookingAppointment = () => {
-      setIsBookingAppointment((prevState) => !prevState);
+   // booking perawatan
+   const clickBookingPerawatan = () => {
+      setIsBookingPerawatan((state) => !state);
+      console.log(bookingPerawatan);
    };
 
-   const closeBookingAppointment = () => {
-      setIsBookingAppointment(false);
+   // booking khitan
+   const clickBookingKhitan = () => {
+      setIsBookingKhitan((prevState) => !prevState);
    };
 
-   const submitBookingAppointment = (e) => {
+   const submitBookingPerawatan = (e) => {
+      e.preventDefault();
+      alert("sukses dikirim");
+   };
+
+   const submitBookingKhitan = (e) => {
       e.preventDefault();
       alert(`telah dikirim : ${pelayanan}`);
    };
@@ -51,27 +68,192 @@ const MainLayout = () => {
 
             {/* whatsapp */}
             <div className="flex lg:flex-col justify-center items-center gap-0 w-full lg:w-auto lg:gap-5 fixed bottom-0 lg:bottom-5 right-0 lg:right-5 z-20 ">
-               <p className="w-full lg:w-64 text-center text-[12px] lg:text-base bg-biru text-white px-3 py-4 lg:rounded-md shadow-lg cursor-pointer hover:text-black transition-all">
+               <button
+                  className="w-full lg:w-64 text-center text-[12px] lg:text-base bg-biru text-white px-3 py-4 lg:rounded-md shadow-lg hover:text-black transition-all"
+                  onClick={clickBookingPerawatan}
+               >
                   Booking Jadwal Perawatan
-               </p>
-               <p
-                  className="w-full lg:w-64 text-center text-[12px] lg:text-base bg-orange-500 text-white px-3 py-4 lg:rounded-md shadow-lg cursor-pointer hover:text-black transition-all"
-                  onClick={clickBookingAppointment}
+               </button>
+               <button
+                  className="w-full lg:w-64 text-center text-[12px] lg:text-base bg-orange-500 text-white px-3 py-4 lg:rounded-md shadow-lg hover:text-black transition-all"
+                  onClick={clickBookingKhitan}
                >
                   Booking Jadwal Khitan
-               </p>
-               {/* klik menu booking */}
-               {bookingAppointment && (
+               </button>
+
+               {/* booking perawatan */}
+               {bookingPerawatan && (
                   <div className=" border border-green-700 ">
-                     <div className="fixed bottom-0 lg:bottom-3 right-0 lg:right-3 w-full lg:w-96  bg-white  lg:rounded-lg shadow-xl text-[12px] lg:text-base">
-                        <p className="text-white bg-orange-500 w-full px-3 py-3 lg:rounded-t-lg">
-                           Booking Pelayanan
+                     <div className="fixed bottom-0 lg:bottom-3 right-0 lg:right-3 w-full lg:w-96  bg-white  lg:rounded-lg shadow-xl text-[12px] lg:text-base overflow-y-auto max-h-[80vh]">
+                        <p className="text-white bg-biru w-full px-3 py-3 lg:rounded-t-lg">
+                           Booking Perawatan
                         </p>
                         <div className="px-3 py-3 text-gray-600 flex flex-col justify-start items-start gap-5">
                            <p>Please Input this field below</p>
                            <form
                               className="flex flex-col justify-start items-start gap-3 w-full"
-                              onSubmit={submitBookingAppointment}
+                              onSubmit={submitBookingPerawatan}
+                           >
+                              <div className="w-full">
+                                 <label htmlFor="">Masukkan Nama Lengkap</label>
+                                 <input
+                                    type="text"
+                                    className="outline-none px-3 py-3 rounded-lg w-full border focus:border-orange-500 bg-white"
+                                    placeholder="Nama Lengkap"
+                                    value={nameRawat}
+                                    onChange={(e) =>
+                                       setNameRawat(e.target.value)
+                                    }
+                                    required
+                                 />
+                              </div>
+                              <div className="w-full">
+                                 <label htmlFor="">Masukan Email</label>
+                                 <input
+                                    type="email"
+                                    className="outline-none px-3 py-3 rounded-lg w-full border focus:border-orange-500 bg-white"
+                                    placeholder="Email"
+                                    value={emailRawat}
+                                    onChange={(e) =>
+                                       setEmailRawat(e.target.value)
+                                    }
+                                    required
+                                 />
+                              </div>
+                              <div className="w-full">
+                                 <label htmlFor="">Masukkan Alamat</label>
+                                 <input
+                                    type="text"
+                                    className="outline-none px-3 py-3 rounded-lg w-full border focus:border-orange-500 bg-white"
+                                    placeholder="Alamat"
+                                    value={alamatRawat}
+                                    onChange={(e) =>
+                                       setAlamatRawat(e.target.value)
+                                    }
+                                    required
+                                 />
+                              </div>
+                              <div className="w-full">
+                                 <label htmlFor="">Masukkan No Hp AKtif</label>
+                                 <input
+                                    type="text"
+                                    className="outline-none px-3 py-3 rounded-lg w-full border focus:border-orange-500 bg-white"
+                                    placeholder="No Hp"
+                                    value={hpRawat}
+                                    onChange={(e) => setHpRawat(e.target.value)}
+                                    required
+                                 />
+                              </div>
+
+                              <div className="w-full">
+                                 <label>Pilih Layanan</label>
+                                 <select
+                                    className="outline-none px-3 py-3 rounded-lg w-full border border-gray-300 focus:border-orange-500 bg-white"
+                                    required
+                                    value={pelayananRawat}
+                                    onChange={(e) =>
+                                       setPelayananRawat(e.target.value)
+                                    }
+                                 >
+                                    <option value="" disabled selected>
+                                       Pilih Pelayanan
+                                    </option>
+                                    <option value="konsultasi">
+                                       Konsultasi
+                                    </option>
+                                    <option value="khitan">
+                                       Layanan Khitan
+                                    </option>
+                                    <option value="perawatanLuka">
+                                       Pemeriksaan Luka
+                                    </option>
+                                 </select>
+                              </div>
+                              <div className="w-full">
+                                 <label htmlFor="">Upload gambar luka</label>
+                                 <input
+                                    type="file"
+                                    className="outline-none px-3 py-3 rounded-lg w-full border focus:border-orange-500 bg-white"
+                                    placeholder="No Hp"
+                                    value={gambarLuka}
+                                    onChange={(e) =>
+                                       setGambarLuka(e.target.value)
+                                    }
+                                    required
+                                 />
+                              </div>
+                              <div className="w-full">
+                                 <label htmlFor="">Deskripsi Luka</label>
+                                 <textarea
+                                    type="text"
+                                    className="outline-none px-3 py-3 rounded-lg w-full border focus:border-orange-500 bg-white"
+                                    placeholder="No Hp"
+                                    value={deskripsi}
+                                    onChange={(e) =>
+                                       setDeskripsi(e.target.value)
+                                    }
+                                    required
+                                 />
+                              </div>
+                              <div className="w-full">
+                                 <label htmlFor="">Pilih Tanggal Layanan</label>
+                                 <input
+                                    type="date"
+                                    className="outline-none px-3 py-3 rounded-lg w-full border focus:border-orange-500 bg-white"
+                                    placeholder="Pilih Tanggal Layanan"
+                                    value={tanggal}
+                                    onChange={(e) =>
+                                       setTanggalRawat(e.target.value)
+                                    }
+                                    required
+                                 />
+                              </div>
+                              <div className="flex justify-start items-center gap-2">
+                                 <input
+                                    type="checkbox"
+                                    className="checkbox bg-white w-6 h-6"
+                                    required
+                                 />
+                                 <p>
+                                    I Agree{" "}
+                                    <span className="text-biru">
+                                       To The Terms & Conditions
+                                    </span>
+                                 </p>
+                              </div>
+                              <div className="flex justify-end items-center gap-5 w-full">
+                                 <button
+                                    className="px-5 py-3 rounded-md bg-zinc-500 text-white hover:bg-zinc-700 "
+                                    onClick={() => setIsBookingPerawatan(false)}
+                                 >
+                                    Close
+                                 </button>
+                                 <button
+                                    type="submit"
+                                    className="px-5 py-3 rounded-md bg-biru text-white hover:bg-orange-700 "
+                                 >
+                                    Submit
+                                 </button>
+                              </div>
+                           </form>
+                           {/* end form */}
+                        </div>
+                     </div>
+                  </div>
+               )}
+
+               {/* klik menu booking */}
+               {bookingKhitan && (
+                  <div className=" border border-green-700 ">
+                     <div className="fixed bottom-0 lg:bottom-3 right-0 lg:right-3 w-full lg:w-96  bg-white  lg:rounded-lg shadow-xl text-[12px] lg:text-base overflow-y-auto max-h-[80vh]">
+                        <p className="text-white bg-orange-500 w-full px-3 py-3 lg:rounded-t-lg">
+                           Booking Layanan Khitan
+                        </p>
+                        <div className="px-3 py-3 text-gray-600 flex flex-col justify-start items-start gap-5">
+                           <p>Please Input this field below</p>
+                           <form
+                              className="flex flex-col justify-start items-start gap-3 w-full"
+                              onSubmit={submitBookingKhitan}
                            >
                               <div className="w-full">
                                  <label htmlFor="">Masukkan Nama Lengkap</label>
@@ -125,7 +307,7 @@ const MainLayout = () => {
                                     required
                                     value={pelayanan}
                                     onChange={(e) =>
-                                       setPelayana(e.target.value)
+                                       setPelayanan(e.target.value)
                                     }
                                  >
                                     <option value="" disabled selected>
@@ -169,7 +351,7 @@ const MainLayout = () => {
                               <div className="flex justify-end items-center gap-5 w-full">
                                  <button
                                     className="px-5 py-3 rounded-md bg-zinc-500 text-white hover:bg-zinc-700 "
-                                    onClick={closeBookingAppointment}
+                                    onClick={() => setIsBookingKhitan(false)}
                                  >
                                     Close
                                  </button>
