@@ -120,8 +120,10 @@ const About = () => {
 
                   {/* flex */}
                   <div className="flex flex-wrap justify-center items-center gap-5 w-screen px-5 lg:px-20">
-                     {displayedBerita?.map((value, index) => {
-                        return (
+                     {displayedBerita == null ? (
+                        <p className="text-gray-500">Isi berita Kosong guys</p>
+                     ) : (
+                        displayedBerita?.map((value, index) => (
                            <div
                               className="p-2 rounded-lg w-[22rem] h-80 border shadow-lg flex flex-col"
                               key={index}
@@ -130,30 +132,34 @@ const About = () => {
                                  <img src={value.urlToImage} alt="" />
                               </div>
                               <div className="grow text-black font-light flex flex-col justify-start items-start h-32 overflow-hidden">
-                                 <h3
-                                    className="text-base
-                                 "
-                                 >
-                                    {value.title}
-                                 </h3>
+                                 <h3 className="text-base">{value.title}</h3>
                                  <p className="truncate break-words">
                                     {value.description}
                                  </p>
                                  <button className="py-2 px-5 bg-biru rounded-md text-white">
-                                    <a href={value.url} target="blank">
+                                    <a
+                                       href={value.url}
+                                       target="_blank"
+                                       rel="noopener noreferrer"
+                                    >
                                        See News
                                     </a>
                                  </button>
                               </div>
                            </div>
-                        );
-                     })}
-                     <button
-                        className="py-2 px-5 text-white bg-orange-500 rounded-md"
-                        onClick={handleClickSeeMore}
-                     >
-                        {clickSeeMore ? "Kecilkan" : "Lihat Lebih"}
-                     </button>
+                        ))
+                     )}
+
+                     {displayedBerita == null ? (
+                        ""
+                     ) : (
+                        <button
+                           className="py-2 px-5 text-white bg-orange-500 rounded-md"
+                           onClick={handleClickSeeMore}
+                        >
+                           {clickSeeMore ? "Kecilkan" : "Lihat Lebih"}
+                        </button>
+                     )}
                   </div>
                </div>
             </div>

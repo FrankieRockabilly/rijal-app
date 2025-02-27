@@ -3,76 +3,131 @@ import styled from 'styled-components';
 
 const Loading = () => {
   return (
-    <StyledWrapper>
-      <div className="spinner" />
-    </StyledWrapper>
+     <StyledWrapper>
+        <div className="loader">
+           <span className="l">L</span>
+           <span className="o">o</span>
+           <span className="a">a</span>
+           <span className="d">d</span>
+           <span className="i">i</span>
+           <span className="n">n</span>
+           <span className="g">g</span>
+           <span className="d1">.</span>
+           <span className="d2">.</span>
+        </div>
+     </StyledWrapper>
   );
 }
 
 const StyledWrapper = styled.div`
-  .spinner {
-   --size: 30px;
-   --first-block-clr: #0bc6a2;
-   --second-block-clr: #fb923c;
-   --clr: #111;
-   width: 100px;
-   height: 100px;
-   position: relative;
-  }
-
-  .spinner::after,.spinner::before {
-   box-sizing: border-box;
-   position: absolute;
-   content: "";
-   width: var(--size);
-   height: var(--size);
-   top: 50%;
-   animation: up 2.4s cubic-bezier(0, 0, 0.24, 1.21) infinite;
-   left: 50%;
-   background: var(--first-block-clr);
-  }
-
-  .spinner::after {
-   background: var(--second-block-clr);
-   top: calc(50% - var(--size));
-   left: calc(50% - var(--size));
-   animation: down 2.4s cubic-bezier(0, 0, 0.24, 1.21) infinite;
-  }
-
-  @keyframes down {
-   0%, 100% {
-    transform: none;
+   .l {
+      color: black;
+      opacity: 0;
+      animation: pass 2s ease-in-out infinite;
+      animation-delay: 0.2s;
+      letter-spacing: 0.5em;
+      text-shadow: 2px 2px 3px #919191;
    }
 
-   25% {
-    transform: translateX(100%);
+   .o {
+      color: black;
+      opacity: 0;
+      animation: pass 2s ease-in-out infinite;
+      animation-delay: 0.4s;
+      letter-spacing: 0.5em;
+      text-shadow: 2px 2px 3px #919191;
    }
 
-   50% {
-    transform: translateX(100%) translateY(100%);
+   .a {
+      color: black;
+      opacity: 0;
+      animation: pass 2s ease-in-out infinite;
+      animation-delay: 0.6s;
+      letter-spacing: 0.5em;
+      text-shadow: 2px 2px 3px #919191;
    }
 
-   75% {
-    transform: translateY(100%);
-   }
-  }
-
-  @keyframes up {
-   0%, 100% {
-    transform: none;
-   }
-
-   25% {
-    transform: translateX(-100%);
+   .d {
+      color: black;
+      opacity: 0;
+      animation: pass 2s ease-in-out infinite;
+      animation-delay: 0.8s;
+      letter-spacing: 0.5em;
+      text-shadow: 2px 2px 3px #919191;
    }
 
-   50% {
-    transform: translateX(-100%) translateY(-100%);
+   .i {
+      color: black;
+      opacity: 0;
+      animation: pass 2s ease-in-out infinite;
+      animation-delay: 1s;
+      letter-spacing: 0.5em;
+      text-shadow: 2px 2px 3px #919191;
    }
 
-   75% {
-    transform: translateY(-100%);
+   .n {
+      color: black;
+      opacity: 0;
+      animation: pass 2s ease-in-out infinite;
+      animation-delay: 1.2s;
+      letter-spacing: 0.5em;
+      text-shadow: 2px 2px 3px #919191;
    }
-  }`;
+
+   .g {
+      color: black;
+      opacity: 0;
+      animation: pass 2s ease-in-out infinite;
+      animation-delay: 1.4s;
+      letter-spacing: 0.5em;
+      text-shadow: 2px 2px 3px #919191;
+   }
+
+   .d1 {
+      color: black;
+      opacity: 0;
+      animation: pass1 2s ease-in-out infinite;
+      animation-delay: 1.6s;
+      letter-spacing: 0.5em;
+      text-shadow: 2px 2px 3px #919191;
+   }
+
+   .d2 {
+      color: black;
+      opacity: 0;
+      animation: pass1 2s ease-in-out infinite;
+      animation-delay: 2s;
+      letter-spacing: 0.5em;
+      text-shadow: 2px 2px 3px #919191;
+   }
+
+   @keyframes pass {
+      0% {
+         opacity: 1;
+      }
+
+      50% {
+         opacity: 0;
+      }
+
+      100% {
+         opacity: 1;
+      }
+   }
+
+   @keyframes pass1 {
+      0% {
+         opacity: 1;
+      }
+
+      50% {
+         opacity: 0;
+      }
+
+      100% {
+         opacity: 1;
+      }
+   }
+`;
 
 export default Loading;

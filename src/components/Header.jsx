@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { IoIosSearch, IoMdMail } from "react-icons/io";
 import { FaPhoneAlt } from "react-icons/fa";
 import { VscListSelection } from "react-icons/vsc";
@@ -64,18 +64,39 @@ export const Header = () => {
             {/* menu yang muncul ketika ukuran layar lg */}
             <div className="hidden xl:flex justify-end items-center gap-8">
                <ul className="flex justify-start items-center gap-10 cursor-pointer text-gray-700">
-                  <Link to={"/"}>
-                     <li className="hover:text-biru">Home</li>
-                  </Link>
-                  <Link to={"/about"}>
-                     <li className="hover:text-biru">Tentang</li>
-                  </Link>
-                  <Link to={"/contact"}>
-                     <li className="hover:text-biru">Kontak</li>
-                  </Link>
-                  <Link to={"/gallery"}>
-                     <li className="hover:text-biru">Galeri</li>
-                  </Link>
+                  <NavLink
+                     to="/"
+                     className={({ isActive }) =>
+                        isActive ? "text-blue-500" : "hover:text-blue-500"
+                     }
+                  >
+                     <li>Home</li>
+                  </NavLink>
+                  <NavLink
+                     to={"/about"}
+                     className={({ isActive }) =>
+                        isActive ? "text-biru" : "hover:text-biru"
+                     }
+                  >
+                     <li>Tentang</li>
+                  </NavLink>
+                  <NavLink
+                     to={"/contact"}
+                     className={({ isActive }) =>
+                        isActive ? "text-biru" : "hover:text-biru"
+                     }
+                  >
+                     <li>Kontak</li>
+                  </NavLink>
+                  <NavLink
+                     to={"/gallery"}
+                     className={({ isActive }) =>
+                        isActive ? "text-biru" : "hover:text-biru"
+                     }
+                  >
+                     <li>Galeri</li>
+                  </NavLink>
+
                   <li className="px-3 py-2 bg-biru rounded-md text-white">
                      Buat Janji / Booking
                   </li>

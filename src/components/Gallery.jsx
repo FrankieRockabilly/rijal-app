@@ -69,7 +69,7 @@ const Gallery = () => {
                      <img
                         src={selectedImage}
                         alt="Selected"
-                        className="w-[30rem] h-[25rem] object-cover border border-red-700 "
+                        className="w-[30rem] h-[25rem] object-cover "
                      />
                      <button
                         className="absolute top-4 right-4 text-white font-bold text-xl"

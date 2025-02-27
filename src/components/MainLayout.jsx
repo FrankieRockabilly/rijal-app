@@ -5,14 +5,14 @@ import Footer from "./Footer";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css"; // CSS untuk styling kalender
 import SuccessSubmitPerawatan from "../assets/modal/SuccessSubmitPerawatan";
-// import Loading from "./Loading";
+import Loading from "./Loading";
 
 const MainLayout = () => {
    const [loadingHalamanAwal, setLoadingHalamanAwal] = useState(true);
    useEffect(() => {
       const timer = setTimeout(() => {
          setLoadingHalamanAwal(false);
-      }, 2000);
+      }, 3000);
 
       return () => clearTimeout(timer);
    });
@@ -98,7 +98,7 @@ const MainLayout = () => {
       <>
          {loadingHalamanAwal ? (
             <div className="h-screen flex justify-center items-center bg-zinc-100 ">
-               <p>Loading...</p>
+               <Loading />
             </div>
          ) : (
             <div className="w-full bg-warm font-poppins relative h-full overflow-hidden">

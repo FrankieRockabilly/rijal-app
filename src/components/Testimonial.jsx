@@ -54,7 +54,7 @@ const Testimonial = () => {
                            <div className="h-9 opacity-20 absolute top-0 left-0">
                               <Quotes size={76} color="#34bf8c" weight="fill" />
                            </div>
-                           <p className="italic text-sm">"{review.review}"" </p>
+                           <p className="italic text-sm">"{review.review}" </p>
                         </div>
                         <hr className="w-full border border-gray-300 " />
                         <div className="flex justify-start items-center gap-5">
