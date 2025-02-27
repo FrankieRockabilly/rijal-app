@@ -59,17 +59,17 @@ const Gallery = () => {
             {/* Modal */}
             {isModalOpen && (
                <div
-                  className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center backdrop-blur-sm"
+                  className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center backdrop-blur-sm "
                   onClick={closeModal} // Menutup modal saat klik di luar gambar
                >
                   <div
-                     className="bg-white p-4"
+                     className="bg-white p-4  flex justify-center items-center"
                      onClick={(e) => e.stopPropagation()} // Mencegah modal tertutup saat klik gambar
                   >
                      <img
                         src={selectedImage}
                         alt="Selected"
-                        className="w-full h-full lg:w-[60rem] lg:h-[40rem]  object-contain"
+                        className="w-[30rem] h-[25rem] object-cover border border-red-700 "
                      />
                      <button
                         className="absolute top-4 right-4 text-white font-bold text-xl"

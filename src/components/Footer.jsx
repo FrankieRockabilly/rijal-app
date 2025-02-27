@@ -128,7 +128,7 @@ const Footer = () => {
             </div>
          </div>
          <div className="bg-zinc-900 py-5">
-            <p className="text-center text-gray-400 text-sm">
+            <p className="text-center text-gray-400 text-sm pb-10 lg:pb-0">
                © Copyright 2025 Ns.M Rijal Isdianto, S. Kep
             </p>
          </div>
