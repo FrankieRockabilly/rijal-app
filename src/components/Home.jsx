@@ -20,7 +20,6 @@ import {
 } from "react-icons/fa";
 import rijal from "../assets/Image/rijall.png";
 import excitedPerson from "../assets/Image/omg2.png";
-import Footer from "./Footer";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/src/ScrollTrigger";
 import Testimonial from "./Testimonial";
@@ -183,7 +182,7 @@ const Home = () => {
                {/* hero section */}
                <div className="border py-52 h-[20rem] lg:h-[55rem] w-full bg-gradient-to-r from-[#007c9d] to-white text-black flex justify-start items-center overflow-hidden relative">
                   <div className="absolute top-[3%] lg:top-[10%] translate-y-1/2 right-14 lg:right-[35%] z-10 ">
-                     <h1 className="font-extrabold text-5xl lg:text-[10rem]  opacity-10">
+                     <h1 className="font-extrabold text-5xl lg:text-[10rem] tracking-tighter opacity-10">
                         HOME CARE
                      </h1>
                   </div>
@@ -265,52 +264,52 @@ const Home = () => {
          {/* free shipping */}
          <div className="flex flex-wrap justify-center items-center gap-2 lg:gap-5 py-5 text-black ">
             {/* 1 */}
-            <div className="flex justify-start items-center gap-2 lg:gap-8 w-[170px] lg:w-[20rem] speciality">
+            <div className="flex justify-start lg:justify-center items-center gap-3 w-[170px] lg:w-[20rem] speciality">
                <PiSyringe size={size} color="#2abbdf" weight="duotone" />
                <div>
-                  <p className="font-semibold text-sm lg:text-2xl">
+                  <p className="font-semibold text-sm lg:text-xl ">
                      Tanpa Suntik
                   </p>
-                  <p className="text-[12px] lg:text-lg text-gray-500">
+                  <p className="text-[12px] lg:text-sm text-gray-400">
                      All card Accepted
                   </p>
                </div>
             </div>
 
             {/* 2 */}
-            <div className="flex justify-start items-center gap-2 lg:gap-8 w-[170px] lg:w-[20rem] speciality">
+            <div className="flex justify-start lg:justify-center items-center gap-3 w-[170px] lg:w-[20rem] speciality">
                <PiHeadsetThin size={size} color="#2abbdf" weight="duotone" />
                <div>
-                  <p className="font-semibold text-sm lg:text-2xl">
+                  <p className="font-semibold text-sm lg:text-xl">
                      Online Support
                   </p>
-                  <p className="text-[12px] lg:text-lg text-gray-500">
+                  <p className="text-[12px] lg:text-sm text-gray-400">
                      Melayani 24 jam
                   </p>
                </div>
             </div>
 
             {/* 3 */}
-            <div className="flex justify-start items-center gap-2 lg:gap-8 w-[170px] lg:w-[20rem] speciality">
+            <div className="flex justify-start lg:justify-center items-center gap-3 w-[170px] lg:w-[20rem] speciality">
                <PiStethoscopeThin
                   size={size}
                   color="#2abbdf"
                   weight="duotone"
                />
                <div>
-                  <p className="font-semibold text-sm lg:text-2xl">Maksimal</p>
-                  <p className="text-[12px] lg:text-lg text-gray-500">
+                  <p className="font-semibold text-sm lg:text-xl ">Maksimal</p>
+                  <p className="text-[12px] lg:text-sm text-gray-400">
                      Melayani dengan Hati
                   </p>
                </div>
             </div>
 
             {/* 3 */}
-            <div className="flex justify-start items-center gap-2 lg:gap-8 w-[170px] lg:w-[20rem] speciality">
+            <div className="flex justify-start lg:justify-center items-center gap-3 w-[170px] lg:w-[20rem] speciality">
                <CiTimer size={size} color="#2abbdf" weight="duotone" />
                <div>
-                  <p className="font-semibold text-sm lg:text-2xl">Responsif</p>
-                  <p className="text-[12px] lg:text-lg text-gray-500">
+                  <p className="font-semibold text-sm lg:text-xl">Responsif</p>
+                  <p className="text-[12px] lg:text-sm text-gray-400">
                      Penanganan Cepat
                   </p>
                </div>
