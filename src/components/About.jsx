@@ -14,8 +14,9 @@ const About = () => {
    const getBerita = async () => {
       try {
          const response = await axios.get(
-            "https://newsapi.org/v2/everything?q=kesehatan&language=id&apiKey=87fd0ed171264ebf8791cdd68daad984"
+            "https://cors-anywhere.herokuapp.com/https://newsapi.org/v2/everything?q=kesehatan&language=id&apiKey=87fd0ed171264ebf8791cdd68daad984"
          );
+          
          console.log(response.data.articles);
          setDataBerita(response.data.articles);
          setSeeMoreBerita(response.data.articles.slice(0, 10));
