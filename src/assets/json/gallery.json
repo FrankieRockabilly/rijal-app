@@ -3,66 +3,63 @@
         "id":1,
         "gambar" : "https://res.cloudinary.com/dplikeeby/image/upload/v1740142759/luka1_lx59xo.jpg",
         "keterangan" : "sunat titid ges",
-        "tanggal" :"12 november 2023"
+        "tanggal" :"12 november 2023",
+        "kategori" : "luka"
     },
     {
         "id":2,
         "gambar" : "https://res.cloudinary.com/dplikeeby/image/upload/v1740142824/luka3_wrz3eb.jpg",
         "keterangan" : "sunat titid ges",
-        "tanggal" :"12 november 2023"
+        "tanggal" :"12 november 2023",
+        "kategori" : "luka"
     },
     {
         "id":3,
         "gambar" : "https://res.cloudinary.com/dplikeeby/image/upload/v1740142824/luka2_qss3vi.jpg",
         "keterangan" : "sunat titid ges",
-        "tanggal" :"12 november 2023"
+        "tanggal" :"12 november 2023",
+        "kategori" : "luka"
     },
     {
         "id":4,
         "gambar" : "https://res.cloudinary.com/dplikeeby/image/upload/v1740142827/luka4_ozvgzz.jpg",
         "keterangan" : "sunat titid ges",
-        "tanggal" :"12 november 2023"
+        "tanggal" :"12 november 2023",
+        "kategori" : "luka"
     },
     {
         "id":5,
         "gambar" : "https://res.cloudinary.com/dplikeeby/image/upload/v1740142827/luka5_mnyfwd.jpg",
         "keterangan" : "sunat titid ges",
-        "tanggal" :"12 november 2023"
+        "tanggal" :"12 november 2023",
+        "kategori" : "luka"
     },
     {
         "id":6,
-        "gambar" : "https://res.cloudinary.com/dplikeeby/image/upload/v1739505009/rjl_dhznpo.png",
+        "gambar" : "https://res.cloudinary.com/dplikeeby/image/upload/v1740801297/sunatttt_oqk8sg.jpg",
         "keterangan" : "sunat titid ges",
-        "tanggal" :"12 november 2023"
+        "tanggal" :"12 november 2023",
+        "kategori" : "khitan"
     },
     {
         "id":7,
-        "gambar" : "https://cdn.britannica.com/78/43678-050-F4DC8D93/Starry-Night-canvas-Vincent-van-Gogh-New-1889.jpg?w=400&h=225&c=crop",
+        "gambar" : "https://res.cloudinary.com/dplikeeby/image/upload/v1740801297/sunattt_kyym2k.jpg",
         "keterangan" : "sunat titid ges",
-        "tanggal" :"12 november 2023"
+        "tanggal" :"12 november 2023",
+        "kategori" : "khitan"
     },
     {
         "id":8,
-        "gambar" : "https://cdn.britannica.com/78/43678-050-F4DC8D93/Starry-Night-canvas-Vincent-van-Gogh-New-1889.jpg?w=400&h=225&c=crop",
+        "gambar" : "https://res.cloudinary.com/dplikeeby/image/upload/v1740801296/sunat_b7tmar.jpg",
         "keterangan" : "sunat titid ges",
-        "tanggal" :"12 november 2023"
+        "tanggal" :"12 november 2023",
+        "kategori" : "khitan"
     },
     {
         "id":9,
-        "gambar" : "https://cdn.britannica.com/78/43678-050-F4DC8D93/Starry-Night-canvas-Vincent-van-Gogh-New-1889.jpg?w=400&h=225&c=crop",
+        "gambar" : "https://res.cloudinary.com/dplikeeby/image/upload/v1740801296/sunatt_i3ao1p.jpg",
         "keterangan" : "sunat titid ges",
-        "tanggal" :"12 november 2023"
-    },
-    {
-        "id":10,
-        "gambar" : "https://cdn.britannica.com/78/43678-050-F4DC8D93/Starry-Night-canvas-Vincent-van-Gogh-New-1889.jpg?w=400&h=225&c=crop",
-        "keterangan" : "sunat titid ges",
-        "tanggal" :"12 november 2023"
-    },
-    {
-        "id":11,
-        "gambar" : "https://cdn.britannica.com/78/43678-050-F4DC8D93/Starry-Night-canvas-Vincent-van-Gogh-New-1889.jpg?w=400&h=225&c=crop",
-        "keterangan" : "sunat titid ges",
-        "tanggal" :"12 november 2023"
+        "tanggal" :"12 november 2023",
+        "kategori" : "khitan"
     }
 ]

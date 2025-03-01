@@ -1,15 +1,17 @@
-import React from 'react'
-import Header from '../components/Header'
-import About from '../components/About'
+import React from "react";
+import About from "../components/About";
 
 const AboutPage = () => {
-  return (
-     <>
-        <div className="bg-warm overflow-hidden h-full relative">
-           <About />
-        </div>
-     </>
-  );
-}
+   return (
+      <>
+         <div>
+            <div className=" pt-5   bg-white overflow-hidden h-full relative">
+               {/* isi kontak */}
+               <About />
+            </div>
+         </div>
+      </>
+   );
+};
 
-export default AboutPage
+export default AboutPage;

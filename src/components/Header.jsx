@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { IoIosSearch, IoMdMail } from "react-icons/io";
+import { IoMdMail } from "react-icons/io";
 import { FaPhoneAlt } from "react-icons/fa";
 import { VscListSelection } from "react-icons/vsc";
 import gsap from "gsap";

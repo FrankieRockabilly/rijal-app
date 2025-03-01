@@ -1,6 +1,7 @@
 import { Database } from "@phosphor-icons/react";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import Line from "./Line";
 
 const About = () => {
    const [dataBerita, setDataBerita] = useState(null);
@@ -16,7 +17,7 @@ const About = () => {
          const response = await axios.get(
             "https://cors-anywhere.herokuapp.com/https://newsapi.org/v2/everything?q=kesehatan&language=id&apiKey=87fd0ed171264ebf8791cdd68daad984"
          );
-          
+
          console.log(response.data.articles);
          setDataBerita(response.data.articles);
          setSeeMoreBerita(response.data.articles.slice(0, 10));
@@ -38,10 +39,11 @@ const About = () => {
    return (
       <>
          <div className="pb-10 pt-28 px-5 lg:px-40 text-black">
-            <div className="flex flex-col justify-center items-center gap-6 py-10">
+            <div className="flex flex-col justify-center items-center gap-6">
                <h1 className="text-center text-2xl lg:text-3xl font-bold ">
                   Tentang Saya
                </h1>
+               <Line />
                <div className=" flex flex-col lg:flex-row justify-start items-start gap-10">
                   {/* 1 */}
                   <div className="w-full lg:w-[40%] h-[30rem] overflow-hidden rounded-lg">
