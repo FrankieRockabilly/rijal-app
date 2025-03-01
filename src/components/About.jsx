@@ -1,6 +1,5 @@
-import { Database } from "@phosphor-icons/react";
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, Suspense } from "react";
 import Line from "./Line";
 
 const About = () => {
@@ -15,7 +14,7 @@ const About = () => {
    const getBerita = async () => {
       try {
          const response = await axios.get(
-            "https://cors-anywhere.herokuapp.com/https://newsapi.org/v2/everything?q=kesehatan&language=id&apiKey=87fd0ed171264ebf8791cdd68daad984"
+            "https://newsapi.org/v2/everything?q=diabetes&apiKey=87fd0ed171264ebf8791cdd68daad984"
          );
 
          console.log(response.data.articles);
@@ -122,47 +121,51 @@ const About = () => {
 
                   {/* flex */}
                   <div className="flex flex-wrap justify-center items-center gap-5 w-screen px-5 lg:px-20">
-                     {displayedBerita == null ? (
-                        <p className="text-gray-500">Isi berita Kosong guys</p>
-                     ) : (
-                        displayedBerita?.map((value, index) => (
-                           <div
-                              className="p-2 rounded-lg w-[22rem] h-80 border shadow-lg flex flex-col"
-                              key={index}
-                           >
-                              <div className="h-[70%] overflow-hidden rounded-lg">
-                                 <img src={value.urlToImage} alt="" />
+                     <Suspense fallback={<p>Loading guys, wait ...</p>}>
+                        {displayedBerita == null ? (
+                           <p className="text-gray-500">
+                              Isi berita Kosong guys
+                           </p>
+                        ) : (
+                           displayedBerita?.map((value, index) => (
+                              <div
+                                 className="p-2 rounded-lg w-[22rem] h-80 border shadow-lg flex flex-col relative"
+                                 key={index}
+                              >
+                                 <div className="h-[70%] overflow-hidden rounded-lg">
+                                    <img src={value.urlToImage} alt="" />
+                                 </div>
+                                 <div className="grow text-black font-light flex flex-col justify-start items-start h-32 overflow-hidden">
+                                    <h3 className="text-base h-full break-words max-h-16">
+                                       {value.title}
+                                    </h3>
+                                    <button className="py-2 px-5 bg-biru rounded-md text-white absolute bottom-2 left-2  hover:bg-blue-900 duration-300 transition-all ease-in-out">
+                                       <a
+                                          href={value.url}
+                                          target="_blank"
+                                          rel="noopener noreferrer"
+                                       >
+                                          See News
+                                       </a>
+                                    </button>
+                                 </div>
                               </div>
-                              <div className="grow text-black font-light flex flex-col justify-start items-start h-32 overflow-hidden">
-                                 <h3 className="text-base">{value.title}</h3>
-                                 <p className="truncate break-words">
-                                    {value.description}
-                                 </p>
-                                 <button className="py-2 px-5 bg-biru rounded-md text-white">
-                                    <a
-                                       href={value.url}
-                                       target="_blank"
-                                       rel="noopener noreferrer"
-                                    >
-                                       See News
-                                    </a>
-                                 </button>
-                              </div>
-                           </div>
-                        ))
-                     )}
-
-                     {displayedBerita == null ? (
-                        ""
-                     ) : (
+                           ))
+                        )}
+                     </Suspense>
+                  </div>
+                  {displayedBerita == null ? (
+                     ""
+                  ) : (
+                     <div className="flex justify-center items-center py-10">
                         <button
-                           className="py-2 px-5 text-white bg-orange-500 rounded-md"
+                           className="py-2 px-5 text-white bg-orange-500 rounded-md "
                            onClick={handleClickSeeMore}
                         >
                            {clickSeeMore ? "Kecilkan" : "Lihat Lebih"}
                         </button>
-                     )}
-                  </div>
+                     </div>
+                  )}
                </div>
             </div>
          </div>

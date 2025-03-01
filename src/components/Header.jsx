@@ -14,6 +14,10 @@ export const Header = () => {
       setIsMenuClicked((prevState) => !prevState);
    };
 
+   const refresh = () => {
+      window.location.reload();
+   };
+
    // Animasi GSAP
    useEffect(() => {
       gsap.fromTo(
@@ -51,9 +55,10 @@ export const Header = () => {
                      <li className="mr-10">
                         <Link to="#">
                            <img
-                              src="https://img.freepik.com/free-vector/flat-design-rr-logo-template_23-2149232004.jpg"
+                              src="https://res.cloudinary.com/dplikeeby/image/upload/v1740844540/RIJALHOMECARE_vmjuwa.png"
                               alt=""
                               className="w-12"
+                              onClick={refresh}
                            />
                         </Link>
                      </li>

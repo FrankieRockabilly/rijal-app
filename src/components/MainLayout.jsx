@@ -35,6 +35,9 @@ const MainLayout = () => {
    const [email, setEmail] = useState("");
    const [alamat, setAlamat] = useState("");
    const [tanggal, setTanggal] = useState("");
+   const changeTanggal = (date) => {
+      setTanggal(date);
+   };
    const [hp, setHp] = useState("");
    const [pelayanan, setPelayanan] = useState("");
    const [bookingPerawatan, setIsBookingPerawatan] = useState(false);
@@ -414,15 +417,13 @@ const MainLayout = () => {
                                     <label htmlFor="">
                                        Pilih Tanggal Layanan
                                     </label>
-                                    <input
-                                       type="date"
+                                    <DatePicker
+                                       id="tanggalLayanan"
+                                       selected={tanggal} // Menampilkan tanggal yang dipilih
+                                       onChange={changeTanggal} // Fungsi untuk menangani perubahan
+                                       dateFormat="yyyy-MM-dd" // Format tanggal yang ditampilkan
+                                       placeholderText="Pilih Tanggal Layanan"
                                        className="outline-none px-3 py-3 rounded-lg w-full border focus:border-orange-500 bg-white"
-                                       placeholder="Pilih Tanggal Layanan"
-                                       value={tanggal}
-                                       onChange={(e) =>
-                                          setTanggal(e.target.value)
-                                       }
-                                       required
                                     />
                                  </div>
                                  <div className="flex justify-start items-center gap-2">

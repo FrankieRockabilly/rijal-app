@@ -67,7 +67,9 @@ const Testimonial = () => {
                            </div>
                            <div className="text-black text-sm">
                               <h1>{review.name} </h1>
-                              <p className="text-gray-500">{review.status} </p>
+                              <p className="text-gray-500 truncate">
+                                 {review.status}{" "}
+                              </p>
                            </div>
                         </div>
                      </div>
