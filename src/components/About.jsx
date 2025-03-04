@@ -1,39 +1,10 @@
-import axios from "axios";
-import React, { useEffect, useState, Suspense } from "react";
+import React, { useEffect } from "react";
 import Line from "./Line";
 
 const About = () => {
-   const [dataBerita, setDataBerita] = useState(null);
-   const [seeMoreBerita, setSeeMoreBerita] = useState(null);
-   const [clickSeeMore, setClickSeeMore] = useState(false);
-
    useEffect(() => {
       window.scrollTo(0, 0);
    }, []);
-
-   const getBerita = async () => {
-      try {
-         const response = await axios.get(
-            "https://newsapi.org/v2/everything?q=diabetes&apiKey=87fd0ed171264ebf8791cdd68daad984"
-         );
-
-         console.log(response.data.articles);
-         setDataBerita(response.data.articles);
-         setSeeMoreBerita(response.data.articles.slice(0, 10));
-      } catch (error) {
-         console.log(error);
-      }
-   };
-
-   useEffect(() => {
-      getBerita();
-   }, []);
-
-   const handleClickSeeMore = () => {
-      setClickSeeMore((prevState) => !prevState);
-      seeMoreBerita(dataBerita);
-   };
-   const displayedBerita = clickSeeMore ? dataBerita : seeMoreBerita;
 
    return (
       <>
@@ -107,65 +78,6 @@ const About = () => {
                         </div>
                      </div>
                   </div>
-               </div>
-
-               {/* tulisan dibawah */}
-               <div className="px-5 lg:px-40 py-20 ">
-                  <div className="flex justify-center items-center gap-5">
-                     <hr className="bg-gray-600 w-full" />
-                     <h2 className="text-center text-2xl py-11  uppercase font-bold min-w-52">
-                        b e r I t A
-                     </h2>
-                     <hr className="bg-gray-900 w-full" />
-                  </div>
-
-                  {/* flex */}
-                  <div className="flex flex-wrap justify-center items-center gap-5 w-screen px-5 lg:px-20">
-                     <Suspense fallback={<p>Loading guys, wait ...</p>}>
-                        {displayedBerita == null ? (
-                           <p className="text-gray-500">
-                              Isi berita Kosong guys
-                           </p>
-                        ) : (
-                           displayedBerita?.map((value, index) => (
-                              <div
-                                 className="p-2 rounded-lg w-[22rem] h-80 border shadow-lg flex flex-col relative"
-                                 key={index}
-                              >
-                                 <div className="h-[70%] overflow-hidden rounded-lg">
-                                    <img src={value.urlToImage} alt="" />
-                                 </div>
-                                 <div className="grow text-black font-light flex flex-col justify-start items-start h-32 overflow-hidden">
-                                    <h3 className="text-base h-full break-words max-h-16">
-                                       {value.title}
-                                    </h3>
-                                    <button className="py-2 px-5 bg-biru rounded-md text-white absolute bottom-2 left-2  hover:bg-blue-900 duration-300 transition-all ease-in-out">
-                                       <a
-                                          href={value.url}
-                                          target="_blank"
-                                          rel="noopener noreferrer"
-                                       >
-                                          See News
-                                       </a>
-                                    </button>
-                                 </div>
-                              </div>
-                           ))
-                        )}
-                     </Suspense>
-                  </div>
-                  {displayedBerita == null ? (
-                     ""
-                  ) : (
-                     <div className="flex justify-center items-center py-10">
-                        <button
-                           className="py-2 px-5 text-white bg-orange-500 rounded-md "
-                           onClick={handleClickSeeMore}
-                        >
-                           {clickSeeMore ? "Kecilkan" : "Lihat Lebih"}
-                        </button>
-                     </div>
-                  )}
                </div>
             </div>
          </div>

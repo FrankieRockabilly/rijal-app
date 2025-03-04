@@ -8,7 +8,7 @@ import SuccessSubmitPerawatan from "../assets/modal/SuccessSubmitPerawatan";
 import Loading from "./Loading";
 
 const MainLayout = () => {
-   const [loadingHalamanAwal, setLoadingHalamanAwal] = useState(true);
+   const [loadingHalamanAwal, setLoadingHalamanAwal] = useState(false);
    useEffect(() => {
       const timer = setTimeout(() => {
          setLoadingHalamanAwal(false);

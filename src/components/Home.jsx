@@ -25,6 +25,7 @@ import ScrollTrigger from "gsap/src/ScrollTrigger";
 import Testimonial from "./Testimonial";
 import { CiTimer } from "react-icons/ci";
 import Booking from "./Booking";
+import News from "./News";
 
 const Home = () => {
    const [size, setSize] = useState(0);
@@ -447,6 +448,9 @@ const Home = () => {
             </div>
          </div>
 
+         <div>
+            <News />
+         </div>
          {/* booking */}
          <div>
             <Booking />

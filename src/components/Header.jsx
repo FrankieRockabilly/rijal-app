@@ -55,7 +55,8 @@ export const Header = () => {
                      <li className="mr-10">
                         <Link to="#">
                            <img
-                              src="https://res.cloudinary.com/dplikeeby/image/upload/v1740844540/RIJALHOMECARE_vmjuwa.png"
+                              // src="https://res.cloudinary.com/dplikeeby/image/upload/v1740844540/RIJALHOMECARE_vmjuwa.png"
+                              src="https://res.cloudinary.com/dplikeeby/image/upload/v1740987484/Preview_ox3qlp.jpg"
                               alt=""
                               className="w-12"
                               onClick={refresh}
