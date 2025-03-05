@@ -28,10 +28,45 @@
         "category" : "khitan"
     },
     {
-        "id" :1,
-        "title" : "Super Ring, Sunat Ramah Anak Rumah Khitan Ibadurrahman",
-        "url" : "https://rri.co.id/jawa-tengah/kesehatan/326169/super-ring-sunat-ramah-anak-rumah-khitan-ibadurrahman",
-        "urlToImage" : "https://cdn.rri.co.id/berita/8/images/1692368217869-IMG_20230818_140336/1692368217869-IMG_20230818_140336.jpg",
+        "id" :5,
+        "title" : "Metode Super Ring Sunat Terbaru",
+        "url" : "https://investigasi.news/nasional/semarang/metode-super-ring-sunat-terbaru-pertama-diperkenalkan-di-manokwari/",
+        "urlToImage" : "https://investigasi.news/wp-content/uploads/2022/09/1664340295071.jpg",
+        "category" : "khitan"
+    },
+    {
+        "id" :6,
+        "title" : "Tips Puasa Sehat Pengidap Diabetes",
+        "url" : "https://health.detik.com/berita-detikhealth/d-7806971/tips-puasa-sehat-untuk-pengidap-diabetes-jangan-lupa-makan-sahur",
+        "urlToImage" : "https://akcdn.detik.net.id/community/media/visual/2023/02/14/ilustrasi-diabetes-1_169.jpeg?w=700&q=90",
+        "category" : "luka"
+    },
+    {
+        "id" :7,
+        "title" : "Teh Tawar Redakan Penyakit ?",
+        "url" : "https://health.detik.com/berita-detikhealth/d-7803508/minum-teh-tawar-bisa-redakan-4-penyakit-ini-daftarnya",
+        "urlToImage" : "https://akcdn.detik.net.id/community/media/visual/2024/02/01/ilustrasi-teh-kayu-manis_169.jpeg?w=700&q=90",
+        "category" : "luka"
+    },
+    {
+        "id" :8,
+        "title" : "Makanan Manis Saat Berbuka ? Hati hati. Ini Kata Dokter",
+        "url" : "https://health.detik.com/berita-detikhealth/d-7802998/saran-dokter-soal-makanan-manis-saat-berbuka-hati-hati-kalau-ada-diabetes",
+        "urlToImage" : "https://akcdn.detik.net.id/community/media/visual/2024/03/20/sejarah-kolak_169.jpeg?w=700&q=90",
+        "category" : "luka"
+    },
+    {
+        "id" :9,
+        "title" : "Begini Prinsip Penanganan Diabetes dan Hubungannya Dengan Syaraf",
+        "url" : "https://health.detik.com/fotohealth/d-7197509/begini-prinsip-penanganan-diabetes-dan-hubungannya-terhadap-syaraf",
+        "urlToImage" : "https://akcdn.detik.net.id/community/media/visual/2024/02/16/begini-prinsip-penanganan-diabetes-dan-hubungannya-terhadap-masalah-syaraf-1_169.jpeg?w=700&q=90",
+        "category" : "luka"
+    },
+    {
+        "id" :10,
+        "title" : "Puasa Aman untuk Anak dengan Diabetes Melitus, Atur Pola Makan secara Tepat",
+        "url" : "https://www.kompas.id/artikel/puasa-aman-untuk-anak-dengan-diabetes-melitus-atur-pola-makan-secara-tepat",
+        "urlToImage" : "https://assetd.kompas.id/HPmu1eYe0GUdmWGnhGKP9ZFa6_U=/fit-in/1024x853/filters:format(webp):quality(80):watermark(https://cdn-content.kompas.id/umum/kompas_main_logo.png,-16p,-13p,0)/https://asset.kgnewsroom.com/photo/pre/2023/04/12/95843f9f-7d2e-497a-b14d-75b18614dcfb_jpg.jpg",
         "category" : "luka"
     }
 ]

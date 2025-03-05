@@ -8,6 +8,9 @@ import {
    WhatsappLogo,
    LinkedinLogo,
    InstagramLogo,
+   MapPin,
+   Envelope,
+   Phone,
 } from "@phosphor-icons/react";
 
 const Footer = () => {
@@ -37,7 +40,7 @@ const Footer = () => {
 
    return (
       <>
-         <div className="w-full px-5 lg:px-36 py-20 lg:py-32 bg-zinc-900 text-gray-400  overflow-hidden  ">
+         <div className="w-full px-5 lg:px-36 py-20 lg:py-32 bg-zinc-900 text-gray-400  overflow-hidden">
             <div className=" flex flex-col lg:flex-row justify-between items-start gap-5 ">
                {/* 1 */}
                <div className=" lg:w-96 max-w-72">
@@ -105,22 +108,22 @@ const Footer = () => {
                      Kontak
                   </p>
                   <div className="text-sm lg:text-base flex flex-col justify-start items-start gap-5">
-                     <p className="font-bold">
-                        Alamat :
+                     <p className="font-bold flex justify-start items-start gap-2">
+                        <MapPin size={30} />
                         <span className="font-light">
                            {" "}
                            Desa Karya Mulya, Rambah Samo, Rokan Hulu
                         </span>
                      </p>
-                     <p className="font-bold">
-                        E mail :
+                     <p className="font-bold flex justify-start items-start gap-2">
+                        <Envelope size={27} />
                         <span className="font-light">
                            {" "}
                            rizalaraffa14@gmail.com
                         </span>
                      </p>
-                     <p className="font-bold">
-                        Telp :
+                     <p className="font-bold flex justify-start items-start gap-2">
+                        <Phone size={27} />
                         <span className="font-light"> +62 822 7321 2907</span>
                      </p>
                   </div>

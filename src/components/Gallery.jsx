@@ -131,7 +131,7 @@ const Gallery = () => {
                   <img
                      src={selectedImage}
                      alt="Selected"
-                     className="w-[30rem] h-[25rem] object-contain"
+                     className="w-[30rem] h-[25rem] xl:w-[45rem] xl:h-[35rem] object-contain "
                   />
                   <button
                      className="absolute top-4 right-4 text-white font-bold text-xl"

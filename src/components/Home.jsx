@@ -174,6 +174,36 @@ const Home = () => {
             ease: "power1.inOut",
          }
       );
+      gsap.fromTo(
+         ".bannerSatu",
+         { x: 50, opacity: 0 },
+         {
+            x: 0,
+            opacity: 1,
+            scrollTrigger: {
+               trigger: ".bannerSatu",
+               start: "top 80%",
+               scrub: false,
+            },
+            duration: 1,
+            ease: "power1.inOut",
+         }
+      );
+      gsap.fromTo(
+         ".bannerDua",
+         { x: 50, opacity: 0 },
+         {
+            x: 0,
+            opacity: 1,
+            scrollTrigger: {
+               trigger: ".bannerDua",
+               start: "top 80%",
+               scrub: false,
+            },
+            duration: 1,
+            ease: "power1.inOut",
+         }
+      );
    }, []);
 
    return (
@@ -386,7 +416,7 @@ const Home = () => {
          </div>
 
          {/* banner */}
-         <div className="w-full px-5  py-10 lg:px-[10%] text-white">
+         <div className="w-full px-5  py-10 lg:px-[10%] text-white bannerSatu">
             <div
                className="bg-biru rounded-xl px-5 lg:px-28 py-5 lg:py-28 flex flex-col justify-start items-start gap-3 shadow-lg bg-opacity-80 relative"
                // style={{
@@ -418,7 +448,7 @@ const Home = () => {
          </div>
 
          {/* second banner */}
-         <div className="w-full px-5  lg:px-[10%] text-white">
+         <div className="w-full px-5  lg:px-[10%] text-white bannerDua">
             <div
                className="bg-orange-500 rounded-xl px-5 lg:px-28 py-5 lg:py-28 flex flex-col justify-end items-end gap-3 shadow-lg bg-opacity-80 relative overflow-hidden bg-cover bg-no-repeat"
                style={{ backgroundImage: `url(${excitedPerson})` }}

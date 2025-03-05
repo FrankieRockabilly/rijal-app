@@ -14,10 +14,6 @@ export const Header = () => {
       setIsMenuClicked((prevState) => !prevState);
    };
 
-   const refresh = () => {
-      window.location.reload();
-   };
-
    // Animasi GSAP
    useEffect(() => {
       gsap.fromTo(
@@ -53,15 +49,15 @@ export const Header = () => {
                <nav>
                   <ul className="flex justify-start items-center gap-5">
                      <li className="mr-10">
-                        <Link to="#">
+                        <a href="./">
                            <img
-                              // src="https://res.cloudinary.com/dplikeeby/image/upload/v1740844540/RIJALHOMECARE_vmjuwa.png"
-                              src="https://res.cloudinary.com/dplikeeby/image/upload/v1740987484/Preview_ox3qlp.jpg"
+                              src="https://res.cloudinary.com/dplikeeby/image/upload/v1740844540/RIJALHOMECARE_vmjuwa.png"
+                              // src="https://res.cloudinary.com/dplikeeby/image/upload/v1740987484/Preview_ox3qlp.jpg"
                               alt=""
                               className="w-12"
-                              onClick={refresh}
+                              // onClick={refresh}
                            />
-                        </Link>
+                        </a>
                      </li>
                   </ul>
                </nav>
