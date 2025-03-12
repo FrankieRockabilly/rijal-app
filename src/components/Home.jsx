@@ -80,9 +80,9 @@ const Home = () => {
 
       gsap.fromTo(
          ".layanan",
-         { x: 50, opacity: 0 },
+         { y: 50, opacity: 0 },
          {
-            x: 0,
+            y: 0,
             scrollTrigger: {
                trigger: ".layanan",
                start: "top 80%",
@@ -209,9 +209,15 @@ const Home = () => {
    return (
       <>
          <div className="  bg-warm overflow-hidden h-full relative">
-            <div className="relative pt-14 lg:pt-20">
+            <div className="relative pt-14 lg:pt-20 ">
                {/* hero section */}
-               <div className="border py-52 h-[20rem] lg:h-[55rem] w-full bg-gradient-to-r from-[#007c9d] to-white text-black flex justify-start items-center overflow-hidden relative">
+               <div
+                  className="border py-52 h-[20rem] lg:h-[55rem] w-full bg-gradient-to-r from-[#007c9d] to-white text-black flex justify-start items-center overflow-hidden relative bg-no-repeat bg-cover "
+                  // style={{
+                  //    backgroundImage: `url(https://img.freepik.com/free-photo/frame-medical-equipment-desk_23-2148519742.jpg?t=st=1741743620~exp=1741747220~hmac=5341bc207a539ddbd870d2a3a0799b67bf5c20f50bcc454149c0f2624259ba33&w=1060)`,
+                  //    opacity: 0.5,
+                  // }}
+               >
                   <div className="absolute top-[3%] lg:top-[10%] translate-y-1/2 right-14 lg:right-[35%] z-10 ">
                      <h1 className="font-extrabold text-5xl lg:text-[10rem] tracking-tighter opacity-10">
                         HOME CARE

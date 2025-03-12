@@ -27,9 +27,9 @@ const About = () => {
                   {/* 2 */}
                   <div className="w-full lg:w-[70%]">
                      <div className="w-full flex flex-col justify-start items-start gap-7 ">
-                        <p>Tentang Saya</p>
                         <h2 className="font-bold text-2xl xl:text-4xl">
-                           We Are Providing Best Service Since 2001 to Pesent
+                           Kami memberikan pelayanan keseshtan terbaik sejak
+                           2001 hingga sekarang
                         </h2>
                         <hr className="border border-green-400 w-52" />
                         <p className="text-sm lg:text-base ">

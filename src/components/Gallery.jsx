@@ -34,8 +34,14 @@ const Gallery = () => {
    useEffect(() => {
       gsap.fromTo(
          ".gallery",
-         { opacity: 0, x: 20 },
-         { opacity: 1, x: 0, duration: 0.3, stagger: 0.1, ease: "expo.in" }
+         { opacity: 0, y: 20 },
+         {
+            opacity: 1,
+            y: 0,
+            duration: 0.3,
+            stagger: 0.07,
+            ease: "back.in",
+         }
       );
    }, [filteredGallery]); // Memicu animasi ketika filteredGallery berubah (kategori diubah)
 

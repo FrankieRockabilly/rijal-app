@@ -5,127 +5,51 @@ const Loading = () => {
   return (
      <StyledWrapper>
         <div className="loader">
-           <span className="l">L</span>
-           <span className="o">o</span>
-           <span className="a">a</span>
-           <span className="d">d</span>
-           <span className="i">i</span>
-           <span className="n">n</span>
-           <span className="g">g</span>
-           <span className="d1">.</span>
-           <span className="d2">.</span>
+           <div className="loader-text">Loading...</div>
+           <div className="loader-bar" />
         </div>
      </StyledWrapper>
   );
 }
 
 const StyledWrapper = styled.div`
-   .l {
-      color: black;
-      opacity: 0;
-      animation: pass 2s ease-in-out infinite;
-      animation-delay: 0.2s;
-      letter-spacing: 0.5em;
-      text-shadow: 2px 2px 3px #919191;
+   .loader {
+      /* background-color: blue; */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
    }
 
-   .o {
-      color: black;
-      opacity: 0;
-      animation: pass 2s ease-in-out infinite;
-      animation-delay: 0.4s;
-      letter-spacing: 0.5em;
-      text-shadow: 2px 2px 3px #919191;
+   .loader-text {
+      font-size: 24px;
+      color: rgb(0, 0, 0);
+      margin-bottom: 20px;
+      align-self: center;
    }
 
-   .a {
-      color: black;
-      opacity: 0;
-      animation: pass 2s ease-in-out infinite;
-      animation-delay: 0.6s;
-      letter-spacing: 0.5em;
-      text-shadow: 2px 2px 3px #919191;
+   .loader-bar {
+      width: 30%;
+      height: 10px;
+      border-radius: 5px;
+      background-color: rgb(0, 0, 0);
+      animation: loader-bar-animation 2s ease-in-out infinite;
    }
 
-   .d {
-      color: black;
-      opacity: 0;
-      animation: pass 2s ease-in-out infinite;
-      animation-delay: 0.8s;
-      letter-spacing: 0.5em;
-      text-shadow: 2px 2px 3px #919191;
-   }
-
-   .i {
-      color: black;
-      opacity: 0;
-      animation: pass 2s ease-in-out infinite;
-      animation-delay: 1s;
-      letter-spacing: 0.5em;
-      text-shadow: 2px 2px 3px #919191;
-   }
-
-   .n {
-      color: black;
-      opacity: 0;
-      animation: pass 2s ease-in-out infinite;
-      animation-delay: 1.2s;
-      letter-spacing: 0.5em;
-      text-shadow: 2px 2px 3px #919191;
-   }
-
-   .g {
-      color: black;
-      opacity: 0;
-      animation: pass 2s ease-in-out infinite;
-      animation-delay: 1.4s;
-      letter-spacing: 0.5em;
-      text-shadow: 2px 2px 3px #919191;
-   }
-
-   .d1 {
-      color: black;
-      opacity: 0;
-      animation: pass1 2s ease-in-out infinite;
-      animation-delay: 1.6s;
-      letter-spacing: 0.5em;
-      text-shadow: 2px 2px 3px #919191;
-   }
-
-   .d2 {
-      color: black;
-      opacity: 0;
-      animation: pass1 2s ease-in-out infinite;
-      animation-delay: 2s;
-      letter-spacing: 0.5em;
-      text-shadow: 2px 2px 3px #919191;
-   }
-
-   @keyframes pass {
+   @keyframes loader-bar-animation {
       0% {
-         opacity: 1;
+         /* transform: translateX(-100%) rotate(270deg); */
+         transform: translateX(-100%);
       }
 
       50% {
-         opacity: 0;
+         /* transform: translateX(100%) rotate(-90deg); */
+         transform: translateX(100%);
       }
 
       100% {
-         opacity: 1;
-      }
-   }
-
-   @keyframes pass1 {
-      0% {
-         opacity: 1;
-      }
-
-      50% {
-         opacity: 0;
-      }
-
-      100% {
-         opacity: 1;
+         /* transform: translateX(-100%) rotate(270deg); */
+         transform: translateX(-100%);
       }
    }
 `;

@@ -3,6 +3,7 @@ import news from "../assets/json/news.json";
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
+import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 
 const News = () => {
    const [all, setALl] = useState(true);
@@ -60,29 +61,37 @@ const News = () => {
          <div className="px-5 py-20 ">
             <div className="flex justify-center items-center gap-5 ">
                <hr className="bg-gray-600 w-full" />
-               <h2 className="text-center text-2xl py-2  uppercase font-bold min-w-52">
+               <h2 className="text-center text-2xl py-2  uppercase font-bold min-w-52 text-black ">
                   b e r I t A
                </h2>
                <hr className="bg-gray-900 w-full" />
             </div>
-            <div className="flex justify-center items-center gap-2 lg:gap-5 py-5 text-[12px] lg:text-base">
+            <div className="flex justify-center items-center gap-2 lg:gap-5 py-5 xl:pt-5 xl:pb-10 text-[12px] lg:text-base">
                <button
                   onClick={clickAll}
-                  className={all ? "text-biru" : "text-gray-600"}
+                  className={`flex justify-center items-center gap-2 ${
+                     all ? "text-biru" : "text-gray-600"
+                  }`}
                >
-                  All
+                  <p>All</p>
+                  <MdOutlineKeyboardArrowRight />
                </button>
                <button
                   onClick={clickKhitan}
-                  className={khitan ? "text-biru" : "text-gray-600"}
+                  className={`flex justify-center items-center gap-2 ${
+                     khitan ? "text-biru" : "text-gray-600"
+                  } `}
                >
-                  Khitan Super Ring
+                  <p>Khitan Super Ring</p>
+                  <MdOutlineKeyboardArrowRight />
                </button>
                <button
                   onClick={clickLuka}
-                  className={luka ? "text-biru" : "text-gray-600"}
+                  className={`flex justify-center items-center gap-2 ${
+                     luka ? "text-biru" : "text-gray-600"
+                  }`}
                >
-                  Rawatan Luka
+                  <p>Rawatan Luka</p>
                </button>
             </div>
 
@@ -100,18 +109,18 @@ const News = () => {
                            <img src={value.urlToImage} alt="" />
                         </div>
                         <div className="grow text-black font-light flex flex-col justify-start items-start h-32 overflow-hidden">
-                           <h3 className="text-base h-full break-words max-h-16 font-medium py-2">
+                           <h3 className="text-base h-full break-words max-h-16 font-light py-2">
                               {value.title}
                            </h3>
-                           <button className="py-2 px-5 bg-biru rounded-md text-white absolute bottom-2 left-2  hover:bg-blue-900 duration-300 transition-all ease-in-out">
-                              <a
-                                 href={value.url}
-                                 target="_blank"
-                                 rel="noopener noreferrer"
-                              >
+                           <a
+                              href={value.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                           >
+                              <button className="py-2 px-5 bg-biru rounded-md text-white absolute bottom-2 left-2  hover:bg-blue-900 duration-300 transition-all ease-in-out border-4 border-white">
                                  Lihat berita
-                              </a>
-                           </button>
+                              </button>
+                           </a>
                         </div>
                      </div>
                   ))
