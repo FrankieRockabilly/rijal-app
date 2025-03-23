@@ -6,6 +6,7 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css"; // CSS untuk styling kalender
 import SuccessSubmitPerawatan from "../assets/modal/SuccessSubmitPerawatan";
 import Loading from "./Loading";
+import axios from "axios";
 
 const MainLayout = () => {
    const [loadingHalamanAwal, setLoadingHalamanAwal] = useState(true);
@@ -39,7 +40,13 @@ const MainLayout = () => {
       setTanggal(date);
    };
    const [hp, setHp] = useState("");
-   const [pelayanan, setPelayanan] = useState("");
+   const [nik, setNik] = useState("");
+   const [ortu, setOrtu] = useState("");
+   const [alergi, setAlergi] = useState("");
+   const [tanggalLahir, setTanggalLahir] = useState("");
+   const [jamPelaksanaan, setJamPelaksanaan] = useState("");
+
+   // rawatan luka
    const [bookingPerawatan, setIsBookingPerawatan] = useState(false);
    const [bookingKhitan, setIsBookingKhitan] = useState(false);
 
@@ -58,19 +65,35 @@ const MainLayout = () => {
       setIsBookingKhitan((prevState) => !prevState);
    };
 
-   const submitBookingPerawatan = (e) => {
+   const submitBookingKhitan = async (e) => {
       e.preventDefault();
       setLoading(true);
-      setTimeout(() => {
-         setLoading(false);
-         setSuccesSubmitPerawatan(true);
-      }, 2000);
-      console.log("berhasil submit");
+
+      try {
+         const response = await axios.post(
+            "http://localhost:5000/bookingKhitan",
+            {
+               nama: name,
+               nik: nik,
+               email: email,
+               tangalLahir: tanggalLahir,
+               namaOrtu: ortu,
+               tanggal: tanggal,
+               jamPelaksanaan: jamPelaksanaan,
+               alamat: alamat,
+               noHp: hp,
+               alergi: alergi,
+            }
+         );
+         console.log(response.data);
+      } catch (error) {
+         console.log(error.response);
+      }
    };
 
-   const submitBookingKhitan = (e) => {
+   const submitBookingPerawatan = (e) => {
       e.preventDefault();
-      alert(`telah dikirim : ${pelayanan}`);
+      alert(`telah dikirim `);
    };
 
    // klik di luar area form
@@ -170,7 +193,7 @@ const MainLayout = () => {
                                  <div className="w-full">
                                     <label htmlFor="">Masukan Email</label>
                                     <input
-                                       type="email"
+                                       type="text"
                                        className="outline-none px-3 py-3 rounded-lg w-full border focus:border-orange-500 bg-white"
                                        placeholder="Email"
                                        value={emailRawat}
@@ -350,15 +373,50 @@ const MainLayout = () => {
                                     />
                                  </div>
                                  <div className="w-full">
+                                    <label htmlFor="">NIK</label>
+                                    <input
+                                       type="text"
+                                       className="outline-none px-3 py-3 rounded-lg w-full border focus:border-orange-500 bg-white"
+                                       placeholder="Email"
+                                       value={nik}
+                                       onChange={(e) => setNik(e.target.value)}
+                                       required
+                                    />
+                                 </div>
+                                 <div className="w-full">
                                     <label htmlFor="">Masukan Email</label>
                                     <input
-                                       type="email"
+                                       type="text"
                                        className="outline-none px-3 py-3 rounded-lg w-full border focus:border-orange-500 bg-white"
                                        placeholder="Email"
                                        value={email}
                                        onChange={(e) =>
                                           setEmail(e.target.value)
                                        }
+                                       required
+                                    />
+                                 </div>
+                                 <div className="w-full">
+                                    <label htmlFor="">Tanggal Lahir</label>
+                                    <input
+                                       type="text"
+                                       className="outline-none px-3 py-3 rounded-lg w-full border focus:border-orange-500 bg-white"
+                                       placeholder="Tanggal Lahir"
+                                       value={tanggalLahir}
+                                       onChange={(e) =>
+                                          setTanggalLahir(e.target.value)
+                                       }
+                                       required
+                                    />
+                                 </div>
+                                 <div className="w-full">
+                                    <label htmlFor="">Nama Orang Tua</label>
+                                    <input
+                                       type="text"
+                                       className="outline-none px-3 py-3 rounded-lg w-full border focus:border-orange-500 bg-white"
+                                       placeholder="Nama Orang Tua"
+                                       value={ortu}
+                                       onChange={(e) => setOrtu(e.target.value)}
                                        required
                                     />
                                  </div>
@@ -375,6 +433,7 @@ const MainLayout = () => {
                                        required
                                     />
                                  </div>
+
                                  <div className="w-full">
                                     <label htmlFor="">
                                        Masukkan No Hp AKtif
@@ -390,30 +449,6 @@ const MainLayout = () => {
                                  </div>
 
                                  <div className="w-full">
-                                    <label>Pilih Layanan</label>
-                                    <select
-                                       className="outline-none px-3 py-3 rounded-lg w-full border border-gray-300 focus:border-orange-500 bg-white"
-                                       required
-                                       value={pelayanan}
-                                       onChange={(e) =>
-                                          setPelayanan(e.target.value)
-                                       }
-                                    >
-                                       <option value="" disabled selected>
-                                          Pilih Pelayanan
-                                       </option>
-                                       <option value="konsultasi">
-                                          Konsultasi
-                                       </option>
-                                       <option value="khitan">
-                                          Layanan Khitan
-                                       </option>
-                                       <option value="perawatanLuka">
-                                          Pemeriksaan Luka
-                                       </option>
-                                    </select>
-                                 </div>
-                                 <div className="w-full">
                                     <label htmlFor="">
                                        Pilih Tanggal Layanan
                                     </label>
@@ -422,8 +457,34 @@ const MainLayout = () => {
                                        selected={tanggal} // Menampilkan tanggal yang dipilih
                                        onChange={changeTanggal} // Fungsi untuk menangani perubahan
                                        dateFormat="yyyy-MM-dd" // Format tanggal yang ditampilkan
-                                       placeholderText="Pilih Tanggal Layanan"
+                                       placeholderText="dd/mm/yy"
+                                       className="outline-none px-3 py-3 rounded-lg w-full border focus:border-orange-500 bg-white cursor-pointer"
+                                    />
+                                 </div>
+                                 <div className="w-full">
+                                    <label htmlFor="">Jam Pelaksanaan</label>
+                                    <input
+                                       type="text"
                                        className="outline-none px-3 py-3 rounded-lg w-full border focus:border-orange-500 bg-white"
+                                       placeholder="No Hp"
+                                       value={jamPelaksanaan}
+                                       onChange={(e) =>
+                                          setJamPelaksanaan(e.target.value)
+                                       }
+                                       required
+                                    />
+                                 </div>
+                                 <div className="w-full">
+                                    <label htmlFor="">Alergi Obat</label>
+                                    <input
+                                       type="text"
+                                       className="outline-none px-3 py-3 rounded-lg w-full border focus:border-orange-500 bg-white"
+                                       placeholder="No Hp"
+                                       value={alergi}
+                                       onChange={(e) =>
+                                          setAlergi(e.target.value)
+                                       }
+                                       required
                                     />
                                  </div>
                                  <div className="flex justify-start items-center gap-2">

@@ -3,6 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import { IoMdMail } from "react-icons/io";
 import { FaPhoneAlt } from "react-icons/fa";
 import { VscListSelection } from "react-icons/vsc";
+import { CiUser } from "react-icons/ci";
 import gsap from "gsap";
 
 export const Header = () => {
@@ -130,8 +131,16 @@ export const Header = () => {
             </div>
 
             {/* hamburger menu ketika ukuran sm */}
-            <div className="xl:hidden">
-               <VscListSelection size={25} onClick={handleClickMenu} />
+            <div className="flex justify-center items-center gap-3 text-black">
+               <Link to={"/login"}>
+                  <button className="flex justify-center items-center gap-2 ">
+                     <CiUser size={20} />
+                     <p>Login</p>
+                  </button>
+               </Link>
+               <div className="xl:hidden">
+                  <VscListSelection size={25} onClick={handleClickMenu} />
+               </div>
             </div>
          </div>
 
