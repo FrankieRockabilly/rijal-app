@@ -40,7 +40,7 @@ const Footer = () => {
 
    return (
       <>
-         <div className="w-full px-5 lg:px-36 py-20 lg:py-32 bg-zinc-900 text-gray-400  overflow-hidden">
+         <div className="w-full px-5 lg:px-36 py-20 lg:py-20 bg-zinc-900 text-gray-400  overflow-hidden">
             <div className=" flex flex-col lg:flex-row justify-between items-start gap-5 ">
                {/* 1 */}
                <div className=" lg:w-96 max-w-72">

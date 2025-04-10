@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import Line from "./Line";
 import gallery from "../assets/json/gallery.json";
 import gsap from "gsap";
+import { FaRegEyeSlash } from "react-icons/fa6";
 
 const Gallery = () => {
    const [isModalOpen, setIsModalOpen] = useState(false);
@@ -10,8 +11,9 @@ const Gallery = () => {
    const [all, setAll] = useState(true);
    const [luka, setLuka] = useState(false);
    const [khitan, setKhitan] = useState(false);
+   const [imageVisibility, setImageVisibility] = useState({}); // Menyimpan status visibilitas gambar
 
-   const gsapTriggered = useRef(false); // Reference untuk melacak apakah GSAP sudah dijalankan
+   const gsapTriggered = useRef(false);
 
    // Auto scroll ke atas layar
    useEffect(() => {
@@ -26,9 +28,9 @@ const Gallery = () => {
             { opacity: 0, x: 20 },
             { opacity: 1, x: 0, duration: 0.3, stagger: 0.1, ease: "expo.in" }
          );
-         gsapTriggered.current = true; // Menandai bahwa GSAP sudah dijalankan
+         gsapTriggered.current = true;
       }
-   }, []); // Empty dependency array untuk memastikan efek hanya dipicu sekali
+   }, []);
 
    // Menjalankan GSAP setiap kali kategori galeri berubah
    useEffect(() => {
@@ -43,7 +45,7 @@ const Gallery = () => {
             ease: "back.in",
          }
       );
-   }, [filteredGallery]); // Memicu animasi ketika filteredGallery berubah (kategori diubah)
+   }, [filteredGallery]);
 
    const handleClickAll = () => {
       setAll(true);
@@ -79,6 +81,14 @@ const Gallery = () => {
       setSelectedImage(null);
    };
 
+   // Fungsi untuk toggle visibility gambar
+   const toggleVisibility = (index) => {
+      setImageVisibility((prevState) => ({
+         ...prevState,
+         [index]: !prevState[index], // Toggle visibility berdasarkan index gambar
+      }));
+   };
+
    return (
       <div className="pb-10 pt-28">
          <div className="flex flex-col justify-center items-center gap-6">
@@ -110,15 +120,20 @@ const Gallery = () => {
             {filteredGallery?.map((value, index) => {
                return (
                   <div
-                     className="w-40 h-36 lg:w-72 lg:h-64 bg-white p-2 border shadow-2xl gallery"
+                     className="w-40 h-36 lg:w-72 lg:h-64 bg-white p-2 border shadow-2xl gallery relative"
                      key={index}
                   >
                      <img
                         src={value.gambar}
                         alt=""
-                        className="w-full h-full object-cover cursor-pointer"
+                        className={`w-full h-full object-cover cursor-pointer ${
+                           imageVisibility[index]
+                              ? "blur-none opacity-100"
+                              : "blur-sm opacity-20"
+                        }`}
                         onClick={() => openModal(value.gambar)} // Menampilkan modal saat gambar diklik
                      />
+                     {/* icon untuk melihat */}
                   </div>
                );
             })}

@@ -5,11 +5,12 @@ import Footer from "./Footer";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css"; // CSS untuk styling kalender
 import SuccessSubmitPerawatan from "../assets/modal/SuccessSubmitPerawatan";
+import BookingKhitanSuccess from "../notification/BookingKhitanSuccess";
 import Loading from "./Loading";
 import axios from "axios";
 
 const MainLayout = () => {
-   const [loadingHalamanAwal, setLoadingHalamanAwal] = useState(true);
+   const [loadingHalamanAwal, setLoadingHalamanAwal] = useState(false);
    useEffect(() => {
       const timer = setTimeout(() => {
          setLoadingHalamanAwal(false);
@@ -31,20 +32,20 @@ const MainLayout = () => {
    const [deskripsi, setDeskripsi] = useState("");
    const [successSubmitPerawatan, setSuccesSubmitPerawatan] = useState(false);
 
-   // booking kkhitan
-   const [name, setName] = useState("");
-   const [email, setEmail] = useState("");
+   // BOOKING KHITAN
+   const [nama, setNama] = useState("");
+   const [usia, setUsia] = useState("");
    const [alamat, setAlamat] = useState("");
    const [tanggal, setTanggal] = useState("");
    const changeTanggal = (date) => {
       setTanggal(date);
    };
    const [hp, setHp] = useState("");
-   const [nik, setNik] = useState("");
    const [ortu, setOrtu] = useState("");
    const [alergi, setAlergi] = useState("");
    const [tanggalLahir, setTanggalLahir] = useState("");
    const [jamPelaksanaan, setJamPelaksanaan] = useState("");
+   const [successBookingKhitan, setSuccessBookingKhitan] = useState(false);
 
    // rawatan luka
    const [bookingPerawatan, setIsBookingPerawatan] = useState(false);
@@ -73,10 +74,9 @@ const MainLayout = () => {
          const response = await axios.post(
             "http://localhost:5000/bookingKhitan",
             {
-               nama: name,
-               nik: nik,
-               email: email,
-               tangalLahir: tanggalLahir,
+               nama: nama,
+               usia: usia,
+               tanggalLahir: tanggalLahir,
                namaOrtu: ortu,
                tanggal: tanggal,
                jamPelaksanaan: jamPelaksanaan,
@@ -86,8 +86,25 @@ const MainLayout = () => {
             }
          );
          console.log(response.data);
+         setSuccessBookingKhitan(true);
+         setTimeout(() => {
+            setSuccessBookingKhitan(false);
+         }, 3000);
+
+         // hapus semua isi field data inputan
+         setLoading(false);
+         setNama("");
+         setUsia("");
+         setTanggalLahir("");
+         setOrtu("");
+         setTanggal("");
+         setJamPelaksanaan("");
+         setAlamat("");
+         setHp("");
+         setAlergi("");
       } catch (error) {
          console.log(error.response);
+         setLoading(false);
       }
    };
 
@@ -127,7 +144,9 @@ const MainLayout = () => {
                <Loading />
             </div>
          ) : (
+            // notifikasi sukse booking
             <div className="w-full bg-warm font-poppins relative h-full overflow-hidden">
+               {successBookingKhitan && <BookingKhitanSuccess />}
                {successSubmitPerawatan && <SuccessSubmitPerawatan />}
                <div>
                   <Header />
@@ -367,37 +386,24 @@ const MainLayout = () => {
                                        type="text"
                                        className="outline-none px-3 py-3 rounded-lg w-full border focus:border-orange-500 bg-white"
                                        placeholder="Nama Lengkap"
-                                       value={name}
-                                       onChange={(e) => setName(e.target.value)}
+                                       value={nama}
+                                       onChange={(e) => setNama(e.target.value)}
                                        required
                                     />
                                  </div>
                                  <div className="w-full">
-                                    <label htmlFor="">NIK</label>
+                                    <label htmlFor="">Usia</label>
                                     <input
                                        type="text"
                                        className="outline-none px-3 py-3 rounded-lg w-full border focus:border-orange-500 bg-white"
-                                       placeholder="Email"
-                                       value={nik}
-                                       onChange={(e) => setNik(e.target.value)}
+                                       placeholder="Usia anak"
+                                       value={usia}
+                                       onChange={(e) => setUsia(e.target.value)}
                                        required
                                     />
                                  </div>
                                  <div className="w-full">
-                                    <label htmlFor="">Masukan Email</label>
-                                    <input
-                                       type="text"
-                                       className="outline-none px-3 py-3 rounded-lg w-full border focus:border-orange-500 bg-white"
-                                       placeholder="Email"
-                                       value={email}
-                                       onChange={(e) =>
-                                          setEmail(e.target.value)
-                                       }
-                                       required
-                                    />
-                                 </div>
-                                 <div className="w-full">
-                                    <label htmlFor="">Tanggal Lahir</label>
+                                    <label htmlFor="">Tanggal Lahirr</label>
                                     <input
                                        type="text"
                                        className="outline-none px-3 py-3 rounded-lg w-full border focus:border-orange-500 bg-white"
@@ -466,7 +472,7 @@ const MainLayout = () => {
                                     <input
                                        type="text"
                                        className="outline-none px-3 py-3 rounded-lg w-full border focus:border-orange-500 bg-white"
-                                       placeholder="No Hp"
+                                       placeholder="Jam booking"
                                        value={jamPelaksanaan}
                                        onChange={(e) =>
                                           setJamPelaksanaan(e.target.value)
@@ -479,7 +485,7 @@ const MainLayout = () => {
                                     <input
                                        type="text"
                                        className="outline-none px-3 py-3 rounded-lg w-full border focus:border-orange-500 bg-white"
-                                       placeholder="No Hp"
+                                       placeholder="Masukkan alergi obat"
                                        value={alergi}
                                        onChange={(e) =>
                                           setAlergi(e.target.value)
@@ -511,7 +517,11 @@ const MainLayout = () => {
                                        type="submit"
                                        className="px-5 py-3 rounded-md bg-orange-500 text-white hover:bg-orange-700 "
                                     >
-                                       Submit
+                                       {loading ? (
+                                          <span className="loading loading-spinner loading-xs"></span>
+                                       ) : (
+                                          "Submit"
+                                       )}
                                     </button>
                                  </div>
                               </form>

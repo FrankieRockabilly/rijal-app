@@ -26,6 +26,7 @@ import Testimonial from "./Testimonial";
 import { CiTimer } from "react-icons/ci";
 import Booking from "./Booking";
 import News from "./News";
+import Maps from "./Maps";
 
 const Home = () => {
    const [size, setSize] = useState(0);
@@ -274,23 +275,23 @@ const Home = () => {
 
                {/* layanan kami */}
                <div className="flex flex-wrap justify-center items-center gap-5 lg:gap-10 py-10 text-black">
-                  <div className="w-[6rem] lg:w-[12rem] h-32 lg:h-48 text-center rounded-lg flex flex-col justify-center items-center gap-2 shadow-md border p-3 hover:bg-gradient-to-r from-[#007c9d] to-green-300 cursor-pointer layanan">
+                  <div className="w-[6rem] lg:w-[12rem] h-32 lg:h-48 text-center rounded-lg flex flex-col justify-center items-center gap-2 shadow-md border p-3 hover:border-biru overflow-hidden cursor-pointer layanan">
                      <LiaClipboardListSolid size={size} />
                      <p className="text-[12px] lg:text-base">Booking Jadwal</p>
                   </div>
-                  <div className="w-[6rem] lg:w-[12rem] h-32 lg:h-48 text-center rounded-lg flex flex-col justify-center items-center gap-2 shadow-md border p-3 hover:bg-gradient-to-r from-[#007c9d] to-green-300 cursor-pointer layanan">
+                  <div className="w-[6rem] lg:w-[12rem] h-32 lg:h-48 text-center rounded-lg flex flex-col justify-center items-center gap-2 shadow-md border p-3 hover:border-biru overflow-hidden cursor-pointer layanan">
                      <MdMarkChatRead size={size} />
                      <p className="text-[12px] lg:text-base">Konsultasi</p>
                   </div>
-                  <div className="w-[6rem] lg:w-[12rem] h-32 lg:h-48 text-center rounded-lg flex flex-col justify-center items-center gap-2 shadow-md border p-3 hover:bg-gradient-to-r from-[#007c9d] to-green-300 cursor-pointer layanan">
+                  <div className="w-[6rem] lg:w-[12rem] h-32 lg:h-48 text-center rounded-lg flex flex-col justify-center items-center gap-2 shadow-md border p-3 hover:border-biru overflow-hidden cursor-pointer layanan">
                      <RiHealthBookFill size={size} />
                      <p className="text-[12px] lg:text-base">Check up</p>
                   </div>
-                  <div className="w-[6rem] lg:w-[12rem] h-32 lg:h-48 text-center rounded-lg flex flex-col justify-center items-center gap-2 shadow-md border p-3 hover:bg-gradient-to-r from-[#007c9d] to-green-300 cursor-pointer layanan">
+                  <div className="w-[6rem] lg:w-[12rem] h-32 lg:h-48 text-center rounded-lg flex flex-col justify-center items-center gap-2 shadow-md border p-3 hover:border-biru overflow-hidden cursor-pointer layanan">
                      <RxScissors size={size} />
                      <p className="text-[12px] lg:text-base">Layanan Khitan</p>
                   </div>
-                  <div className="w-[6rem] lg:w-[12rem] h-32 lg:h-48 text-center rounded-lg flex flex-col justify-center items-center gap-2 shadow-md border p-3 hover:bg-gradient-to-r from-[#007c9d] to-green-300 cursor-pointer layanan">
+                  <div className="w-[6rem] lg:w-[12rem] h-32 lg:h-48 text-center rounded-lg flex flex-col justify-center items-center gap-2 shadow-md border p-3 hover:border-biru overflow-hidden cursor-pointer layanan">
                      <GiMedicines size={size} />
                      <p className="text-[12px] lg:text-base">Rawat Luka</p>
                   </div>
@@ -491,6 +492,10 @@ const Home = () => {
          <div>
             <Booking />
          </div>
+
+         {/* <div className="w-full ">
+            <Maps />
+         </div> */}
       </>
    );
 };

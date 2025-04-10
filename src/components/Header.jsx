@@ -84,6 +84,14 @@ export const Header = () => {
                      <li>Tentang</li>
                   </NavLink>
                   <NavLink
+                     to={"/about"}
+                     className={({ isActive }) =>
+                        isActive ? "text-biru" : "hover:text-biru"
+                     }
+                  >
+                     <li>Layanan</li>
+                  </NavLink>
+                  <NavLink
                      to={"/contact"}
                      className={({ isActive }) =>
                         isActive ? "text-biru" : "hover:text-biru"
@@ -132,12 +140,12 @@ export const Header = () => {
 
             {/* hamburger menu ketika ukuran sm */}
             <div className="flex justify-center items-center gap-3 text-black">
-               <Link to={"/login"}>
-                  <button className="flex justify-center items-center gap-2 ">
+               <a href={"/login"}>
+                  <button className="flex justify-center items-center gap-2 px-3 py-2 bg-biru rounded-md text-white">
                      <CiUser size={20} />
                      <p>Login</p>
                   </button>
-               </Link>
+               </a>
                <div className="xl:hidden">
                   <VscListSelection size={25} onClick={handleClickMenu} />
                </div>

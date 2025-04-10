@@ -62,7 +62,7 @@ const News = () => {
             <div className="flex justify-center items-center gap-5 ">
                <hr className="bg-gray-600 w-full" />
                <h2 className="text-center text-2xl py-2  uppercase font-bold min-w-52 text-black ">
-                  b e r I t A
+                  Artikel
                </h2>
                <hr className="bg-gray-900 w-full" />
             </div>
@@ -109,7 +109,7 @@ const News = () => {
                            <img src={value.urlToImage} alt="" />
                         </div>
                         <div className="grow text-black font-light flex flex-col justify-start items-start h-32 overflow-hidden">
-                           <h3 className="text-base h-full break-words max-h-16 font-light py-2">
+                           <h3 className="text-base h-full break-words max-h-16 font-light py-2 line-clamp-2 overflow-hidden">
                               {value.title}
                            </h3>
                            <a
@@ -117,7 +117,7 @@ const News = () => {
                               target="_blank"
                               rel="noopener noreferrer"
                            >
-                              <button className="py-2 px-5 bg-biru rounded-md text-white absolute bottom-2 left-2  hover:bg-blue-900 duration-300 transition-all ease-in-out border-4 border-white">
+                              <button className="py-2 px-5 bg-biru rounded-md text-white absolute bottom-2 left-2  hover:bg-blue-900 duration-300 transition-all ease-in-out ">
                                  Lihat berita
                               </button>
                            </a>
