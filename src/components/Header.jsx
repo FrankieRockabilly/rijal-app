@@ -44,7 +44,7 @@ export const Header = () => {
    return (
       <>
          <div
-            className={`flex justify-between items-center px-5 lg:px-[10%] py-2 lg:py-4 w-full fixed top-0 z-40 bg-white shadow-lg backdrop-blur-3xl bg-opacity-85`}
+            className={`flex justify-between items-center px-5 lg:px-[15%] py-2 lg:py-4 w-full fixed top-0 z-40 bg-white shadow-lg backdrop-blur-3xl bg-opacity-85`}
          >
             <div>
                <nav>
@@ -83,14 +83,14 @@ export const Header = () => {
                   >
                      <li>Tentang</li>
                   </NavLink>
-                  <NavLink
+                  {/* <NavLink
                      to={"/about"}
                      className={({ isActive }) =>
                         isActive ? "text-biru" : "hover:text-biru"
                      }
                   >
                      <li>Layanan</li>
-                  </NavLink>
+                  </NavLink> */}
                   <NavLink
                      to={"/contact"}
                      className={({ isActive }) =>
@@ -107,10 +107,6 @@ export const Header = () => {
                   >
                      <li>Galeri</li>
                   </NavLink>
-
-                  <li className="px-3 py-2 bg-biru rounded-md text-white">
-                     Buat Janji / Booking
-                  </li>
                </ul>
 
                {/* <div className="relative">
@@ -124,7 +120,7 @@ export const Header = () => {
                   </div>
                </div> */}
 
-               <div className="px-3 py-2 border border-biru rounded-md text-[#007c9d] hover:text-white flex justify-center items-center gap-2 hover:bg-gradient-to-r from-green-700 to-blue-900 cursor-pointer">
+               {/* <div className="px-3 py-2 border border-biru rounded-md text-[#007c9d] hover:text-white flex justify-center items-center gap-2 hover:bg-gradient-to-r from-green-700 to-blue-900 cursor-pointer">
                   <FaPhoneAlt />
                   <a href="http://wa.me/+6282273212907" target="blank">
                      <p>+6282-7321-2907</p>
@@ -135,11 +131,14 @@ export const Header = () => {
                   <a href="mailto:rizalaraffa14@gmail.com" target="_blank">
                      <p>rizalaraffa14@gmail.com</p>
                   </a>
-               </div>
+               </div> */}
             </div>
+               <div className="px-4 py-3 hover:bg-biru rounded-md hover:text-white border border-biru  ease-in-out duration-300">
+                  Buat Janji / Booking
+               </div>
 
             {/* hamburger menu ketika ukuran sm */}
-            <div className="flex justify-center items-center gap-3 text-black">
+            {/* <div className="flex justify-center items-center gap-3 text-black">
                <a href={"/login"}>
                   <button className="flex justify-center items-center gap-2 px-3 py-2 bg-biru rounded-md text-white">
                      <CiUser size={20} />
@@ -149,7 +148,7 @@ export const Header = () => {
                <div className="xl:hidden">
                   <VscListSelection size={25} onClick={handleClickMenu} />
                </div>
-            </div>
+            </div> */}
          </div>
 
          {/* Munculkan menu jika isMenuClicked true */}
