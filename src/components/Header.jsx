@@ -1,19 +1,30 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { IoMdMail } from "react-icons/io";
-import { FaPhoneAlt } from "react-icons/fa";
+
+// react icons
+import { FaAngleDown  } from "react-icons/fa";
+import { GoArrowRight } from "react-icons/go";
+
 import { VscListSelection } from "react-icons/vsc";
-import { CiUser } from "react-icons/ci";
+import homecareLogo from '../assets/Image/homecareLogo.png'
 import gsap from "gsap";
 
 export const Header = () => {
    const [isMenuClicked, setIsMenuClicked] = useState(false);
-   const [isScroll, setIsScroll] = useState(false);
+   // const [isScroll, setIsScroll] = useState(false);
    const menuRef = useRef(null);
+   const [isOpen, setIsOpen] = useState(false);
+   const [headerActiveMenuLayanan, setHeaderActiveMenuLayanan] = useState('Layanan Khitan Modern')
+   const [activeMenuLayanan, setActiveMenulayanan]  = useState("Tentang")
+   
+   const headerMenuLayananItem = ['Layanan Khitan Modern' , 'Perawatan Luka']
+   const menuLayananItem = ['Tentang' , 'Keunggulan Super Ring', 'Promo & Diskon',  'Testimoni Pasien' , 'Booking Jadwal', 'FAQ & Tips Kesehatans']
+
 
    const handleClickMenu = () => {
       setIsMenuClicked((prevState) => !prevState);
    };
+
 
    // Animasi GSAP
    useEffect(() => {
@@ -44,7 +55,7 @@ export const Header = () => {
    return (
       <>
          <div
-            className={`flex justify-between items-center px-5 lg:px-[15%] py-2 lg:py-4 w-full fixed top-0 z-40 bg-white shadow-lg backdrop-blur-3xl bg-opacity-85`}
+            className={`flex justify-between items-center px-5 lg:px-[7%] w-full fixed top-0 z-40 bg-white shadow-lg backdrop-blur-3xl bg-opacity-85`}
          >
             <div>
                <nav>
@@ -52,11 +63,9 @@ export const Header = () => {
                      <li className="mr-10">
                         <a href="./">
                            <img
-                              src="https://res.cloudinary.com/dplikeeby/image/upload/v1740844540/RIJALHOMECARE_vmjuwa.png"
-                              // src="https://res.cloudinary.com/dplikeeby/image/upload/v1740987484/Preview_ox3qlp.jpg"
+                              src={homecareLogo}
                               alt=""
-                              className="w-12"
-                              // onClick={refresh}
+                              className="w-12 lg:w-16"
                            />
                         </a>
                      </li>
@@ -66,7 +75,7 @@ export const Header = () => {
 
             {/* menu yang muncul ketika ukuran layar lg */}
             <div className="hidden xl:flex justify-end items-center gap-8">
-               <ul className="flex justify-start items-center gap-10 cursor-pointer text-gray-700">
+               <ul className="flex justify-start items-center gap-20 cursor-pointer text-gray-700">
                   <NavLink
                      to="/"
                      className={({ isActive }) =>
@@ -77,20 +86,59 @@ export const Header = () => {
                   </NavLink>
                   <NavLink
                      to={"/about"}
-                     className={({ isActive }) =>
-                        isActive ? "text-biru" : "hover:text-biru"
-                     }
+                     className='hover:text-biru'
                   >
                      <li>Tentang</li>
                   </NavLink>
-                  {/* <NavLink
-                     to={"/about"}
-                     className={({ isActive }) =>
-                        isActive ? "text-biru" : "hover:text-biru"
-                     }
+
+                  <div 
+                     className="relative py-5"
+                     onMouseEnter={() => setIsOpen(true)}
+                     onMouseLeave={() => setIsOpen(false)}
                   >
-                     <li>Layanan</li>
-                  </NavLink> */}
+                     <div className="hover:text-biru flex justify-center items-center gap-3 cursor-pointer ">
+                     <p>Layanan</p>
+                     <FaAngleDown />
+                     </div>
+
+                     {isOpen && (
+                     <div className="absolute left-1/2 transform -translate-x-1/2 -z-50 top-full mt-0 bg-white p-5 w-[80rem] border shadow-lg">
+                        <div className="flex items-start gap-10 py-3">
+                           {headerMenuLayananItem.map((headerItem, index)=>(
+                              <button key={index} 
+                              className={headerActiveMenuLayanan === headerItem ? "py-1  border-b-2 border-biru" : "py-1  hover:text-biru"}
+                              onClick={()=> setHeaderActiveMenuLayanan(headerItem)}
+                              > 
+                                 {headerItem}
+                              </button>
+
+                           ))}
+                        </div>
+
+                        <div className="flex justify-start items-start py-7 gap-40">
+                           <div className="flex flex-col justify-start items-start gap-5">
+                              {menuLayananItem.map((menu, index)=>(
+                                 <button key={index} onClick={()=> setActiveMenulayanan(menu)}
+                                 className={activeMenuLayanan === menu ? "text-biru" : "hover:text-biru"}
+                                 >
+                                    {menu}
+                                 </button>
+                              ))}
+                              <button className="my-5 px-5 py-3 bg-biru text-white rounded-md flex justify-center items-center gap-3">
+                                 <p>Semua Layanan</p>
+                                 <GoArrowRight />
+                              </button>
+                           </div>
+
+                           <div>
+                              Ini adalah isi dari konten menurut judul layanan
+                           </div>
+                        </div>
+                     </div>
+                     )}
+                  </div>
+
+
                   <NavLink
                      to={"/contact"}
                      className={({ isActive }) =>
@@ -133,22 +181,22 @@ export const Header = () => {
                   </a>
                </div> */}
             </div>
-               <div className="px-4 py-3 hover:bg-biru rounded-md hover:text-white border border-biru  ease-in-out duration-300">
+               {/* <div className="px-4 py-3 hover:bg-biru rounded-md hover:text-white border border-biru  ease-in-out duration-300 hidden lg:block">
                   Buat Janji / Booking
-               </div>
+               </div> */}
 
             {/* hamburger menu ketika ukuran sm */}
-            {/* <div className="flex justify-center items-center gap-3 text-black">
+            <div className="flex justify-center items-center gap-3 text-black">
                <a href={"/login"}>
-                  <button className="flex justify-center items-center gap-2 px-3 py-2 bg-biru rounded-md text-white">
+                  {/* <button className="flex justify-center items-center gap-2 px-3 py-2 bg-biru rounded-md text-white">
                      <CiUser size={20} />
                      <p>Login</p>
-                  </button>
+                  </button> */}
                </a>
                <div className="xl:hidden">
                   <VscListSelection size={25} onClick={handleClickMenu} />
                </div>
-            </div> */}
+            </div>
          </div>
 
          {/* Munculkan menu jika isMenuClicked true */}

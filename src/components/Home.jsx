@@ -18,7 +18,7 @@ import {
    FaWhatsapp,
    FaLinkedin,
 } from "react-icons/fa";
-import rijal from "../assets/Image/rijall.png";
+import rijal from "../assets/Image/rjl.png";
 import excitedPerson from "../assets/Image/omg2.png";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/src/ScrollTrigger";
@@ -97,37 +97,6 @@ const Home = () => {
       );
 
       // scroll trigger
-      gsap.fromTo(
-         ".layananKiri",
-         { x: -50, opacity: 0 },
-         {
-            x: 0,
-            opacity: 1,
-            scrollTrigger: {
-               trigger: ".layananKiri",
-               start: "top 80%",
-               scrub: false,
-            },
-            duration: 1,
-            ease: "power1.inOut",
-         }
-      );
-      gsap.fromTo(
-         ".layananKanan",
-         { x: 50, opacity: 0 },
-         {
-            x: 0,
-            opacity: 1,
-            scrollTrigger: {
-               trigger: ".layananKanan",
-               start: "top 80%",
-               scrub: false,
-            },
-            duration: 1,
-            ease: "power1.inOut",
-         }
-      );
-
       gsap.fromTo(
          ".speciality",
          { x: -50, opacity: 0 },
@@ -210,10 +179,10 @@ const Home = () => {
    return (
       <>
          <div className="  bg-warm overflow-hidden h-full relative">
-            <div className="relative pt-14 lg:pt-20 ">
+            <div className="relative pt-10 lg:pt-14 ">
                {/* hero section */}
                <div
-                  className="border py-52 h-[20rem] lg:h-[55rem] w-full bg-gradient-to-r from-[#007c9d] to-white text-black flex justify-start items-center overflow-hidden relative bg-no-repeat bg-cover "
+                  className=" py-52 h-[20rem] lg:h-[55rem] w-full bg-gradient-to-r from-[#007c9d] to-white text-black flex justify-start items-center overflow-hidden relative bg-no-repeat bg-cover "
                   // style={{
                   //    backgroundImage: `url(https://img.freepik.com/free-photo/frame-medical-equipment-desk_23-2148519742.jpg?t=st=1741743620~exp=1741747220~hmac=5341bc207a539ddbd870d2a3a0799b67bf5c20f50bcc454149c0f2624259ba33&w=1060)`,
                   //    opacity: 0.5,
@@ -239,36 +208,21 @@ const Home = () => {
                            Kesehatan Masyarakat
                         </span>
                      </p>
-                     <p className="text-sm lg:text-2xl text-white  kiri">
+                     <p className="text-[11px] lg:text-2xl text-white  kiri">
                         Perawatan Terpercaya dirumah,Untuk Kesehatan Keluarga
                         Anda
                      </p>
-                     <button className="px-3 py-2 lg:px-5 lg:py-3 mt-3 rounded-md text-sm lg:text-base  text-white bg-orange-500 kontak kiri">
+                     <button className="px-3 py-2 lg:px-5 lg:py-3 mt-3 rounded-md text-[12px] lg:text-base  text-white bg-orange-500 kontak kiri">
                         Kontak saya
                      </button>
-                     {/* social media */}
-                     <div className="flex justify-start items-center gap-3 py-5 text-zinc-800 text-base lg:text-2xl">
-                        <h1>Find me in</h1>
-                        <a href="#">
-                           <FaFacebookF size={20} />
-                        </a>
-                        <a href="#">
-                           <FaInstagram size={20} />
-                        </a>
-                        <a href="#">
-                           <FaWhatsapp size={20} />
-                        </a>
-                        <a href="#">
-                           <FaLinkedin size={20} />
-                        </a>
-                     </div>
+                     
                   </div>
                   {/* 2 */}
-                  <div className="w-full h-full flex justify-end items-end absolute top-0 left-0 kanan">
+                  <div className="w-full h-full flex justify-end items-end absolute top-0 left-0 kanan ">
                      <img
                         src={rijal}
                         alt=""
-                        className="w-80 lg:w-[60rem] object-cover opacity-60"
+                        className="w-52 lg:w-[40rem] object-cover opacity-60"
                      />
                   </div>
                </div>
