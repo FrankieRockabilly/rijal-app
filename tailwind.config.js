@@ -11,7 +11,7 @@ export default {
             warm: "#F8F8FF",
          },
          fontFamily: {
-            poppins: ["Poppins", "sans-serif"],
+            poppins: ["Montserrat","sans-serif"],
          },
       },
    },

@@ -12,12 +12,6 @@ import { GiMedicines } from "react-icons/gi";
 import { MdMarkChatRead } from "react-icons/md";
 import { RiHealthBookFill } from "react-icons/ri";
 import { RxScissors } from "react-icons/rx";
-import {
-   FaFacebookF,
-   FaInstagram,
-   FaWhatsapp,
-   FaLinkedin,
-} from "react-icons/fa";
 import rijal from "../assets/Image/rjl.png";
 import excitedPerson from "../assets/Image/omg2.png";
 import gsap from "gsap";
@@ -228,24 +222,24 @@ const Home = () => {
                </div>
 
                {/* layanan kami */}
-               <div className="flex flex-wrap justify-center items-center gap-5 lg:gap-10 py-10 text-black">
-                  <div className="w-[6rem] lg:w-[12rem] h-32 lg:h-48 text-center rounded-lg flex flex-col justify-center items-center gap-2 shadow-md border p-3 hover:border-biru overflow-hidden cursor-pointer layanan">
+               <div className="px-10 flex flex-wrap justify-center items-center gap-5 lg:gap-10 py-10 text-black">
+                  <div className="w-20 lg:w-[12rem] h-24 lg:h-48 text-center rounded-lg flex flex-col justify-center items-center gap-2 shadow-md border p-3 hover:border-biru overflow-hidden cursor-pointer layanan">
                      <LiaClipboardListSolid size={size} />
-                     <p className="text-[12px] lg:text-base">Booking Jadwal</p>
+                     <p className="text-[12px] lg:text-base">Booking</p>
                   </div>
-                  <div className="w-[6rem] lg:w-[12rem] h-32 lg:h-48 text-center rounded-lg flex flex-col justify-center items-center gap-2 shadow-md border p-3 hover:border-biru overflow-hidden cursor-pointer layanan">
+                  <div className="w-20 lg:w-[12rem] h-24 lg:h-48 text-center rounded-lg flex flex-col justify-center items-center gap-2 shadow-md border p-3 hover:border-biru overflow-hidden cursor-pointer layanan">
                      <MdMarkChatRead size={size} />
                      <p className="text-[12px] lg:text-base">Konsultasi</p>
                   </div>
-                  <div className="w-[6rem] lg:w-[12rem] h-32 lg:h-48 text-center rounded-lg flex flex-col justify-center items-center gap-2 shadow-md border p-3 hover:border-biru overflow-hidden cursor-pointer layanan">
+                  <div className="w-20 lg:w-[12rem] h-24 lg:h-48 text-center rounded-lg flex flex-col justify-center items-center gap-2 shadow-md border p-3 hover:border-biru overflow-hidden cursor-pointer layanan">
                      <RiHealthBookFill size={size} />
-                     <p className="text-[12px] lg:text-base">Check up</p>
+                     <p className="text-[12px] lg:text-base">MCU</p>
                   </div>
-                  <div className="w-[6rem] lg:w-[12rem] h-32 lg:h-48 text-center rounded-lg flex flex-col justify-center items-center gap-2 shadow-md border p-3 hover:border-biru overflow-hidden cursor-pointer layanan">
+                  <div className="w-20 lg:w-[12rem] h-24 lg:h-48 text-center rounded-lg flex flex-col justify-center items-center gap-2 shadow-md border p-3 hover:border-biru overflow-hidden cursor-pointer layanan">
                      <RxScissors size={size} />
-                     <p className="text-[12px] lg:text-base">Layanan Khitan</p>
+                     <p className="text-[12px] lg:text-base">Khitan</p>
                   </div>
-                  <div className="w-[6rem] lg:w-[12rem] h-32 lg:h-48 text-center rounded-lg flex flex-col justify-center items-center gap-2 shadow-md border p-3 hover:border-biru overflow-hidden cursor-pointer layanan">
+                  <div className="w-20 lg:w-[12rem] h-24 lg:h-48 text-center rounded-lg flex flex-col justify-center items-center gap-2 shadow-md border p-3 hover:border-biru overflow-hidden cursor-pointer layanan">
                      <GiMedicines size={size} />
                      <p className="text-[12px] lg:text-base">Rawat Luka</p>
                   </div>
@@ -316,12 +310,12 @@ const Home = () => {
                   Mengapa Pilih Kami ?
                </h1>
                <Line />
-               <p>
+               <p className="text-[12px] lg:text-base">
                   Kami hadir untuk memberikan perawatan terbaik bagi ibu dan
                   bayi, dengan layanan profesional, nyaman, dan penuh kasih
                   sayang langsung di rumah Anda{" "}
                </p>
-               <div>
+               <div className="text-[12px] lg:text-base">
                   <div className="flex justify-start items-center gap-2">
                      <div className="w-2 h-2 rounded-full border-2 border-green-600"></div>
                      <p>Pelayanan Profesional</p>
@@ -341,21 +335,21 @@ const Home = () => {
             </div>
 
             {/* 2 */}
-            <div className="w-full lg:w-[35rem] h-full flex justify-end items-end relative flex-col-reverse gap-10 pilihKanan">
+            <div className="w-full lg:w-[35rem] h-full lg:h-[28rem] flex justify-end items-end relative flex-col-reverse gap-10 pilihKanan">
                <img
-                  src="https://demo.phlox.pro/medical/wp-content/uploads/sites/166/2020/05/Mask_Group_54-1.jpg"
-                  alt=""
-                  className="w-full object-cover rounded-md"
+                  src="https://res.cloudinary.com/dplikeeby/image/upload/v1740838564/12_brz7bq.jpg"
+                  alt="homecare"
+                  className="w-full h-full object-cover rounded-md "
                />
                {/* absolute div */}
                <div className="flex flex-col lg:flex-row justify-around items-center gap-10 lg:absolute lg:bottom-5 lg:-left-96 px-10 py-10 w-full lg:w-auto h-full lg:h-52 bg-biru text-white">
                   {/* 1 */}
-                  <div className="flex flex-col lg:flex-row justify-center items-center gap-2 ">
+                  <div className="flex flex-col lg:flex-row justify-center items-center gap-2">
                      <PiHospitalThin size={80} />
                      <div className="flex flex-col justify-center items-center lg:items-start gap-1">
                         <p className="text-2xl lg:text-2xl">100+</p>
                         <p className="text-sm lg:text-xl">
-                           STATISFIED PATIENTS{" "}
+                           PASIEN PUAS{" "}
                         </p>
                      </div>
                   </div>
@@ -364,7 +358,7 @@ const Home = () => {
                      <FaBed size={80} />
                      <div className="flex flex-col justify-center items-center lg:items-start gap-1">
                         <p className="text-2xl lg:text-2xl">256++ </p>
-                        <p className="text-sm lg:text-xl">CLINICS OF BEDS </p>
+                        <p className="text-sm lg:text-xl">KHITAN SUPER NYAMAN</p>
                      </div>
                   </div>
                </div>

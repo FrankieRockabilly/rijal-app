@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, Route } from "react-router-dom";
 
 // react icons
 import { FaAngleDown  } from "react-icons/fa";
@@ -8,18 +8,20 @@ import { GoArrowRight } from "react-icons/go";
 import { VscListSelection } from "react-icons/vsc";
 import homecareLogo from '../assets/Image/homecareLogo.png'
 import gsap from "gsap";
+import KhitanContent from "./headerContent/KhitanContent";
+import RawatanContent from "./headerContent/RawatanContent";
 
 export const Header = () => {
    const [isMenuClicked, setIsMenuClicked] = useState(false);
    // const [isScroll, setIsScroll] = useState(false);
    const menuRef = useRef(null);
    const [isOpen, setIsOpen] = useState(false);
-   const [headerActiveMenuLayanan, setHeaderActiveMenuLayanan] = useState('Layanan Khitan Modern')
-   const [activeMenuLayanan, setActiveMenulayanan]  = useState("Tentang")
-   
-   const headerMenuLayananItem = ['Layanan Khitan Modern' , 'Perawatan Luka']
-   const menuLayananItem = ['Tentang' , 'Keunggulan Super Ring', 'Promo & Diskon',  'Testimoni Pasien' , 'Booking Jadwal', 'FAQ & Tips Kesehatans']
 
+   const [activeTabs, setActiveTabs] = useState('Layanan Khitan')
+   const tabs= [
+      { id:1, label:"Layanan Khitan" , route : "#",},
+      { id:2, label:"Layanan Rawatan Luka" , route : "#"}
+   ]
 
    const handleClickMenu = () => {
       setIsMenuClicked((prevState) => !prevState);
@@ -102,38 +104,24 @@ export const Header = () => {
                      </div>
 
                      {isOpen && (
-                     <div className="absolute left-1/2 transform -translate-x-1/2 -z-50 top-full mt-0 bg-white p-5 w-[80rem] border shadow-lg">
-                        <div className="flex items-start gap-10 py-3">
-                           {headerMenuLayananItem.map((headerItem, index)=>(
-                              <button key={index} 
-                              className={headerActiveMenuLayanan === headerItem ? "py-1  border-b-2 border-biru" : "py-1  hover:text-biru"}
-                              onClick={()=> setHeaderActiveMenuLayanan(headerItem)}
-                              > 
-                                 {headerItem}
-                              </button>
-
-                           ))}
-                        </div>
-
-                        <div className="flex justify-start items-start py-7 gap-40">
-                           <div className="flex flex-col justify-start items-start gap-5">
-                              {menuLayananItem.map((menu, index)=>(
-                                 <button key={index} onClick={()=> setActiveMenulayanan(menu)}
-                                 className={activeMenuLayanan === menu ? "text-biru" : "hover:text-biru"}
-                                 >
-                                    {menu}
-                                 </button>
+                     <div className="absolute left-1/2 transform -translate-x-1/2 -z-50 top-full mt-0 bg-white p-5 w-[80rem] border-t-2 border-biru shadow-lg">
+                        <div className="flex justify-start items-start gap-20 py-4 text-lg font-semibold ">
+                              {tabs.map((item)=>(
+                                 <button key={item.id} onClick={()=> setActiveTabs(item.label)}
+                                 className={`border-b-2 px-2 py-1 ${activeTabs === item.label ? "border-biru text-biru" : "border-gray-500 hover:border-biru"}`}
+                                 > {item.label} </button>
                               ))}
-                              <button className="my-5 px-5 py-3 bg-biru text-white rounded-md flex justify-center items-center gap-3">
-                                 <p>Semua Layanan</p>
-                                 <GoArrowRight />
-                              </button>
-                           </div>
-
-                           <div>
-                              Ini adalah isi dari konten menurut judul layanan
-                           </div>
                         </div>
+
+                        <div className="flex justify-start items-start gap-20 mt-5">
+                        {activeTabs === "Layanan Khitan" && <KhitanContent />}
+                        {activeTabs === "Layanan Rawatan Luka" && <RawatanContent />}
+                        </div>
+
+                        <button className="my-10 px-5 py-3 bg-biru hover:bg-sky-800 transition-all duration-150 ease-out text-white rounded-md flex justify-center items-center gap-3">
+                           <p className="text-sm">Semua Layanan</p>
+                           <GoArrowRight />
+                        </button>
                      </div>
                      )}
                   </div>
