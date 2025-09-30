@@ -176,10 +176,10 @@ const Home = () => {
             <div className="relative pt-10 lg:pt-14 ">
                {/* hero section */}
                <div
-                  className=" py-52 h-[20rem] lg:h-[55rem] w-full bg-gradient-to-r from-[#007c9d] to-white text-black flex justify-start items-center overflow-hidden relative bg-no-repeat bg-cover "
+                  className="h-[20rem] lg:h-[100vh] w-full bg-gradient-to-r from-[#007c9d] to-white text-black flex justify-start items-center overflow-hidden relative bg-no-repeat bg-cover"
                   // style={{
                   //    backgroundImage: `url(https://img.freepik.com/free-photo/frame-medical-equipment-desk_23-2148519742.jpg?t=st=1741743620~exp=1741747220~hmac=5341bc207a539ddbd870d2a3a0799b67bf5c20f50bcc454149c0f2624259ba33&w=1060)`,
-                  //    opacity: 0.5,
+                  //    opacity: 0.9,
                   // }}
                >
                   <div className="absolute top-[3%] lg:top-[10%] translate-y-1/2 right-14 lg:right-[35%] z-10 ">
@@ -191,7 +191,7 @@ const Home = () => {
                   <div className=" max-w-[75%] h-full px-5 lg:px-28 flex flex-col justify-center items-start lg:gap-3">
                      <div className="flex justify-start items-center gap-2 homecare">
                         <Line />
-                        <p>M Rijal</p>
+                        <p>Ns. Muhammad Rijal, S. Kep</p>
                      </div>
                      <h1 className="font-bold text-4xl lg:text-8xl xl:text-[11rem] text-white homecare">
                         HomeCare
@@ -206,7 +206,7 @@ const Home = () => {
                         Perawatan Terpercaya dirumah,Untuk Kesehatan Keluarga
                         Anda
                      </p>
-                     <button className="px-3 py-2 lg:px-5 lg:py-3 mt-3 rounded-md text-[12px] lg:text-base  text-white bg-orange-500 kontak kiri">
+                     <button className="px-3 py-2 lg:px-5 lg:py-3 mt-3 rounded-md text-[12px] lg:text-base  text-white bg-orange-500 kontak kiri z-10">
                         Kontak saya
                      </button>
                      
@@ -223,23 +223,23 @@ const Home = () => {
 
                {/* layanan kami */}
                <div className="px-10 flex flex-wrap justify-center items-center gap-5 lg:gap-10 py-10 text-black">
-                  <div className="w-20 lg:w-[12rem] h-24 lg:h-48 text-center rounded-lg flex flex-col justify-center items-center gap-2 shadow-md border p-3 hover:border-biru overflow-hidden cursor-pointer layanan">
+                  <div className="w-20 h-24 lg:w-[10rem]  lg:h-40 text-center rounded-lg flex flex-col justify-center items-center gap-2 shadow-md border p-3 hover:border-biru overflow-hidden cursor-pointer layanan">
                      <LiaClipboardListSolid size={size} />
                      <p className="text-[12px] lg:text-base">Booking</p>
                   </div>
-                  <div className="w-20 lg:w-[12rem] h-24 lg:h-48 text-center rounded-lg flex flex-col justify-center items-center gap-2 shadow-md border p-3 hover:border-biru overflow-hidden cursor-pointer layanan">
+                  <div className="w-20 h-24 lg:w-[10rem]  lg:h-40 text-center rounded-lg flex flex-col justify-center items-center gap-2 shadow-md border p-3 hover:border-biru overflow-hidden cursor-pointer layanan">
                      <MdMarkChatRead size={size} />
                      <p className="text-[12px] lg:text-base">Konsultasi</p>
                   </div>
-                  <div className="w-20 lg:w-[12rem] h-24 lg:h-48 text-center rounded-lg flex flex-col justify-center items-center gap-2 shadow-md border p-3 hover:border-biru overflow-hidden cursor-pointer layanan">
+                  <div className="w-20 h-24 lg:w-[10rem]  lg:h-40 text-center rounded-lg flex flex-col justify-center items-center gap-2 shadow-md border p-3 hover:border-biru overflow-hidden cursor-pointer layanan">
                      <RiHealthBookFill size={size} />
                      <p className="text-[12px] lg:text-base">MCU</p>
                   </div>
-                  <div className="w-20 lg:w-[12rem] h-24 lg:h-48 text-center rounded-lg flex flex-col justify-center items-center gap-2 shadow-md border p-3 hover:border-biru overflow-hidden cursor-pointer layanan">
+                  <div className="w-20 h-24 lg:w-[10rem]  lg:h-40 text-center rounded-lg flex flex-col justify-center items-center gap-2 shadow-md border p-3 hover:border-biru overflow-hidden cursor-pointer layanan">
                      <RxScissors size={size} />
                      <p className="text-[12px] lg:text-base">Khitan</p>
                   </div>
-                  <div className="w-20 lg:w-[12rem] h-24 lg:h-48 text-center rounded-lg flex flex-col justify-center items-center gap-2 shadow-md border p-3 hover:border-biru overflow-hidden cursor-pointer layanan">
+                  <div className="w-20 h-24 lg:w-[10rem]  lg:h-40 text-center rounded-lg flex flex-col justify-center items-center gap-2 shadow-md border p-3 hover:border-biru overflow-hidden cursor-pointer layanan">
                      <GiMedicines size={size} />
                      <p className="text-[12px] lg:text-base">Rawat Luka</p>
                   </div>
@@ -342,7 +342,7 @@ const Home = () => {
                   className="w-full h-full object-cover rounded-md "
                />
                {/* absolute div */}
-               <div className="flex flex-col lg:flex-row justify-around items-center gap-10 lg:absolute lg:bottom-5 lg:-left-96 px-10 py-10 w-full lg:w-auto h-full lg:h-52 bg-biru text-white">
+               <div className="hidden xl:flex flex-col lg:flex-row justify-around items-center gap-10 lg:absolute lg:bottom-5 lg:-left-96 px-10 py-10 w-full lg:w-auto h-full lg:h-52 bg-biru text-white ">
                   {/* 1 */}
                   <div className="flex flex-col lg:flex-row justify-center items-center gap-2">
                      <PiHospitalThin size={80} />
@@ -371,67 +371,62 @@ const Home = () => {
          </div>
 
          {/* banner */}
-         <div className="w-full px-5  py-10 lg:px-[10%] text-white bannerSatu">
-            <div
-               className="bg-biru rounded-xl px-5 lg:px-28 py-5 lg:py-28 flex flex-col justify-start items-start gap-3 shadow-lg bg-opacity-80 relative"
-               // style={{
-               //    backgroundImage: `url(https://img.freepik.com/free-photo/view-medicine-blue-background_23-2149341571.jpg?t=st=1739951318~exp=1739954918~hmac=74472508729df09e0fdb0309dee3f2a2f9efdf5c658abd90c1e1856d3084734c&w=1380)`,
-               //    backgroundSize: "cover",
-               //    backgroundPosition: "center",
-               // }}
-            >
-               <h2>Tahukah Kamu ?</h2>
-               <h1 className="text-lg lg:text-6xl font-semibold max-w-[60%]">
-                  SOLUSI TEPAT UNTUK
-                  <span className="text-orange-500">PENYEMBUHAN LUKA</span>
-               </h1>
-               <p className="text-[12px] lg:text-xl max-w-[70%] z-10">
-                  Luka yang tidak di tangani dengan baik bisa beresiko infeksi
-                  dan memperlambat proses penyembuhan
-               </p>
-               <button className="bg-orange-500 px-5 py-3 text-white rounded-lg mt-3">
-                  Read More
-               </button>
-               {/* gambar */}
-               <div className="absolute right-0 lg:-top-28 bottom-0 w-[42%] ">
-                  <img
-                     src="https://res.cloudinary.com/dplikeeby/image/upload/v1739855466/obat_ixcp8q.png"
-                     alt=""
-                  />
+         <div className="flex flex-col lg:flex-row justify-center items-center gap-2 lg:px-10">
+            {/* first banner */}
+            <div className="w-full lg:w-[50%] p-5 text-white bannerSatu ">
+               <div className="bg-biru rounded-xl px-5 lg:px-28 py-5 lg:py-28 flex flex-col justify-start items-start gap-3 shadow-lg bg-opacity-80 relative shadow-xl"
+                  // style={{
+                  //    backgroundImage: `url(https://img.freepik.com/free-photo/view-medicine-blue-background_23-2149341571.jpg?t=st=1739951318~exp=1739954918~hmac=74472508729df09e0fdb0309dee3f2a2f9efdf5c658abd90c1e1856d3084734c&w=1380)`,
+                  //    backgroundSize: "cover",
+                  //    backgroundPosition: "center",
+                  // }}
+               >
+                  <h2>Tahukah Kamu ?</h2>
+                  <h1 className="text-lg lg:text-3xl font-semibold">
+                     SOLUSI TEPAT UNTUK
+                     <span className="text-orange-500">PENYEMBUHAN LUKA</span>
+                  </h1>
+                  <p className="text-xs lg:text-base z-10">
+                     Luka yang tidak di tangani dengan baik bisa beresiko infeksi
+                     dan memperlambat proses penyembuhan
+                  </p>
+                  <button className="bg-orange-500 px-5 py-3 text-white rounded-lg mt-3">
+                     Read More
+                  </button>
+                  {/* gambar */}
+                  <div className="absolute right-0 lg:-top-28 bottom-0 w-[42%] ">
+                     <img
+                        src="https://res.cloudinary.com/dplikeeby/image/upload/v1739855466/obat_ixcp8q.png"
+                        alt=""
+                     />
+                  </div>
                </div>
             </div>
-         </div>
 
-         {/* second banner */}
-         <div className="w-full px-5  lg:px-[10%] text-white bannerDua">
-            <div
-               className="bg-orange-500 rounded-xl px-5 lg:px-28 py-5 lg:py-28 flex flex-col justify-end items-end gap-3 shadow-lg bg-opacity-80 relative overflow-hidden bg-cover bg-no-repeat"
-               style={{ backgroundImage: `url(${excitedPerson})` }}
-            >
-               <div className=" flex flex-col justify-start items-start gap-3 w-full text-left max-w-[60%] z-10 ">
-                  <h1 className="text-lg lg:text-6xl font-semibold ">
-                     METODE KHITAN TANPA SUNTIK
-                     <span className="text-biru">SUPER RING</span>
+            {/* second banner */}
+            <div className="w-full lg:w-[50%]  p-5 text-white bannerSatu">
+               <div
+                     className="bg-orange-500 rounded-xl px-5 lg:px-28 py-5 lg:py-28 flex flex-col justify-end items-end gap-3 shadow-lg bg-opacity-80 relative overflow-hidden bg-cover bg-no-repeat  shadow-xl"
+                     style={{ backgroundImage: `url(${excitedPerson})` }}
+                  >
+                  <h2>Metode Khitan Tanpa Jarum</h2>
+                  <h1 className="text-lg text-right lg:text-3xl font-semibold">
+                     Memperkenalkan Metode Khitan
+                     <span className="text-biru">Super Ring</span>
                   </h1>
-                  <p className="text-[12px] lg:text-xl">
+                  <p className="text-xs lg:text-base z-10">
                      Takut jarum? Sekarang nggak perlu lagi! Dengan Metode Super
-                     Ring, sunat jadi lebih nyaman tanpa suntikan, tanpa
-                     jahitan, dan minim rasa sakit.
+                           Ring, sunat jadi lebih nyaman tanpa suntikan, tanpa
+                           jahitan, dan minim rasa sakit.
                   </p>
                   <button className="bg-biru px-5 py-3 text-white rounded-lg mt-3">
                      Read More
                   </button>
+                  {/* gambar */}
                </div>
-               {/* gambar */}
-               {/* <div className="absolute left-0 lg:-top-28 bottom-0 inset-0 ">
-                  <img
-                     src={excitedPerson}
-                     alt=""
-                     className="w-[70%] lg:w-[30%]"
-                  />
-               </div> */}
             </div>
          </div>
+
 
          <div>
             <News />

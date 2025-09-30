@@ -104,11 +104,11 @@ export const Header = () => {
                      </div>
 
                      {isOpen && (
-                     <div className="absolute left-1/2 transform -translate-x-1/2 -z-50 top-full mt-0 bg-white p-5 w-[80rem] border-t-2 border-biru shadow-lg">
+                     <div className="absolute left-1/2 transform -translate-x-1/2 -z-50 top-full mt-0 bg-white p-10 w-[80rem] border-t-2 border-biru shadow-lg">
                         <div className="flex justify-start items-start gap-20 py-4 text-lg font-semibold ">
                               {tabs.map((item)=>(
                                  <button key={item.id} onClick={()=> setActiveTabs(item.label)}
-                                 className={`border-b-2 px-2 py-1 ${activeTabs === item.label ? "border-biru text-biru" : "border-gray-500 hover:border-biru"}`}
+                                 className={`border-b-2  py-1 ${activeTabs === item.label ? "border-biru text-biru" : "border-gray-500 hover:border-biru"}`}
                                  > {item.label} </button>
                               ))}
                         </div>
