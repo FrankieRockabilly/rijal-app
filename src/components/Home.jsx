@@ -30,7 +30,7 @@ const Home = () => {
          const width = window.innerWidth;
 
          if (width < 768) {
-            setSize(20); // Untuk tampilan mobile
+            setSize(15); // Untuk tampilan mobile
          } else if (width >= 768 && width < 1024) {
             setSize(35); // Untuk tampilan tablet
          } else {
@@ -176,13 +176,13 @@ const Home = () => {
             <div className="relative pt-10 lg:pt-14 ">
                {/* hero section */}
                <div
-                  className="h-[20rem] lg:h-[100vh] w-full bg-gradient-to-r from-[#007c9d] to-white text-black flex justify-start items-center overflow-hidden relative bg-no-repeat bg-cover"
+                  className="h-[30rem] lg:h-[100vh] w-full bg-gradient-to-r from-[#007c9d] to-white text-black flex justify-start items-center overflow-hidden relative bg-no-repeat bg-cover"
                   // style={{
                   //    backgroundImage: `url(https://img.freepik.com/free-photo/frame-medical-equipment-desk_23-2148519742.jpg?t=st=1741743620~exp=1741747220~hmac=5341bc207a539ddbd870d2a3a0799b67bf5c20f50bcc454149c0f2624259ba33&w=1060)`,
                   //    opacity: 0.9,
                   // }}
                >
-                  <div className="absolute top-[3%] lg:top-[10%] translate-y-1/2 right-14 lg:right-[35%] z-10 ">
+                  <div className="absolute top-[20%] lg:top-[10%] translate-y-1/2 left-8 lg:right-[35%] z-10 ">
                      <h1 className="font-extrabold text-5xl lg:text-[10rem] tracking-tighter opacity-10">
                         HOME CARE
                      </h1>
@@ -191,7 +191,7 @@ const Home = () => {
                   <div className=" max-w-[75%] h-full px-5 lg:px-28 flex flex-col justify-center items-start lg:gap-3">
                      <div className="flex justify-start items-center gap-2 homecare">
                         <Line />
-                        <p>Ns. Muhammad Rijal, S. Kep</p>
+                        <p className="text-xs lg:text-sm">Ns. Muhammad Rijal, S. Kep</p>
                      </div>
                      <h1 className="font-bold text-4xl lg:text-8xl xl:text-[11rem] text-white homecare">
                         HomeCare
@@ -222,26 +222,26 @@ const Home = () => {
                </div>
 
                {/* layanan kami */}
-               <div className="px-10 flex flex-wrap justify-center items-center gap-5 lg:gap-10 py-10 text-black">
-                  <div className="w-20 h-24 lg:w-[10rem]  lg:h-40 text-center rounded-lg flex flex-col justify-center items-center gap-2 shadow-md border p-3 hover:border-biru overflow-hidden cursor-pointer layanan">
+               <div className="flex flex-wrap justify-center items-center gap-3 lg:gap-10 py-5 lg:py-10 text-black">
+                  <div className="w-14 h-20 lg:w-[10rem]  lg:h-40 text-center rounded-lg flex flex-col justify-center items-center gap-2 shadow-md border p-3 hover:border-biru overflow-hidden cursor-pointer layanan">
                      <LiaClipboardListSolid size={size} />
-                     <p className="text-[12px] lg:text-base">Booking</p>
+                     <p className="text-[10px] lg:text-base">Booking</p>
                   </div>
-                  <div className="w-20 h-24 lg:w-[10rem]  lg:h-40 text-center rounded-lg flex flex-col justify-center items-center gap-2 shadow-md border p-3 hover:border-biru overflow-hidden cursor-pointer layanan">
+                  <div className="w-14 h-20 lg:w-[10rem]  lg:h-40 text-center rounded-lg flex flex-col justify-center items-center gap-2 shadow-md border p-3 hover:border-biru overflow-hidden cursor-pointer layanan">
                      <MdMarkChatRead size={size} />
-                     <p className="text-[12px] lg:text-base">Konsultasi</p>
+                     <p className="text-[10px] lg:text-base">Konsultasi</p>
                   </div>
-                  <div className="w-20 h-24 lg:w-[10rem]  lg:h-40 text-center rounded-lg flex flex-col justify-center items-center gap-2 shadow-md border p-3 hover:border-biru overflow-hidden cursor-pointer layanan">
+                  <div className="w-14 h-20 lg:w-[10rem]  lg:h-40 text-center rounded-lg flex flex-col justify-center items-center gap-2 shadow-md border p-3 hover:border-biru overflow-hidden cursor-pointer layanan">
                      <RiHealthBookFill size={size} />
-                     <p className="text-[12px] lg:text-base">MCU</p>
+                     <p className="text-[10px] lg:text-base">MCU</p>
                   </div>
-                  <div className="w-20 h-24 lg:w-[10rem]  lg:h-40 text-center rounded-lg flex flex-col justify-center items-center gap-2 shadow-md border p-3 hover:border-biru overflow-hidden cursor-pointer layanan">
+                  <div className="w-14 h-20 lg:w-[10rem]  lg:h-40 text-center rounded-lg flex flex-col justify-center items-center gap-2 shadow-md border p-3 hover:border-biru overflow-hidden cursor-pointer layanan">
                      <RxScissors size={size} />
-                     <p className="text-[12px] lg:text-base">Khitan</p>
+                     <p className="text-[10px] lg:text-base">Khitan</p>
                   </div>
-                  <div className="w-20 h-24 lg:w-[10rem]  lg:h-40 text-center rounded-lg flex flex-col justify-center items-center gap-2 shadow-md border p-3 hover:border-biru overflow-hidden cursor-pointer layanan">
+                  <div className="w-14 h-20 lg:w-[10rem]  lg:h-40 text-center rounded-lg flex flex-col justify-center items-center gap-2 shadow-md border p-3 hover:border-biru overflow-hidden cursor-pointer layanan">
                      <GiMedicines size={size} />
-                     <p className="text-[12px] lg:text-base">Rawat Luka</p>
+                     <p className="text-[10px] lg:text-base">Rawat Luka</p>
                   </div>
                </div>
             </div>
@@ -257,7 +257,7 @@ const Home = () => {
                      Tanpa Suntik
                   </p>
                   <p className="text-[12px] lg:text-sm text-gray-400">
-                     All card Accepted
+                     Sembuh Lebih Cepat
                   </p>
                </div>
             </div>
@@ -374,7 +374,7 @@ const Home = () => {
          <div className="flex flex-col lg:flex-row justify-center items-center gap-2 lg:px-10">
             {/* first banner */}
             <div className="w-full lg:w-[50%] p-5 text-white bannerSatu ">
-               <div className="bg-biru rounded-xl px-5 lg:px-28 py-5 lg:py-28 flex flex-col justify-start items-start gap-3 shadow-lg bg-opacity-80 relative shadow-xl"
+               <div className="bg-biru rounded-xl px-5 lg:px-12 py-5 lg:py-10 flex flex-col justify-start items-start gap-3 bg-opacity-80 relative shadow-xl"
                   // style={{
                   //    backgroundImage: `url(https://img.freepik.com/free-photo/view-medicine-blue-background_23-2149341571.jpg?t=st=1739951318~exp=1739954918~hmac=74472508729df09e0fdb0309dee3f2a2f9efdf5c658abd90c1e1856d3084734c&w=1380)`,
                   //    backgroundSize: "cover",
@@ -406,13 +406,13 @@ const Home = () => {
             {/* second banner */}
             <div className="w-full lg:w-[50%]  p-5 text-white bannerSatu">
                <div
-                     className="bg-orange-500 rounded-xl px-5 lg:px-28 py-5 lg:py-28 flex flex-col justify-end items-end gap-3 shadow-lg bg-opacity-80 relative overflow-hidden bg-cover bg-no-repeat  shadow-xl"
+                     className="bg-orange-500 rounded-xl px-5 lg:px-12 py-5 lg:py-10 flex flex-col justify-end items-end gap-3 shadow-lg bg-opacity-80 relative overflow-hidden bg-cover bg-no-repeat"
                      style={{ backgroundImage: `url(${excitedPerson})` }}
                   >
                   <h2>Metode Khitan Tanpa Jarum</h2>
                   <h1 className="text-lg text-right lg:text-3xl font-semibold">
                      Memperkenalkan Metode Khitan
-                     <span className="text-biru">Super Ring</span>
+                     <span className="text-biru"> Super Ring</span>
                   </h1>
                   <p className="text-xs lg:text-base z-10">
                      Takut jarum? Sekarang nggak perlu lagi! Dengan Metode Super
