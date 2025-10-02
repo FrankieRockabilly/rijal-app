@@ -86,7 +86,7 @@ export const Header = () => {
                         <div className="p-1 bg-white rounded-md">
                            <CiMail  size={15} color="#f97316" />
                         </div>
-                        <p>rijal@gmail.com</p>
+                        <p>rizalaraffa14@gmail.com</p>
                      </div>
                   </div>
 
@@ -131,6 +131,7 @@ export const Header = () => {
                   {/* end kanan black polygon */}
                </div>
 
+{/* header master */}
                <div className="flex justify-between items-center  px-5 lg:px-[7%]">
                   <div className="w-auto">
                            <div className="mr-10">
@@ -175,7 +176,7 @@ export const Header = () => {
 
                            {isOpen && (
                            <div className="absolute left-1/2 transform -translate-x-1/2 -z-50 top-full mt-0 bg-white py-5 px-7 w-max border-t-2 border-biru shadow-lg">
-                              <div className="flex justify-start items-start gap-20 py-4 text-lg font-semibold ">
+                              <div className="flex justify-start items-start gap-20 py-4 lg:text-base xl:text-lg font-semibold ">
                                     {tabs.map((item)=>(
                                        <button key={item.id} onClick={()=> setActiveTabs(item.label)}
                                        className={`border-b-2  py-1 ${activeTabs === item.label ? "border-biru text-biru" : "border-gray-500 hover:border-biru"}`}
@@ -264,35 +265,25 @@ export const Header = () => {
             <div
                ref={menuRef}
                className="fixed h-auto w-full py-7 text-base mt-12 bg-white flex flex-col justify-center items-center gap-8 z-30 shadow-lg navmenu"
-               onClick={() => {
-                  e.preventDefault()
-                  setIsMenuClicked(false)
-               }}
             >
-               <Link to={"/"}>
+               <Link to={"/"} onClick={() => setIsMenuClicked(false)}>
                   <p className="menu-item hover:text-biru">Home</p>
                </Link>
-               <Link to={"/about"}>
+               <Link to={"/about"} onClick={() => setIsMenuClicked(false)}>
                   <p className="menu-item hover:text-biru">Tentang</p>
                </Link>
-               <Link to={"/contact"}>
+               <Link to={"/contact"} onClick={() => setIsMenuClicked(false)}>
                   <p className="menu-item hover:text-biru">Kontak</p>
                </Link>
-               <Link to={"/gallery"}>
+               <Link to={"/gallery"} onClick={() => setIsMenuClicked(false)}>
                   <p className="menu-item hover:text-biru">Galeri</p>
                </Link>
-               <Link to={"/about"}>
+               <Link to={"/about"} onClick={() => setIsMenuClicked(false)}>
                   <p className="menu-item hover:text-biru">Booking Online</p>
                </Link>
-
-               {/* <button
-                  onClick={() => setIsMenuClicked(false)}
-                  className="bg-red-700 px-5 py-1 rounded-md text-white"
-               >
-                  x
-               </button> */}
             </div>
-         )}
+            )}
+
       </>
    );
 };

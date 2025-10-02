@@ -303,7 +303,7 @@ const Home = () => {
          </div>
 
          {/* why choose us */}
-         <div className="flex flex-col lg:flex-row justify-center items-center gap-5 lg:gap-10  px-5  py-10 lg:pb-32 text-black">
+         <div className="flex flex-col lg:flex-row justify-center items-center gap-5 lg:gap-10  px-5 lg:py-10 lg:pb-32 text-black">
             {/* 1 */}
             <div className="flex flex-col justify-start items-start gap-5 lg:gap-10 lg:max-w-[40%] py-10 kiri text-sm lg:text-base pilihKiri">
                <h1 className="text-xl lg:text-3xl font-bold">
@@ -390,8 +390,8 @@ const Home = () => {
                      Luka yang tidak di tangani dengan baik bisa beresiko infeksi
                      dan memperlambat proses penyembuhan
                   </p>
-                  <button className="bg-orange-500 px-5 py-3 text-white rounded-lg mt-3">
-                     Read More
+                  <button className="bg-orange-500 px-3 py-2 text-xs lg:text-sm text-white rounded-lg mt-3">
+                     Selengkapnya
                   </button>
                   {/* gambar */}
                   <div className="absolute right-0 lg:-top-28 bottom-0 w-[42%] ">
@@ -419,8 +419,8 @@ const Home = () => {
                            Ring, sunat jadi lebih nyaman tanpa suntikan, tanpa
                            jahitan, dan minim rasa sakit.
                   </p>
-                  <button className="bg-biru px-5 py-3 text-white rounded-lg mt-3">
-                     Read More
+                  <button className="bg-biru px-3 py-2 text-xs lg:text-sm text-white rounded-lg mt-3">
+                     Selengkapnya
                   </button>
                   {/* gambar */}
                </div>

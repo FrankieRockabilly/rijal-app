@@ -1,6 +1,7 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { SoundcloudLogo } from '@phosphor-icons/react';
 import { Link } from "react-router-dom";
+import homecareLogo from '../assets/Image/homecareLogo.png'
 import gsap from "gsap";
 import ScrollTrigger from "gsap/all";
 import {
@@ -44,7 +45,8 @@ const Footer = () => {
             <div className=" flex flex-col lg:flex-row justify-between items-start gap-5 ">
                {/* 1 */}
                <div className=" lg:w-96 max-w-72">
-                  <SoundcloudLogo size={80} color="#2abbdf" weight="duotone" />
+                  <img src={homecareLogo} alt="" className='w-20 h-20'/>
+                  {/* <SoundcloudLogo size={80} color="#2abbdf" weight="duotone" /> */}
                   <p className="text-sm">
                      <span className="font-semibold">Rijal Homecare </span>
                      melayani kebutuhan perawatan kesehatan di rumah dengan
@@ -86,7 +88,7 @@ const Footer = () => {
                   </div>
                </div>
 
-               <div className=" lg:w-96 ">
+               <div className="w-72 lg:w-96">
                   <p className="font-bold text-xl mb-2 lg:mb-5 pb-5  border-b-2 border-white text-biru w-[50%]">
                      Useful Links
                   </p>

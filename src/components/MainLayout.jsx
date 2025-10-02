@@ -10,11 +10,11 @@ import Loading from "./Loading";
 import axios from "axios";
 
 const MainLayout = () => {
-   const [loadingHalamanAwal, setLoadingHalamanAwal] = useState(false);
+   const [loadingHalamanAwal, setLoadingHalamanAwal] = useState(true);
    useEffect(() => {
       const timer = setTimeout(() => {
          setLoadingHalamanAwal(false);
-      }, 3000);
+      }, 1500);
 
       return () => clearTimeout(timer);
    });
@@ -141,7 +141,7 @@ const MainLayout = () => {
       <>
          {loadingHalamanAwal ? (
             <div className="h-screen flex justify-center items-center bg-zinc-100 ">
-               <Loading />
+               <span className="loading loading-ring loading-lg bg-biru"></span>
             </div>
          ) : (
             // notifikasi sukse booking
@@ -358,19 +358,19 @@ const MainLayout = () => {
 
                   {/* klik menu booking */}
                   {bookingKhitan && (
-                     <div className=" border border-white shadow-xl ">
+                     <div className=" border border-white shadow-xl">
                         <div
                            ref={bookingKhitanRef}
-                           className="fixed bottom-0 lg:bottom-3 right-0 lg:right-3 w-full lg:w-96  bg-white  lg:rounded-lg shadow-xl text-[12px] lg:text-base overflow-y-auto max-h-[80vh]"
+                           className="fixed bottom-0 lg:bottom-3 right-0 lg:right-3 w-full lg:w-96  bg-white  lg:rounded-lg shadow-xl text-[12px] lg:text-base overflow-y-auto max-h-[80vh] "
                         >
-                           <div className="text-white bg-orange-500 w-full px-3 py-3 lg:rounded-t-lg flex justify-between items-center">
-                              <p>Booking Layanan Khitan</p>
-                              <button
-                                 className="px-5"
-                                 onClick={() => setIsBookingKhitan(false)}
-                              >
-                                 x
-                              </button>
+                           <div className=" w-full h-full px-3 py-3 text-white flex justify-between items-center bg-orange-500  lg:rounded-t-lg">
+                                 <p>Booking Layanan Khitan</p>
+                                 <button
+                                    className="px-5"
+                                    onClick={() => setIsBookingKhitan(false)}
+                                 >
+                                    x
+                                 </button>
                            </div>
                            <div className="px-3 py-3 text-gray-600 flex flex-col justify-start items-start gap-5">
                               <p>Please Input this field below</p>

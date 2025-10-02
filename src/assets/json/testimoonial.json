@@ -1,66 +1,66 @@
 [
-   {
-    "id" : 1,
-    "name" : "Harvey Moeis",
-    "status" :"Koruptor",
-    "review" :"Saya merasa segaar sekali setelah mendapat perawatan disini, rasanya saya ingin korupsi lebih banyak lagi",
-    "image" : "https://static.promediateknologi.id/crop/0x0:0x0/0x0/webp/photo/p2/146/2025/02/14/HARVEY-MOEIS-853702304.jpg"
-   },
-   {
-    "id" : 2,
-    "name" : "Justin Bieber",
-    "status" :"Penyanyi Dangdut",
-    "review" :"Lu siapa dah",
-    "image" : "https://static.promediateknologi.id/crop/0x0:0x0/0x0/webp/photo/p2/01/2025/01/13/IMG_6531-198265778.jpg"
-   },
-   {
-    "id" : 3,
-    "name" : "Deddy Corbuzier",
-    "status" :"Bapak bapak berotot",
-    "review" :"Otot Kawat Tulang Besi",
-    "image" : "https://www.gramedia.com/blog/content/images/2018/12/Deddy-Corbuzier-1.jpg"
-   },
-   {
-    "id" : 4,
-    "name" : "Firdaus Oiwobo",
-    "status" :"Pemilik Gunung Emas",
-    "review" :"Saya memiliki aset yang jauh lebih banyak di banding Hotman Paris",
-    "image" : "https://i0.wp.com/www.harianaceh.co.id/wp-content/uploads/2025/02/Firdaus-Oiwobo-23532.jpg?fit=640%2C359&ssl=1"
-   },
-   {
-    "id" : 5,
-    "name" : "Doraemon",
-    "status" :"Aktor Jepang",
-    "review" :"Baling baling bambu",
-    "image" : "https://thumb.viva.co.id/media/frontend/thumbs3/2022/05/20/628729271f854-kartun-doraemon_665_374.jpg"
-   },
-   {
-    "id" : 6,
-    "name" : "Elon Musk",
-    "status" :"Mas mas amrik",
-    "review" :"Layanan homecare ini adalah keputusan terbaik. Perawatannya luar biasa, dan saya merasa sangat terbantu dengan layanan yang personal dan terpercaya",
-    "image" : "https://d.newsweek.com/en/full/2590364/elon-musk.jpg?w=1200&f=9bd0f002656a3cd184485146ddc80adf"
-   },
-   {
-    "id" : 7,
-    "name" : "Jokowi",
-    "status" :"Presiden ke 7",
-    "review" :"Mas Rijal imut banget",
-    "image" : "https://banggaikep.go.id/portal/wp-content/uploads/2024/03/jokowi-1.jpg"
-   },
-   {
-    "id" : 8,
-    "name" : "Prabowo Subianto",
-    "review" :"Gacor kangg",
-    "status" :"Presiden RI",
-    "image" : "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Prabowo_Subianto_2024_official_portrait.jpg/640px-Prabowo_Subianto_2024_official_portrait.jpg"
-   },
-   {
-    "id" : 9,
-    "name" : "P E R T A M I N A",
-    "review" :"Rp 1.000.000.000.000.000  bejirrr",
-    "status" :"Pemuncak Klasemen Koruptor",
-    "image" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQl0oG5uN_mYl27jtggU2vo1snqwpUF6wbFQw&s"
-   }
+      {
+      "id" : 1,
+      "name" : "Harvey Moeis",
+      "status" :"Koruptor",
+      "review" :"Saya merasa segaar sekali setelah mendapat perawatan disini, rasanya saya ingin korupsi lebih banyak lagi",
+      "image" : "https://static.promediateknologi.id/crop/0x0:0x0/0x0/webp/photo/p2/146/2025/02/14/HARVEY-MOEIS-853702304.jpg"
+      },
+      {
+      "id" : 2,
+      "name" : "Justin Bieber",
+      "status" :"Penyanyi Dangdut",
+      "review" :"Lu siapa dah",
+      "image" : "https://static.promediateknologi.id/crop/0x0:0x0/0x0/webp/photo/p2/01/2025/01/13/IMG_6531-198265778.jpg"
+      },
+      {
+      "id" : 3,
+      "name" : "Deddy Corbuzier",
+      "status" :"Bapak bapak berotot",
+      "review" :"Otot Kawat Tulang Besi",
+      "image" : "https://www.gramedia.com/blog/content/images/2018/12/Deddy-Corbuzier-1.jpg"
+      },
+      {
+      "id" : 4,
+      "name" : "Firdaus Oiwobo",
+      "status" :"Pemilik Gunung Emas",
+      "review" :"Saya memiliki aset yang jauh lebih banyak di banding Hotman Paris",
+      "image" : "https://i0.wp.com/www.harianaceh.co.id/wp-content/uploads/2025/02/Firdaus-Oiwobo-23532.jpg?fit=640%2C359&ssl=1"
+      },
+      {
+      "id" : 5,
+      "name" : "Doraemon",
+      "status" :"Aktor Jepang",
+      "review" :"Baling baling bambu",
+      "image" : "https://thumb.viva.co.id/media/frontend/thumbs3/2022/05/20/628729271f854-kartun-doraemon_665_374.jpg"
+      },
+      {
+      "id" : 6,
+      "name" : "Elon Musk",
+      "status" :"Mas mas amrik",
+      "review" :"Layanan homecare ini adalah keputusan terbaik. Perawatannya luar biasa, dan saya merasa sangat terbantu dengan layanan yang personal dan terpercaya",
+      "image" : "https://d.newsweek.com/en/full/2590364/elon-musk.jpg?w=1200&f=9bd0f002656a3cd184485146ddc80adf"
+      },
+      {
+      "id" : 7,
+      "name" : "Jokowi",
+      "status" :"Presiden ke 7",
+      "review" :"Mas Rijal imut banget",
+      "image" : "https://banggaikep.go.id/portal/wp-content/uploads/2024/03/jokowi-1.jpg"
+      },
+      {
+      "id" : 8,
+      "name" : "Prabowo Subianto",
+      "review" :"Gacor kangg",
+      "status" :"Presiden RI",
+      "image" : "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Prabowo_Subianto_2024_official_portrait.jpg/640px-Prabowo_Subianto_2024_official_portrait.jpg"
+      },
+      {
+      "id" : 9,
+      "name" : "P E R T A M I N A",
+      "review" :"Rp 1.000.000.000.000.000  bejirrr",
+      "status" :"Pemuncak Klasemen Koruptor",
+      "image" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQl0oG5uN_mYl27jtggU2vo1snqwpUF6wbFQw&s"
+      }
       
 ]

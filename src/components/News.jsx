@@ -58,7 +58,7 @@ const News = () => {
    return (
       <>
          {/* tulisan dibawah */}
-         <div className="px-5 py-20 ">
+         <div className="px-5 py-10 lg:py-20 ">
             <div className="flex justify-center items-center gap-5 ">
                <hr className="bg-gray-600 w-full" />
                <h2 className="text-center text-2xl py-2  uppercase font-bold min-w-52 text-black ">
@@ -96,20 +96,20 @@ const News = () => {
             </div>
 
             {/* flex */}
-            <div className="flex flex-wrap justify-center items-center gap-5 w-full px-5  ">
+            <div className="flex flex-wrap justify-center items-center gap-2 lg:gap-5 w-full">
                {filteredNews == null ? (
                   <p className="text-gray-500">Isi berita Kosong guys</p>
                ) : (
                   filteredNews?.map((value, index) => (
                      <div
-                        className="p-2 rounded-lg w-[22rem] h-80 border shadow-lg flex flex-col relative news"
+                        className="p-1 rounded-lg w-[10rem] h-64 md:w-[15rem] lg:w-[22rem] lg:h-72 border shadow-lg flex flex-col relative text-sm news"
                         key={index}
                      >
-                        <div className="h-[70%] overflow-hidden rounded-lg">
-                           <img src={value.urlToImage} alt="" />
+                        <div className="h-[70%] overflow-hidden rounded-lg ">
+                           <img src={value.urlToImage} alt="" className='h-full w-full object-cover' />
                         </div>
-                        <div className="grow text-black font-light flex flex-col justify-start items-start h-32 overflow-hidden">
-                           <h3 className="text-base h-full break-words max-h-16 font-light py-2 line-clamp-2 overflow-hidden">
+                        <div className="grow text-black font-light flex flex-col justify-start items-start overflow-hidden">
+                           <h3 className="text-xs xl:text-sm h-full break-words text-gray-600 font-light py-2 line-clamp-2 overflow-hidden">
                               {value.title}
                            </h3>
                            <a
@@ -117,9 +117,9 @@ const News = () => {
                               target="_blank"
                               rel="noopener noreferrer"
                            >
-                              <button className="py-2 px-5 bg-biru rounded-md text-white absolute bottom-2 left-2  hover:bg-blue-900 duration-300 transition-all ease-in-out ">
-                                 Lihat berita
-                              </button>
+                              {/* <button className="py-1 px-3 bg-green-600 rounded-sm text-white absolute top-1 left-1  hover:bg-blue-900 duration-300 transition-all ease-in-out ">
+                                 view
+                              </button> */}
                            </a>
                         </div>
                      </div>

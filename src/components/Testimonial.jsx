@@ -28,7 +28,7 @@ const Testimonial = () => {
          </div>
 
          {/* Bagian kanan - Slider */}
-         <div className="w-full lg:w-3/5 py-12 ">
+         <div className="w-full lg:w-3/5 pt-12 ">
             <Swiper
                loop={true} // Infinite scroll
                autoplay={{
@@ -49,12 +49,12 @@ const Testimonial = () => {
                      key={index}
                      className="flex justify-center items-center"
                   >
-                     <div className="w-80 lg:w-full h-60 lg:h-[15rem]  flex flex-col justify-around items-start p-5 border rounded-2xl bg-slate-100">
-                        <div className="h-32 flex flex-col justify-start w-full items-start overflow-hidden relative">
+                     <div className="w-80 lg:w-full h-48 lg:h-[15rem]  flex flex-col justify-around items-start p-5 border rounded-2xl bg-slate-100">
+                        <div className="h-24 flex flex-col justify-start w-full items-start overflow-hidden relative">
                            <div className="h-9 opacity-20 absolute top-0 left-0">
                               <Quotes size={76} color="#34bf8c" weight="fill" />
                            </div>
-                           <p className="italic text-sm">"{review.review}" </p>
+                           <p className="italic text-xs lg:text-sm">"{review.review}" </p>
                         </div>
                         <hr className="w-full border border-gray-300 " />
                         <div className="flex justify-start items-center gap-5">
