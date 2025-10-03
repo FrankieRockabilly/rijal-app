@@ -6,12 +6,17 @@ import {
    PiStethoscopeThin,
    PiSyringe,
 } from "react-icons/pi";
-import { FaBed } from "react-icons/fa";
+
+// icons
+import { FaBed,FaWhatsapp  } from "react-icons/fa";
 import { LiaClipboardListSolid } from "react-icons/lia";
 import { GiMedicines } from "react-icons/gi";
 import { MdMarkChatRead } from "react-icons/md";
 import { RiHealthBookFill } from "react-icons/ri";
+import { FaCheck } from "react-icons/fa6";
 import { RxScissors } from "react-icons/rx";
+
+
 import rijal from "../assets/Image/rjl.png";
 import excitedPerson from "../assets/Image/omg2.png";
 import gsap from "gsap";
@@ -20,7 +25,6 @@ import Testimonial from "./Testimonial";
 import { CiTimer } from "react-icons/ci";
 import Booking from "./Booking";
 import News from "./News";
-import Maps from "./Maps";
 
 const Home = () => {
    const [size, setSize] = useState(0);
@@ -175,26 +179,20 @@ const Home = () => {
          <div className="  bg-warm overflow-hidden h-full relative">
             <div className="relative pt-10 lg:pt-14 ">
                {/* hero section */}
-               <div
-                  className="h-[30rem] lg:h-[100vh] w-full bg-gradient-to-r from-[#007c9d] to-white text-black flex justify-start items-center overflow-hidden relative bg-no-repeat bg-cover"
-                  // style={{
-                  //    backgroundImage: `url(https://img.freepik.com/free-photo/frame-medical-equipment-desk_23-2148519742.jpg?t=st=1741743620~exp=1741747220~hmac=5341bc207a539ddbd870d2a3a0799b67bf5c20f50bcc454149c0f2624259ba33&w=1060)`,
-                  //    opacity: 0.9,
-                  // }}
-               >
-                  <div className="absolute top-[20%] lg:top-[10%] translate-y-1/2 left-8 lg:right-[35%] z-10 ">
+               <div className="h-[32rem] lg:h-[100vh] w-full bg-gradient-to-br from-[#007c9d] to-gray-200 text-black flex justify-start items-center overflow-hidden relative" >
+                  {/* <div className="absolute top-[20%] lg:top-[10%] translate-y-1/2 left-8 lg:right-[35%] z-10 ">
                      <h1 className="font-extrabold text-5xl lg:text-[10rem] tracking-tighter opacity-10">
                         HOME CARE
                      </h1>
-                  </div>
+                  </div> */}
                   {/* 1 */}
-                  <div className=" max-w-[75%] h-full px-5 lg:px-28 flex flex-col justify-center items-start lg:gap-3">
+                  <div className=" max-w-full h-full px-5 md:px-32  xl:px-[17rem] flex flex-col justify-center items-start lg:gap-3 z-30">
                      <div className="flex justify-start items-center gap-2 homecare">
                         <Line />
-                        <p className="text-xs lg:text-sm">Ns. Muhammad Rijal, S. Kep</p>
+                        <p className="text-[9px] lg:text-sm">Ns. Muhammad Rijal, S. Kep</p>
                      </div>
                      <h1 className="font-bold text-4xl lg:text-8xl xl:text-[11rem] text-white homecare">
-                        HomeCare
+                        Home Care
                      </h1>
                      <p className="text-xl lg:text-5xl font-semibold  kiri">
                         Layanan{" "}
@@ -202,44 +200,63 @@ const Home = () => {
                            Kesehatan Masyarakat
                         </span>
                      </p>
-                     <p className="text-[11px] lg:text-2xl text-white  kiri">
-                        Perawatan Terpercaya dirumah,Untuk Kesehatan Keluarga
-                        Anda
+                     <p className="text-[11px] lg:text-2xl w-72  lg:w-[30rem] text-white  kiri">
+                        Pelayanan medis profesional langsung di rumah Anda : aman, nyaman, dan terpercaya.
                      </p>
-                     <button className="px-3 py-2 lg:px-5 lg:py-3 mt-3 rounded-md text-[12px] lg:text-base  text-white bg-orange-500 kontak kiri z-10">
-                        Kontak saya
-                     </button>
+                     <div className="w-full flex flex-col justify-start items-start gap-5">
+                        {/* ceklis */}
+                        <div className="w-[90%] md:w-full flex flex-col justify-start items-start gap-1 lg:gap-3 my-7 text-white text-[10px] lg:text-base">
+                           <div className="flex justify-start items-center gap-1 md:gap-2">
+                              <FaCheck color="#00FF00"/>
+                              <p>Bersertifikat dan Berpengalaman</p>
+                           </div>
+                           <div className="w-[90%] flex justify-start items-center gap-1 md:gap-2">
+                              <FaCheck color="#00FF00"/>
+                              <p>Khitan Super Ring : Tanpa Nyeri, Minim Rasa Sakit</p>
+                           </div>
+                           <div className="w-[90%] flex justify-start items-center gap-1 md:gap-2">
+                              <FaCheck color="#00FF00"/>
+                              <p>Prosedur Steril</p>
+                           </div>
+                           <div className="my-3">
+                              <p className="text-white">Hubungi Kami</p>
+                              <button className="px-3 py-2 lg:px-5 lg:py-3 mt-3 rounded-md tracking-wider text-[12px] lg:text-base  text-white bg-green-600 shadow-md kontak kiri z-10">
+                                 +628 22 7321 2907 ( WhatsApp )
+                              </button>
+                           </div>
+                        </div>
+                     </div>
                      
                   </div>
                   {/* 2 */}
-                  <div className="w-full h-full flex justify-end items-end absolute top-0 left-0 kanan ">
+                  <div className="w-2/3  lg:w-full h-full flex justify-end items-end absolute bottom-0 right-0 kanan ">
                      <img
                         src={rijal}
                         alt=""
-                        className="w-52 lg:w-[40rem] object-cover opacity-60"
+                        className="w-72 lg:w-[40rem] object-cover opacity-90"
                      />
                   </div>
                </div>
 
                {/* layanan kami */}
-               <div className="flex flex-wrap justify-center items-center gap-3 lg:gap-10 py-5 lg:py-10 text-black">
-                  <div className="w-14 h-20 lg:w-[10rem]  lg:h-40 text-center rounded-lg flex flex-col justify-center items-center gap-2 shadow-md border p-3 hover:border-biru overflow-hidden cursor-pointer layanan">
+               <div className="flex flex-wrap justify-center items-center gap-3 md:gap-10 lg:gap-10 py-5 lg:py-10 text-black">
+                  <div className="w-14 h-20 md:w-24 md:h-28 lg:w-[10rem] lg:h-40 text-center rounded-lg flex flex-col justify-center items-center gap-2 shadow-md border p-3 hover:border-biru overflow-hidden cursor-pointer layanan">
                      <LiaClipboardListSolid size={size} />
                      <p className="text-[10px] lg:text-base">Booking</p>
                   </div>
-                  <div className="w-14 h-20 lg:w-[10rem]  lg:h-40 text-center rounded-lg flex flex-col justify-center items-center gap-2 shadow-md border p-3 hover:border-biru overflow-hidden cursor-pointer layanan">
+                  <div className="w-14 h-20 md:w-24 md:h-28 lg:w-[10rem] lg:h-40 text-center rounded-lg flex flex-col justify-center items-center gap-2 shadow-md border p-3 hover:border-biru overflow-hidden cursor-pointer layanan">
                      <MdMarkChatRead size={size} />
                      <p className="text-[10px] lg:text-base">Konsultasi</p>
                   </div>
-                  <div className="w-14 h-20 lg:w-[10rem]  lg:h-40 text-center rounded-lg flex flex-col justify-center items-center gap-2 shadow-md border p-3 hover:border-biru overflow-hidden cursor-pointer layanan">
+                  <div className="w-14 h-20 md:w-24 md:h-28 lg:w-[10rem] lg:h-40 text-center rounded-lg flex flex-col justify-center items-center gap-2 shadow-md border p-3 hover:border-biru overflow-hidden cursor-pointer layanan">
                      <RiHealthBookFill size={size} />
                      <p className="text-[10px] lg:text-base">MCU</p>
                   </div>
-                  <div className="w-14 h-20 lg:w-[10rem]  lg:h-40 text-center rounded-lg flex flex-col justify-center items-center gap-2 shadow-md border p-3 hover:border-biru overflow-hidden cursor-pointer layanan">
+                  <div className="w-14 h-20 md:w-24 md:h-28 lg:w-[10rem] lg:h-40 text-center rounded-lg flex flex-col justify-center items-center gap-2 shadow-md border p-3 hover:border-biru overflow-hidden cursor-pointer layanan">
                      <RxScissors size={size} />
                      <p className="text-[10px] lg:text-base">Khitan</p>
                   </div>
-                  <div className="w-14 h-20 lg:w-[10rem]  lg:h-40 text-center rounded-lg flex flex-col justify-center items-center gap-2 shadow-md border p-3 hover:border-biru overflow-hidden cursor-pointer layanan">
+                  <div className="w-14 h-20 md:w-24 md:h-28 lg:w-[10rem] lg:h-40 text-center rounded-lg flex flex-col justify-center items-center gap-2 shadow-md border p-3 hover:border-biru overflow-hidden cursor-pointer layanan">
                      <GiMedicines size={size} />
                      <p className="text-[10px] lg:text-base">Rawat Luka</p>
                   </div>

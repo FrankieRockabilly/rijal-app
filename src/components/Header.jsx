@@ -64,7 +64,7 @@ export const Header = () => {
                <div className="w-full justify-between items-start hidden lg:flex">
                   {/* Kiri: Orange - hanya kanan miring */}
                   <div
-                     className="w-[50%] h-14 text-white px-32 py-3 flex items-center justify-center gap-10 text-sm"
+                     className="w-[50%] h-14 text-white px-32 py-3 flex items-center justify-center gap-5 xl:gap-10 text-sm"
                      style={{ 
                         clipPath: 'polygon(0 0, 100% 0, 95% 100%, 0% 100%)',
                         background: 'linear-gradient(to right, #f97316, #fb923c)'
@@ -74,13 +74,13 @@ export const Header = () => {
                         <div className="p-1 bg-white rounded-md">
                            <MdWifiCalling1 size={15} color="#f97316" />
                         </div>
-                        <p>+62822 xx</p>
+                        <p>+6282273212907</p>
                      </div>
                      <div className="flex justify-start items-center gap-2">
                         <div className="p-1 bg-white rounded-md">
                            <FaGlobe  size={15} color="#f97316" />
                         </div>
-                        <p>Rijal Homecare</p>
+                        <p>RijalHomecare</p>
                      </div>
                      <div className="flex justify-start items-center gap-2">
                         <div className="p-1 bg-white rounded-md">
