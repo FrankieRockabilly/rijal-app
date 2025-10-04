@@ -39,8 +39,8 @@ const Testimonial = () => {
                modules={[Autoplay]} // Gunakan modul Autoplay
                className="w-full"
                breakpoints={{
-                  320: { slidesPerView: 1, spaceBetween: 5 }, // Mobile
-                  640: { slidesPerView: 2, spaceBetween: 5 }, // Tablet
+                  320: { slidesPerView: 1, spaceBetween:2 }, // Mobile
+                  640: { slidesPerView: 2, spaceBetween: 3 }, // Tablet
                   1024: { slidesPerView: 3, spaceBetween: 10 }, // Laptop
                }}
             >

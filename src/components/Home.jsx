@@ -8,6 +8,7 @@ import {
 } from "react-icons/pi";
 
 // icons
+import { ArrowUpRight } from "@phosphor-icons/react";
 import { FaBed,FaWhatsapp  } from "react-icons/fa";
 import { LiaClipboardListSolid } from "react-icons/lia";
 import { GiMedicines } from "react-icons/gi";
@@ -64,7 +65,7 @@ const Home = () => {
       gsap.fromTo(
          ".kiri",
          { x: -50, opacity: 0 },
-         { x: 0, opacity: 1, duration: 1.5, delay: 1, ease: "power1" }
+         { x: 0, opacity: 1, duration: 1.5, delay: 1, ease: "power1", stagger : 0.5 }
       );
       gsap.fromTo(
          ".homecare",
@@ -77,6 +78,7 @@ const Home = () => {
          { x: 0, opacity: 1, duration: 1.5, delay: 2, ease: "power1.inOut" }
       );
 
+      // layanan
       gsap.fromTo(
          ".layanan",
          { y: 50, opacity: 0 },
@@ -95,6 +97,7 @@ const Home = () => {
       );
 
       // scroll trigger
+      // speciality
       gsap.fromTo(
          ".speciality",
          { x: -50, opacity: 0 },
@@ -112,6 +115,7 @@ const Home = () => {
          }
       );
       // scroll trigger
+      // pilih kiri
       gsap.fromTo(
          ".pilihKiri",
          { x: -50, opacity: 0 },
@@ -127,6 +131,7 @@ const Home = () => {
             ease: "power1.inOut",
          }
       );
+      // pilih kanan
       gsap.fromTo(
          ".pilihKanan",
          { x: 50, opacity: 0 },
@@ -137,36 +142,7 @@ const Home = () => {
                trigger: ".pilihKanan",
                start: "top 80%",
                scrub: false,
-            },
-            duration: 1,
-            ease: "power1.inOut",
-         }
-      );
-      gsap.fromTo(
-         ".bannerSatu",
-         { x: 50, opacity: 0 },
-         {
-            x: 0,
-            opacity: 1,
-            scrollTrigger: {
-               trigger: ".bannerSatu",
-               start: "top 80%",
-               scrub: false,
-            },
-            duration: 1,
-            ease: "power1.inOut",
-         }
-      );
-      gsap.fromTo(
-         ".bannerDua",
-         { x: 50, opacity: 0 },
-         {
-            x: 0,
-            opacity: 1,
-            scrollTrigger: {
-               trigger: ".bannerDua",
-               start: "top 80%",
-               scrub: false,
+               stagger : 0.3
             },
             duration: 1,
             ease: "power1.inOut",
@@ -186,7 +162,7 @@ const Home = () => {
                      </h1>
                   </div> */}
                   {/* 1 */}
-                  <div className=" max-w-full h-full px-5 md:px-32  xl:px-[17rem] flex flex-col justify-center items-start lg:gap-3 z-30">
+                  <div className=" max-w-full h-full px-5 md:px-32  xl:px-[17rem] flex flex-col justify-center items-start lg:gap-3 z-10">
                      <div className="flex justify-start items-center gap-2 homecare">
                         <Line />
                         <p className="text-[9px] lg:text-sm">Ns. Muhammad Rijal, S. Kep</p>
@@ -206,24 +182,26 @@ const Home = () => {
                      <div className="w-full flex flex-col justify-start items-start gap-5">
                         {/* ceklis */}
                         <div className="w-[90%] md:w-full flex flex-col justify-start items-start gap-1 lg:gap-3 my-7 text-white text-[10px] lg:text-base">
-                           <div className="flex justify-start items-center gap-1 md:gap-2">
+                           <div className="flex justify-start items-center gap-1 md:gap-2 kiri">
                               <FaCheck color="#00FF00"/>
                               <p>Bersertifikat dan Berpengalaman</p>
                            </div>
-                           <div className="w-[90%] flex justify-start items-center gap-1 md:gap-2">
+                           <div className="w-[90%] flex justify-start items-center gap-1 md:gap-2 kiri">
                               <FaCheck color="#00FF00"/>
                               <p>Khitan Super Ring : Tanpa Nyeri, Minim Rasa Sakit</p>
                            </div>
-                           <div className="w-[90%] flex justify-start items-center gap-1 md:gap-2">
+                           <div className="w-[90%] flex justify-start items-center gap-1 md:gap-2 kiri">
                               <FaCheck color="#00FF00"/>
                               <p>Prosedur Steril</p>
                            </div>
-                           <div className="my-3">
-                              <p className="text-white">Hubungi Kami</p>
-                              <button className="px-3 py-2 lg:px-5 lg:py-3 mt-3 rounded-md tracking-wider text-[12px] lg:text-base  text-white bg-green-600 shadow-md kontak kiri z-10">
-                                 +628 22 7321 2907 ( WhatsApp )
-                              </button>
-                           </div>
+                              <a href="https://wa.me/+6282273212907" target="blank">
+                                 <div className="my-3 px-3 lg:px-10 py-2 text-xs lg:text-base kiri flex justify-between items-center gap-3  bg-green-600 shadow-md rounded-md kiri">
+                                       <p className="tracking-wider text-[12px] text-white kontak z-10">
+                                          Hubungi Kami
+                                       </p>
+                                    <ArrowUpRight size={25} weight="thin" />
+                                 </div>
+                              </a>
                         </div>
                      </div>
                      
@@ -320,17 +298,17 @@ const Home = () => {
          </div>
 
          {/* why choose us */}
-         <div className="flex flex-col lg:flex-row justify-center items-center gap-5 lg:gap-10  px-5 lg:py-10 lg:pb-32 text-black">
+         <div className="flex flex-col lg:flex-row justify-center items-center gap-5 lg:gap-10  px-5 lg:py-10 lg:pb-32 text-black border">
             {/* 1 */}
-            <div className="flex flex-col justify-start items-start gap-5 lg:gap-10 lg:max-w-[40%] py-10 kiri text-sm lg:text-base pilihKiri">
-               <h1 className="text-xl lg:text-3xl font-bold">
-                  Mengapa Pilih Kami ?
-               </h1>
-               <Line />
+            <div className="flex flex-col justify-start items-start gap-5 lg:gap-7 lg:max-w-[40%] py-10 kiri text-sm lg:text-base pilihKiri">
+               <div className="flex flex-col justify-start items-start gap-5">
+                  <h1 className="text-xl lg:text-3xl font-bold">
+                     Mengapa Pilih Kami ?
+                  </h1>
+                  <Line />
+               </div>
                <p className="text-[12px] lg:text-base">
-                  Kami hadir untuk memberikan perawatan terbaik bagi ibu dan
-                  bayi, dengan layanan profesional, nyaman, dan penuh kasih
-                  sayang langsung di rumah Anda{" "}
+                  Kami hadir untuk memberikan perawatan terbaik, dengan layanan profesional, nyaman, untuk memberikan pelayanan kesehatan yang terbaik
                </p>
                <div className="text-[12px] lg:text-base">
                   <div className="flex justify-start items-center gap-2">
@@ -359,8 +337,7 @@ const Home = () => {
                   className="w-full h-full object-cover rounded-md "
                />
                {/* absolute div */}
-               <div className="hidden xl:flex flex-col lg:flex-row justify-around items-center gap-10 lg:absolute lg:bottom-5 lg:-left-96 px-10 py-10 w-full lg:w-auto h-full lg:h-52 bg-biru text-white ">
-                  {/* 1 */}
+               {/* <div className="hidden xl:flex flex-col lg:flex-row justify-around items-center gap-10 lg:absolute lg:bottom-5 lg:-left-96 px-10 py-10 w-full lg:w-auto h-full lg:h-52 bg-biru text-white ">
                   <div className="flex flex-col lg:flex-row justify-center items-center gap-2">
                      <PiHospitalThin size={80} />
                      <div className="flex flex-col justify-center items-center lg:items-start gap-1">
@@ -370,7 +347,6 @@ const Home = () => {
                         </p>
                      </div>
                   </div>
-                  {/* 2 */}
                   <div className="flex flex-col lg:flex-row justify-center items-center gap-2">
                      <FaBed size={80} />
                      <div className="flex flex-col justify-center items-center lg:items-start gap-1">
@@ -378,7 +354,7 @@ const Home = () => {
                         <p className="text-sm lg:text-xl">KHITAN SUPER NYAMAN</p>
                      </div>
                   </div>
-               </div>
+               </div> */}
             </div>
          </div>
 
@@ -390,13 +366,8 @@ const Home = () => {
          {/* banner */}
          <div className="flex flex-col lg:flex-row justify-center items-center gap-2 lg:px-10">
             {/* first banner */}
-            <div className="w-full lg:w-[50%] p-5 text-white bannerSatu ">
+            <div className="w-full lg:w-[50%] p-5 text-white pilihKanan ">
                <div className="bg-biru rounded-xl px-5 lg:px-12 py-5 lg:py-10 flex flex-col justify-start items-start gap-3 bg-opacity-80 relative shadow-xl"
-                  // style={{
-                  //    backgroundImage: `url(https://img.freepik.com/free-photo/view-medicine-blue-background_23-2149341571.jpg?t=st=1739951318~exp=1739954918~hmac=74472508729df09e0fdb0309dee3f2a2f9efdf5c658abd90c1e1856d3084734c&w=1380)`,
-                  //    backgroundSize: "cover",
-                  //    backgroundPosition: "center",
-                  // }}
                >
                   <h2>Tahukah Kamu ?</h2>
                   <h1 className="text-lg lg:text-3xl font-semibold">
@@ -421,7 +392,7 @@ const Home = () => {
             </div>
 
             {/* second banner */}
-            <div className="w-full lg:w-[50%]  p-5 text-white bannerSatu">
+            <div className="w-full lg:w-[50%]  p-5 text-white pilihKanan">
                <div
                      className="bg-orange-500 rounded-xl px-5 lg:px-12 py-5 lg:py-10 flex flex-col justify-end items-end gap-3 shadow-lg bg-opacity-80 relative overflow-hidden bg-cover bg-no-repeat"
                      style={{ backgroundImage: `url(${excitedPerson})` }}
