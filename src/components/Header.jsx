@@ -59,8 +59,8 @@ export const Header = () => {
 
    return (
       <>
-         <div className={`flex flex-col  w-full fixed top-0 z-40 bg-white shadow-lg backdrop-blur-3xl bg-opacity-85 py-1 `}>
-            {/* header top oren */}
+         <div className={`flex flex-col  w-full fixed top-0 z-40 bg-white shadow-lg backdrop-blur-3xl py-1`}>
+            {/* header top oren dan hitam */}
                <div className="w-full justify-between items-start hidden lg:flex">
                   {/* Kiri: Orange - hanya kanan miring */}
                   <div
@@ -132,7 +132,7 @@ export const Header = () => {
                </div>
 
 {/* header master */}
-               <div className="flex justify-between items-center  px-5 lg:px-[7%]">
+               <div className="sticky top-7 flex justify-between items-center bg-white px-5 lg:px-[7%]">
                   <div className="w-auto">
                            <div className="mr-10">
                               <a href="./">

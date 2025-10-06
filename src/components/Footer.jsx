@@ -47,8 +47,8 @@ const Footer = () => {
                <div className=" lg:w-96 max-w-72">
                   <img src={homecareLogo} alt="" className='w-20 h-20'/>
                   {/* <SoundcloudLogo size={80} color="#2abbdf" weight="duotone" /> */}
-                  <p className="text-sm">
-                     <span className="font-semibold">Rijal Homecare </span>
+                  <p className="text-sm indent-12">
+                     <span className="font-semibold ">Rijal Homecare </span>
                      melayani kebutuhan perawatan kesehatan di rumah dengan
                      layanan profesional dan terpercaya. Kami menyediakan
                      layanan khitan dan pemeriksaan luka di rumah.

@@ -2,14 +2,12 @@ import React, { useEffect, useState } from "react";
 import Line from "./Line";
 import {
    PiHeadsetThin,
-   PiHospitalThin,
    PiStethoscopeThin,
    PiSyringe,
 } from "react-icons/pi";
 
 // icons
-import { ArrowUpRight } from "@phosphor-icons/react";
-import { FaBed,FaWhatsapp  } from "react-icons/fa";
+import { ArrowUpRight,FirstAidKit,Stethoscope, Syringe   } from "@phosphor-icons/react";
 import { LiaClipboardListSolid } from "react-icons/lia";
 import { GiMedicines } from "react-icons/gi";
 import { MdMarkChatRead } from "react-icons/md";
@@ -107,7 +105,7 @@ const Home = () => {
             stagger: 0.2,
             scrollTrigger: {
                trigger: ".speciality",
-               start: "top 80%",
+               start: "top 90%",
                scrub: false,
             },
             duration: 0.5,
@@ -165,7 +163,7 @@ const Home = () => {
                   <div className=" max-w-full h-full px-5 md:px-32  xl:px-[17rem] flex flex-col justify-center items-start lg:gap-3 z-10">
                      <div className="flex justify-start items-center gap-2 homecare">
                         <Line />
-                        <p className="text-[9px] lg:text-sm">Ns. Muhammad Rijal, S. Kep</p>
+                        <p className="text-[9px] lg:text-sm">Ns. Muhammad Rijal, S. Kep, Cwcca</p>
                      </div>
                      <h1 className="font-bold text-4xl lg:text-8xl xl:text-[11rem] text-white homecare">
                         Home Care
@@ -196,7 +194,7 @@ const Home = () => {
                            </div>
                               <a href="https://wa.me/+6282273212907" target="blank">
                                  <div className="my-3 px-3 lg:px-10 py-2 text-xs lg:text-base kiri flex justify-between items-center gap-3  bg-green-600 shadow-md rounded-md kiri">
-                                       <p className="tracking-wider text-[12px] text-white kontak z-10">
+                                       <p className="tracking-wider text-[12px] lg:text-sm text-white kontak z-10">
                                           Hubungi Kami
                                        </p>
                                     <ArrowUpRight size={25} weight="thin" />
@@ -248,6 +246,7 @@ const Home = () => {
             <div className="flex justify-start lg:justify-center items-center gap-3 w-[170px] lg:w-[20rem] speciality">
                <PiSyringe size={size} color="#2abbdf" weight="duotone" />
                <div>
+                  
                   <p className="font-semibold text-sm lg:text-xl ">
                      Tanpa Suntik
                   </p>
@@ -298,63 +297,72 @@ const Home = () => {
          </div>
 
          {/* why choose us */}
-         <div className="flex flex-col lg:flex-row justify-center items-center gap-5 lg:gap-10  px-5 lg:py-10 lg:pb-32 text-black border">
+         <div className=" px-5 py-5 text-black mt-20">
+            
+               <div className="text-center w-full flex flex-col justify-center items-center gap-3">
+                  <h1 className="font-light text-sm tracking-widest">Selamat Datang di Rijal Homecare</h1>
+                  <p className="font-bold text-lg md:text-2xl lg:text-4xl  text-biru">Kami Hadir dengan <span className="text-orange-500">Pelayanan Terbaik</span> untuk Anda</p>
+                  <p className="w-full md:w-[90%] lg:w-[40%] text-sm lg:text-base">Layanan rawatan luka & khitan modern dengan komitmen memberikan solusi terbaik bagi kesehatan Anda</p>
+               </div>
             {/* 1 */}
-            <div className="flex flex-col justify-start items-start gap-5 lg:gap-7 lg:max-w-[40%] py-10 kiri text-sm lg:text-base pilihKiri">
-               <div className="flex flex-col justify-start items-start gap-5">
-                  <h1 className="text-xl lg:text-3xl font-bold">
-                     Mengapa Pilih Kami ?
-                  </h1>
-                  <Line />
-               </div>
-               <p className="text-[12px] lg:text-base">
-                  Kami hadir untuk memberikan perawatan terbaik, dengan layanan profesional, nyaman, untuk memberikan pelayanan kesehatan yang terbaik
-               </p>
-               <div className="text-[12px] lg:text-base">
-                  <div className="flex justify-start items-center gap-2">
-                     <div className="w-2 h-2 rounded-full border-2 border-green-600"></div>
-                     <p>Pelayanan Profesional</p>
-                  </div>
-                  <div className="flex justify-start items-center gap-2">
-                     <div className="w-2 h-2 rounded-full border-2 border-green-600"></div>
-                     <p>Perawatan dirumah tanpa harus keluar</p>
-                  </div>
-                  <div className="flex justify-start items-center gap-2">
-                     <div className="w-2 h-2 rounded-full border-2 border-green-600"></div>
-                     <p>Respon Cepat</p>
-                  </div>
-               </div>
-               <button className="px-5 py-3 bg-biru text-white hover:bg-sky-800">
-                  Selengkapnya
-               </button>
-            </div>
-
-            {/* 2 */}
-            <div className="w-full lg:w-[35rem] h-full lg:h-[28rem] flex justify-end items-end relative flex-col-reverse gap-10 pilihKanan">
-               <img
-                  src="https://res.cloudinary.com/dplikeeby/image/upload/v1740838564/12_brz7bq.jpg"
-                  alt="homecare"
-                  className="w-full h-full object-cover rounded-md "
-               />
-               {/* absolute div */}
-               {/* <div className="hidden xl:flex flex-col lg:flex-row justify-around items-center gap-10 lg:absolute lg:bottom-5 lg:-left-96 px-10 py-10 w-full lg:w-auto h-full lg:h-52 bg-biru text-white ">
-                  <div className="flex flex-col lg:flex-row justify-center items-center gap-2">
-                     <PiHospitalThin size={80} />
-                     <div className="flex flex-col justify-center items-center lg:items-start gap-1">
-                        <p className="text-2xl lg:text-2xl">100+</p>
-                        <p className="text-sm lg:text-xl">
-                           PASIEN PUAS{" "}
-                        </p>
+               <div className="px-2 md:px-10 xl:px-40 py-10 flex flex-wrap justify-center items-center gap-5 lg:gap-16">
+                  {/* 1 */}
+                  <div className="w-full md:w-96 flex justify-center items-center gap-2">
+                     <Syringe  size={40} color="#2b84b1" weight="fill" />
+                     <div className="w-full lg:w-72 flex flex-col justify-start items-start gap-1">                        
+                        <p className="font-semibold text-sm md:text-base xl:text-lg">Tenaga Medis Berpengalaman</p>
+                        <div className="w-12 h-[3px] rounded-full bg-orange-500"></div>
+                        <p className="text-xs md:text-sm">Ditangani oleh perawat dan dokter profesional di bidang perawatan luka dan khitan</p>
                      </div>
                   </div>
-                  <div className="flex flex-col lg:flex-row justify-center items-center gap-2">
-                     <FaBed size={80} />
-                     <div className="flex flex-col justify-center items-center lg:items-start gap-1">
-                        <p className="text-2xl lg:text-2xl">256++ </p>
-                        <p className="text-sm lg:text-xl">KHITAN SUPER NYAMAN</p>
+                  {/* 1 */}
+                  <div className="w-96 flex justify-center items-center gap-2">
+                     <Stethoscope size={50} color="#2b84b1" weight="fill" />
+                     <div className="w-full md:w-72 flex flex-col justify-start items-start gap-1">                        
+                        <p className="font-semibold text-sm md:text-base">Steril & Higienis</p>
+                        <div className="w-12 h-[3px] rounded-full bg-orange-500"></div>
+                        <p className="text-xs md:text-sm">Ditangani oleh perawat dan dokter profesional di bidang perawatan luka dan khitan</p>
                      </div>
                   </div>
-               </div> */}
+                  {/* 1 */}
+                  <div className="w-96 flex justify-center items-center gap-2">
+                     <Stethoscope size={50} color="#2b84b1" weight="fill" />
+                     <div className="w-full md:w-72 flex flex-col justify-start items-start gap-1">                        
+                        <p className="font-semibold text-sm md:text-base">Konsultasi & Kontrol Berkala</p>
+                        <div className="w-12 h-[3px] rounded-full bg-orange-500"></div>
+                        <p className="text-xs md:text-sm">Ditangani oleh perawat dan dokter profesional di bidang perawatan luka dan khitan</p>
+                     </div>
+                  </div>
+                  {/* 1 */}
+                  <div className="w-96 flex justify-center items-center gap-2">
+                     <Stethoscope size={50} color="#2b84b1" weight="fill" />
+                     <div className="w-full md:w-72 flex flex-col justify-start items-start gap-1">                        
+                        <p className="font-semibold text-sm md:text-base">Layanan Homecare</p>
+                        <div className="w-12 h-[3px] rounded-full bg-orange-500"></div>
+                        <p className="text-xs md:text-sm">Kami hadir langsung kerumah anda, Nyaman, efisien, dan tetap aman</p>
+                     </div>
+                  </div>
+                  {/* 1 */}
+                  <div className="w-96 flex justify-center items-center gap-2">
+                     <Stethoscope size={50} color="#2b84b1" weight="fill" />
+                     <div className="w-full md:w-72 flex flex-col justify-start items-start gap-1">                        
+                        <p className="font-semibold text-sm md:text-base">Pemulihan Lebih Optimal</p>
+                        <div className="w-12 h-[3px] rounded-full bg-orange-500"></div>
+                        <p className="text-xs md:text-sm">Dengan metode terkini dan pemantauan rutin, proses tindakan dan penyembuhan berlangsung lebih cepat</p>
+                     </div>
+                  </div>
+                  {/* 1 */}
+                  <div className="w-96 flex justify-center items-center gap-2">
+                     <Stethoscope size={50} color="#2b84b1" weight="fill" />
+                     <div className="w-full md:w-72 flex flex-col justify-start items-start gap-1">                        
+                        <p className="font-semibold text-sm md:text-base">Khitan Modern</p>
+                        <div className="w-12 h-[3px] rounded-full bg-orange-500"></div>
+                        <p className="text-xs md:text-sm">Khitan dengan Super Ring. Aman, nyaman, pulih lebih cepat</p>
+                     </div>
+                  </div>
+                  
+               </div>
+            <div>
             </div>
          </div>
 
@@ -367,7 +375,7 @@ const Home = () => {
          <div className="flex flex-col lg:flex-row justify-center items-center gap-2 lg:px-10">
             {/* first banner */}
             <div className="w-full lg:w-[50%] p-5 text-white pilihKanan ">
-               <div className="bg-biru rounded-xl px-5 lg:px-12 py-5 lg:py-10 flex flex-col justify-start items-start gap-3 bg-opacity-80 relative shadow-xl"
+               <div className="bg-orange-500 rounded-xl px-5 lg:px-12 py-5 lg:py-10 flex flex-col justify-start items-start gap-3 bg-opacity-80 relative shadow-xl"
                >
                   <h2>Tahukah Kamu ?</h2>
                   <h1 className="text-lg lg:text-3xl font-semibold">

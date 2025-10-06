@@ -90,7 +90,7 @@ const Gallery = () => {
    };
 
    return (
-      <div className="pb-10 pt-28">
+      <div className="pb-10 pt-14 md:pt-36 text-black">
          <div className="flex flex-col justify-center items-center gap-6">
             <h1 className="text-center text-2xl lg:text-3xl font-bold text-zinc-900">
                Galeri Pengobatan

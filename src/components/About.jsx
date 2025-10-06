@@ -1,5 +1,6 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import Line from "./Line";
+import rijalAbout from '../assets/Image/rijalAbout.png'
 
 const About = () => {
    useEffect(() => {
@@ -8,7 +9,7 @@ const About = () => {
 
    return (
       <>
-         <div className="pb-10 pt-28 px-5 lg:px-40 text-black">
+         <div className="pb-10 pt-14 md:pt-36  px-5 lg:px-40 text-black">
             <div className="flex flex-col justify-center items-center gap-6">
                <h1 className="text-center text-2xl lg:text-3xl font-bold ">
                   Tentang Saya
@@ -16,9 +17,9 @@ const About = () => {
                <Line />
                <div className=" flex flex-col lg:flex-row justify-start items-start gap-10">
                   {/* 1 */}
-                  <div className="w-full lg:w-[40%] h-[30rem] overflow-hidden rounded-lg">
+                  <div className="w-full lg:w-[40%] h-[30rem] overflow-hidden shadow-md rounded-lg">
                      <img
-                        src="https://res.cloudinary.com/dplikeeby/image/upload/v1740124767/www_wgkiuq.jpg"
+                        src={rijalAbout}
                         alt=""
                         className="w-full h-auto object-cover"
                      />
@@ -32,7 +33,7 @@ const About = () => {
                            2001 hingga sekarang
                         </h2>
                         <hr className="border border-green-400 w-52" />
-                        <p className="text-sm lg:text-base ">
+                        <p className="text-sm lg:text-base indent-20">
                            Kami telah memberikan layanan perawatan kesehatan
                            terbaik sejak tahun 2001 hingga saat ini. Sebagai
                            penyedia layanan homecare profesional, kami fokus
