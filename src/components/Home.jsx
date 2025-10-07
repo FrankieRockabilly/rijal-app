@@ -7,7 +7,7 @@ import {
 } from "react-icons/pi";
 
 // icons
-import { ArrowUpRight,FirstAidKit,Stethoscope, Syringe   } from "@phosphor-icons/react";
+import { ArrowRight,FirstAidKit,Stethoscope, Syringe   } from "@phosphor-icons/react";
 import { LiaClipboardListSolid } from "react-icons/lia";
 import { GiMedicines } from "react-icons/gi";
 import { MdMarkChatRead } from "react-icons/md";
@@ -193,11 +193,11 @@ const Home = () => {
                               <p>Prosedur Steril</p>
                            </div>
                               <a href="https://wa.me/+6282273212907" target="blank">
-                                 <div className="my-3 px-3 lg:px-10 py-2 text-xs lg:text-base kiri flex justify-between items-center gap-3  bg-green-600 shadow-md rounded-md kiri">
+                                 <div className="my-3 px-3 lg:px-10 py-2 xl:py-3 text-xs lg:text-base kiri flex justify-between items-center gap-3  bg-green-600 shadow-md rounded-md kiri">
                                        <p className="tracking-wider text-[12px] lg:text-sm text-white kontak z-10">
                                           Hubungi Kami
                                        </p>
-                                    <ArrowUpRight size={25} weight="thin" />
+                                    <ArrowRight size={25} weight="thin" />
                                  </div>
                               </a>
                         </div>
@@ -299,7 +299,7 @@ const Home = () => {
          {/* why choose us */}
          <div className=" px-5 py-5 text-black mt-20">
             
-               <div className="text-center w-full flex flex-col justify-center items-center gap-3">
+               <div className="text-center w-full flex flex-col justify-center items-center gap-3 speciality ">
                   <h1 className="font-light text-sm tracking-widest">Selamat Datang di Rijal Homecare</h1>
                   <p className="font-bold text-lg md:text-2xl lg:text-4xl  text-biru">Kami Hadir dengan <span className="text-orange-500">Pelayanan Terbaik</span> untuk Anda</p>
                   <p className="w-full md:w-[90%] lg:w-[40%] text-sm lg:text-base">Layanan rawatan luka & khitan modern dengan komitmen memberikan solusi terbaik bagi kesehatan Anda</p>
@@ -307,7 +307,7 @@ const Home = () => {
             {/* 1 */}
                <div className="px-2 md:px-10 xl:px-40 py-10 flex flex-wrap justify-center items-center gap-5 lg:gap-16">
                   {/* 1 */}
-                  <div className="w-full md:w-96 flex justify-center items-center gap-2">
+                  <div className="w-full md:w-96 flex justify-center items-center gap-2 speciality">
                      <Syringe  size={40} color="#2b84b1" weight="fill" />
                      <div className="w-full lg:w-72 flex flex-col justify-start items-start gap-1">                        
                         <p className="font-semibold text-sm md:text-base xl:text-lg">Tenaga Medis Berpengalaman</p>
@@ -315,8 +315,8 @@ const Home = () => {
                         <p className="text-xs md:text-sm">Ditangani oleh perawat dan dokter profesional di bidang perawatan luka dan khitan</p>
                      </div>
                   </div>
-                  {/* 1 */}
-                  <div className="w-96 flex justify-center items-center gap-2">
+                  {/* 1 */} 
+                  <div className="w-96 flex justify-center items-center gap-2 speciality">
                      <Stethoscope size={50} color="#2b84b1" weight="fill" />
                      <div className="w-full md:w-72 flex flex-col justify-start items-start gap-1">                        
                         <p className="font-semibold text-sm md:text-base">Steril & Higienis</p>
@@ -325,7 +325,7 @@ const Home = () => {
                      </div>
                   </div>
                   {/* 1 */}
-                  <div className="w-96 flex justify-center items-center gap-2">
+                  <div className="w-96 flex justify-center items-center gap-2 speciality">
                      <Stethoscope size={50} color="#2b84b1" weight="fill" />
                      <div className="w-full md:w-72 flex flex-col justify-start items-start gap-1">                        
                         <p className="font-semibold text-sm md:text-base">Konsultasi & Kontrol Berkala</p>
@@ -334,7 +334,7 @@ const Home = () => {
                      </div>
                   </div>
                   {/* 1 */}
-                  <div className="w-96 flex justify-center items-center gap-2">
+                  <div className="w-96 flex justify-center items-center gap-2 speciality">
                      <Stethoscope size={50} color="#2b84b1" weight="fill" />
                      <div className="w-full md:w-72 flex flex-col justify-start items-start gap-1">                        
                         <p className="font-semibold text-sm md:text-base">Layanan Homecare</p>
@@ -343,7 +343,7 @@ const Home = () => {
                      </div>
                   </div>
                   {/* 1 */}
-                  <div className="w-96 flex justify-center items-center gap-2">
+                  <div className="w-96 flex justify-center items-center gap-2 speciality">
                      <Stethoscope size={50} color="#2b84b1" weight="fill" />
                      <div className="w-full md:w-72 flex flex-col justify-start items-start gap-1">                        
                         <p className="font-semibold text-sm md:text-base">Pemulihan Lebih Optimal</p>
@@ -352,7 +352,7 @@ const Home = () => {
                      </div>
                   </div>
                   {/* 1 */}
-                  <div className="w-96 flex justify-center items-center gap-2">
+                  <div className="w-96 flex justify-center items-center gap-2 speciality">
                      <Stethoscope size={50} color="#2b84b1" weight="fill" />
                      <div className="w-full md:w-72 flex flex-col justify-start items-start gap-1">                        
                         <p className="font-semibold text-sm md:text-base">Khitan Modern</p>
@@ -374,11 +374,11 @@ const Home = () => {
          {/* banner */}
          <div className="flex flex-col lg:flex-row justify-center items-center gap-2 lg:px-10">
             {/* first banner */}
-            <div className="w-full lg:w-[50%] p-5 text-white pilihKanan ">
-               <div className="bg-orange-500 rounded-xl px-5 lg:px-12 py-5 lg:py-10 flex flex-col justify-start items-start gap-3 bg-opacity-80 relative shadow-xl"
+            <div className="w-full lg:w-[50%] p-5 text-white pilihKiri ">
+               <div className="bg-biru rounded-xl px-5 lg:px-12 py-5 lg:py-10 flex flex-col justify-start items-start gap-3 bg-opacity-80 relative shadow-xl"
                >
                   <h2>Tahukah Kamu ?</h2>
-                  <h1 className="text-lg lg:text-3xl font-semibold">
+                  <h1 className="text-lg lg:text-3xl font-semibold z-10">
                      SOLUSI TEPAT UNTUK
                      <span className="text-orange-500">PENYEMBUHAN LUKA</span>
                   </h1>
