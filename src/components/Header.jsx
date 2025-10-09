@@ -64,7 +64,7 @@ export const Header = () => {
                <div className="w-full justify-between items-start hidden lg:flex">
                   {/* Kiri: Orange - hanya kanan miring */}
                   <div
-                     className="w-[50%] h-14 text-white px-32 py-3 flex items-center justify-center gap-5 xl:gap-10 text-sm"
+                     className="w-[50%] h-14 text-white px-32 py-3 flex items-center justify-center gap-5 xl:gap-10 text-xs xl:text-sm"
                      style={{ 
                         clipPath: 'polygon(0 0, 100% 0, 95% 100%, 0% 100%)',
                         background: 'linear-gradient(to right, #f97316, #fb923c)'
@@ -92,7 +92,7 @@ export const Header = () => {
 
                   {/* Kanan: Hitam ke abu - kiri miring */}
                   <div
-                     className="w-[50%] h-12 text-white px-32 py-3 flex items-center justify-between gap-10 text-sm"
+                     className="w-[50%] h-12 text-white px-14 xl:px-32 py-3 flex items-center justify-between gap-4 xl:gap-10 text-sm"
                      style={{ 
                         clipPath: 'polygon(4% 0, 100% 0, 100% 100%, 0 100%)',
                         background: 'linear-gradient(to right, #000, #64748b)' // from-black to-slate-500

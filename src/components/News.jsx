@@ -102,43 +102,19 @@ const News = () => {
                ) : (
                   filteredNews?.map((value, index) => (
                      <div
-                        className="p-1 rounded-lg w-[10rem] h-64 md:w-[15rem] lg:w-[22rem] lg:h-72 border shadow-lg flex flex-col relative text-sm news"
+                        className="p-1 rounded-lg w-[10rem] h-64 md:w-[15rem] lg:w-[22rem] lg:h-64 border shadow-lg flex flex-col relative text-sm news"
                         key={index}
                      >
-                        <div className="h-[70%] overflow-hidden rounded-lg ">
+                        <div className="h-full overflow-hidden rounded-lg ">
                            <img src={value.urlToImage} alt="" className='h-full w-full object-cover' />
                         </div>
-                        <div className="grow text-black font-light flex flex-col justify-start items-start overflow-hidden">
-                           <h3 className="text-xs xl:text-sm h-full break-words text-gray-600 font-light py-2 line-clamp-2 overflow-hidden">
-                              {value.title}
-                           </h3>
-                           <a
-                              href={value.url}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                           >
-                              {/* <button className="py-1 px-3 bg-green-600 rounded-sm text-white absolute top-1 left-1  hover:bg-blue-900 duration-300 transition-all ease-in-out ">
-                                 view
-                              </button> */}
-                           </a>
+                        <div className='absolute bottom-2 bg-white w-[80%] right-1/2 transform translate-x-1/2 px-2 py-1 overflow-hidden shadow-lg border'>
+                           {value.title}
                         </div>
                      </div>
                   ))
                )}
             </div>
-            {/* {news == null ? (
-               ""
-            ) : (
-               <div className="flex justify-center items-center py-10">
-                  <button
-                     className="py-2 px-5 rounded-md flex justify-center items-center gap-2"
-                     onClick={clickLebihBanyak}
-                  >
-                     <p>lihat lebih banyak</p>
-                     <MdKeyboardDoubleArrowRight />
-                  </button>
-               </div>
-            )} */}
          </div>
       </>
    );

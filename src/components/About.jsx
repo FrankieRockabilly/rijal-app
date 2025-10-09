@@ -9,12 +9,14 @@ const About = () => {
 
    return (
       <>
-         <div className="pb-10 pt-14 md:pt-36  px-5 lg:px-40 text-black">
-            <div className="flex flex-col justify-center items-center gap-6">
-               <h1 className="text-center text-2xl lg:text-3xl font-bold ">
-                  Tentang Saya
-               </h1>
-               <Line />
+         <div className="pb-10 pt-14 md:pt-28  px-5 lg:px-40 text-black">
+            <div>
+               <div className="lg:my-16 flex flex-col justify-start items-center  gap-6">
+                  <h1 className="text-center text-2xl lg:text-3xl font-semibold ">
+                     Tentang Saya
+                  </h1>
+                  <Line />
+               </div>
                <div className=" flex flex-col lg:flex-row justify-start items-start gap-10">
                   {/* 1 */}
                   <div className="w-full lg:w-[40%] h-[30rem] overflow-hidden shadow-md rounded-lg">
@@ -28,8 +30,8 @@ const About = () => {
                   {/* 2 */}
                   <div className="w-full lg:w-[70%]">
                      <div className="w-full flex flex-col justify-start items-start gap-7 ">
-                        <h2 className="font-bold text-2xl xl:text-4xl">
-                           Kami memberikan pelayanan keseshtan terbaik sejak
+                        <h2 className="font-semibold text-2xl xl:text-4xl">
+                           Kami memberikan pelayanan kesehatan terbaik sejak
                            2001 hingga sekarang
                         </h2>
                         <hr className="border border-green-400 w-52" />
@@ -48,7 +50,7 @@ const About = () => {
                      </div>
                      <div className="flex flex-col lg:flex-row justify-start items-start gap-5 w-full mt-5">
                         <div className="">
-                           <h2 className="text-base lg:text-2xl font-bold">
+                           <h2 className="text-base lg:text-2xl font-semibold">
                               Layanan Responsif
                            </h2>
                            <p className="text-[12px] lg:text-base ">
@@ -58,7 +60,7 @@ const About = () => {
                            </p>
                         </div>
                         <div>
-                           <h2 className="text-base lg:text-2xl font-bold">
+                           <h2 className="text-base lg:text-2xl font-semibold">
                               Perawatan Tanggap
                            </h2>
                            <p className="text-[12px] lg:text-base ">
@@ -68,7 +70,7 @@ const About = () => {
                            </p>
                         </div>
                         <div>
-                           <h2 className="text-base lg:text-2xl font-bold">
+                           <h2 className="text-base lg:text-2xl font-semibold">
                               Segera dan Profesional
                            </h2>
                            <p className="text-[12px] lg:text-base ">
